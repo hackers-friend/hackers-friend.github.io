@@ -74,7 +74,21 @@ input{
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 20px;
-    height: auto; /* Should be removed. Only for demonstration */
+    height: 175px;
+}
+@media only screen and (max-width: 1000px) {
+
+  .column {
+    border-bottom: solid;
+    border-bottom-color: #dddddd;
+    float: left;
+    width: 33.33%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    height:auto;
+  }
+
 }
 h2.cname
 {
@@ -137,15 +151,15 @@ h2.cname
 
 .video {
     margin: auto;
-    height: 520px;
-    width: 100%;
+    margin-top: 0;
+    height:660px;
+    width: auto;
     border: solid;
     border-width: 3px;
     border-color: white;
-    background-color: #111;
+    background-color:white;
 }
 h2.vname{
-    color: white;
     text-align: center;
 }
 button.vnav-next {
