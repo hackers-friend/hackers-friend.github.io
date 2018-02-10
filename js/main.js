@@ -45,3 +45,4 @@ tsl.setAttribute("href",yy);
 var lsl = document.getElementById("linkedin");
 var zz = "https://www.linkedin.com/shareArticle?mini=true&url="+window.location.href+"&title=HackersFriend.com&summary=&source=";
 lsl.setAttribute("href",zz);
+document.getElementById("news").innerHTML="<marquee onmouseover=\"this.stop();\" onmouseout=\"this.start();\" scrollamount=\"10\"><a href=\"http://www.hackersfriend.com/workshops/w1.html\"><b style=\"color:red\">Upcoming workshop: </b>Python from zero to hero @ BTM Layout, Banglore</marquee></a>";
