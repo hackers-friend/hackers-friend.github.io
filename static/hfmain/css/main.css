@@ -112,6 +112,7 @@ body{
 
 .card-img-top{
   border-radius: 0px;
+  height: 150px;
 }
 
 .cname {
@@ -119,7 +120,7 @@ body{
   padding:10px;
   border-radius:0px 0px 30px 0px;
   padding-left: 20px;
-  width: 98%;
+  width: 100%;
 }
 
 .cover{
