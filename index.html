@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from 127.0.0.1:8000/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Aug 2018 16:58:37 GMT -->
+<!-- Mirrored from 127.0.0.1:8000/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 Aug 2018 19:13:03 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -18,11 +18,12 @@
     <title>HackersFriend </title>
     
     <link rel="stylesheet" href="static/hfmain/css/main.css" />
+    <script src="static/hfmain/js/main.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <link rel="shortcut icon" type="image/png" href="media/favicon.png"/>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#005580">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#005580">
         <a class="navbar-brand" href="index.html">HackersFriend</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapse_target">
@@ -120,35 +121,35 @@
             <h1 class="text-center">Why HackersFriend</h1>
 
 <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
         <img src="media/learning_step.png" style="height:200px;">
     </div>
-    <div class="col-sm-4" style="margin-top:50px;">
+    <div class="col-lg-4" style="margin-top:50px;">
                    <h3>Step by step Learning</h3>
         <p>Learning something, in way that can be used for buidling something, requires step by step guidance. At HackersFriend We desing tutorials in a manner that you'll never get stuck.</p>
     </div>
-    <div class="col-sm-2">
+    <div class="col-lg-2">
         <img src="media/group_study.png" style="height:200px; width:200px;">
     </div>
-    <div class="col-sm-4" style="margin-top:50px;">
+    <div class="col-lg-4" style="margin-top:50px;">
                    <h3>Community</h3>
         <p>Learning is fun when you do it in Group.</p>
         <p>Join our <a href="https://www.facebook.com/groups/HackersFn/" target="_blank">Facebook Group</a> today and join your Learning friends.</p>
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-2">
+    <div class="col-lg-2">
         <img src="media/choosen_problem.png" style="height:200px; width:200px;">
     </div>
-    <div class="col-sm-4" style="margin-top:50px;">
+    <div class="col-lg-4" style="margin-top:50px;">
                    <h3>Choosen problems for practice</h3>
         <p>We beileve solving a problem that makes you think, helps you to prepare in right manner.</p>
         <p>Problems at HackersFriend are specifically Choosen that makes you think and requires you to learn.</p>
     </div>
-    <div class="col-sm-2">
+    <div class="col-lg-2">
         <img src="media/kid_coding.png" style="height:200px; width:200px;">
     </div>
-    <div class="col-sm-4" style="margin-top:50px;">
+    <div class="col-lg-4" style="margin-top:50px;">
                    <h3>Desinged to stay on track</h3>
         <p>Best startegy to learn something is to stay on track. When you have a thrust of Learning, key is to keep that alive till the end.</p>
         <p>At HackersFriend we have designed tutorials to keep that Learning thrust alive and growing while you learn.</p>
@@ -156,8 +157,38 @@
 </div>
 </div>
 <br>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Questions and Tutorials uploaded!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5 class="text-danger">We have uploaded Arithmetic Aptitude Questions in practice section of Campus Placement Training.</h5>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="practice/campus-placement/arithmetic-aptitude/profit-loss.html" class="btn btn-success">Give them a try</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script>
+      window.onload = function() {
+        $('#myModal').modal('show');
+      }
+  </script>
 
-    <footer class="bg-dark mt-5 pt-3 text-light">
+<footer class="footer bg-dark mt-5 pt-3 text-light">
+        
           <div class="container">
 
                 <div class="row">
@@ -197,7 +228,7 @@
             <div class="container">
                 <hr>
                 <div class="row">
-                    <div class="col-sm-4 offset-sm-4">
+                    <div class="col-sm-6 offset-sm-3">
                         <a class="btn btn-outline-info" href="https://facebook.com/HackersFn" target="_blank"><img src="media/fb-icon.png" style="width:50px; height:50px;"></a>
                         <a class="btn btn-outline-info" href="https://twitter.com/HackersFn" target="_blank"><img src="media/twitter-icon.png" style="width:50px; height:50px;"></a>
                         <a class="btn btn-outline-info" href="https://www.linkedin.com/company/hackersfriend/" target="_blank"><img src="media/linkedin-icon.png" style="width:50px; height:50px;"></a>
@@ -206,16 +237,17 @@
                 </div>
                 <hr>
                 <div class="row">
-                  <div class="col-sm-8 offset-sm-2">
+                  <div class="col-sm-10 offset-sm-1">
                     <small style="color:grey;">&copy; HackersFriend | All rights reserved | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
                   </div>
+          
               </div>
                 <br>
             </div>
           </div>
-        </footer>
-<script src="static/hfmain/js/main.js"></script>
+          
+</footer>
 </body>
 
-<!-- Mirrored from 127.0.0.1:8000/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Aug 2018 16:59:18 GMT -->
+<!-- Mirrored from 127.0.0.1:8000/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 11 Aug 2018 19:13:43 GMT -->
 </html>
