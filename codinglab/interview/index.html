@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 127.0.0.1:8000/codinglab/interview/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Dec 2018 05:45:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117151898-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117151898-1'); 
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HackersFriend Interview CodingLab</title>
+    
+    <link rel="stylesheet" href="../../static/hfmain/css/main.css" />
+    <script src="../../static/hfmain/js/main.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <link rel="shortcut icon" type="image/png" href="../../media/favicon.png"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#005580">
+        <a class="navbar-brand" href="../../index.html">HackersFriend</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="collapse_target">
+        <ul class="navbar-nav  ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Coding Lab</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../tutorials/index.html">Tutorials</a>
+            </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../../articles/index.html">Articles</a>
+                    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../../projects/index.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="../../notifications/index.html" class="nav-link"><img src="../../media/notifications.png" alt="notification" style="height:24px;width:24px;"></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+
+<div class="container-fluid" style="background-color:slategrey; color: white;">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+                <center>
+                        <img src="../../media/interview_w.png" alt="updates" style="height:250px;">
+                </center>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <h4 class="text-center">Interview Lab</h4>
+                
+                <p>Practice on problems that touches every aspect of data structures and algorithms and crack coding interview.</p>
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+       <div class="row">
+           <div class="col-md-3">
+               <br>
+               <br>
+            <!-- Nav pills -->
+  <ul class="nav nav-pills flex-column" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" href="#latest">Latest problems</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#1">Basics</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#2">Arrays</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#3">Hash Maps and Dictionaries</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#4">Linked Lists</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#5">Sorting Algorithms</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#6">Search Algorithms</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#7">String Manipulation</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#8">Greedy Algorithms</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#9">Recursion and Backtracking</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#10">Stack and Que</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#11">Graphs</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#12">Trees</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#13">Dynamic Programming</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#14">Other problems</a>
+        </li>
+        
+      </ul>
+           </div>
+           <div class="col-md-9">
+            <!-- Tab panes -->
+  <div class="tab-content">
+        <div id="latest" class="container tab-pane active">
+          <h4 class="text-center">Latest problems in this lab</h4>
+          <div class="container">
+          
+              <br>
+                  <div class="card">
+                      <div class="card-body">
+                              <h5 class="text-center">Multiply matrices</h5>
+                              <br>
+                              
+                              You are given two matrices. Let's call them <b>a</b> and <b>b</b>. Write a program to print multiplication of both of these matrices.
+                              
+                              <br>
+                              <p class="text-right"> <a href="matrix-multiplication.html" class="btn btn-danger" >Try it</a> </p>
+                              <hr>
+                              <p><b>Level: </b> Easy <b>| </b> Uploaded on </b> <b>Nov. 29, 2018</b></p>
+                      </div>
+                    </div>
+      
+              <br>
+                  <div class="card">
+                      <div class="card-body">
+                              <h5 class="text-center">Print Hello world</h5>
+                              <br>
+                              
+                              Write a program to print 'Hello world'.
+                              
+                              <br>
+                              <p class="text-right"> <a href="hello-world.html" class="btn btn-danger" >Try it</a> </p>
+                              <hr>
+                              <p><b>Level: </b> Easy <b>| </b> Uploaded on </b> <b>Nov. 27, 2018</b></p>
+                      </div>
+                    </div>
+      
+    </div>
+        </div>
+        
+        <div id="1" class="container tab-pane fade"><br>
+            <h5 class="text-center">Basics</h5>
+            <br>
+            
+            
+            <div class="card">
+                    <div class="card-body">
+                            <h5 class="text-center">Print Hello world</h5>
+                            <br>
+                            
+                            Write a program to print 'Hello world'.
+                            
+                            <br>
+                            <p class="text-right"> <a href="hello-world.html" class="btn btn-danger" >Try it</a> </p>
+                            <hr>
+                            <p><b>Level: </b> Easy <b>| </b> Uploaded on </b> <b>Nov. 27, 2018</b></p>
+                    </div>
+                  </div>
+                  <br>
+            
+            
+            
+            <div class="card">
+                    <div class="card-body">
+                            <h5 class="text-center">Multiply matrices</h5>
+                            <br>
+                            
+                            You are given two matrices. Let's call them <b>a</b> and <b>b</b>. Write a program to print multiplication of both of these matrices.
+                            
+                            <br>
+                            <p class="text-right"> <a href="matrix-multiplication.html" class="btn btn-danger" >Try it</a> </p>
+                            <hr>
+                            <p><b>Level: </b> Easy <b>| </b> Uploaded on </b> <b>Nov. 29, 2018</b></p>
+                    </div>
+                  </div>
+                  <br>
+            
+            
+        </div>
+        
+        <div id="2" class="container tab-pane fade"><br>
+            <h5 class="text-center">Arrays</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="3" class="container tab-pane fade"><br>
+            <h5 class="text-center">Hash Maps and Dictionaries</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="4" class="container tab-pane fade"><br>
+            <h5 class="text-center">Linked Lists</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="5" class="container tab-pane fade"><br>
+            <h5 class="text-center">Sorting Algorithms</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="6" class="container tab-pane fade"><br>
+            <h5 class="text-center">Search Algorithms</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="7" class="container tab-pane fade"><br>
+            <h5 class="text-center">String Manipulation</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="8" class="container tab-pane fade"><br>
+            <h5 class="text-center">Greedy Algorithms</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="9" class="container tab-pane fade"><br>
+            <h5 class="text-center">Recursion and Backtracking</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="10" class="container tab-pane fade"><br>
+            <h5 class="text-center">Stack and Que</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="11" class="container tab-pane fade"><br>
+            <h5 class="text-center">Graphs</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="12" class="container tab-pane fade"><br>
+            <h5 class="text-center">Trees</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="13" class="container tab-pane fade"><br>
+            <h5 class="text-center">Dynamic Programming</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+        <div id="14" class="container tab-pane fade"><br>
+            <h5 class="text-center">Other problems</h5>
+            <br>
+            
+            
+            
+            
+            
+        </div>
+        
+      </div>
+           </div>
+       </div>
+    </div>
+
+<footer class="footer bg-dark mt-5 pt-3 text-light">
+    <div class="container text-center">
+      <h2>HackersFriend</h2>
+      <br>
+      <p><a href="../../jobs/index.html">Work with us</a> | <a href="../../intern/index.html" >Intern with us</a> | <a href="#">Beocome campus ambassdor</a> | <a href="../../verify-certificate.html">Verify certificate</a></p>
+    </div>
+          <div class="bg-bark">
+            <div class="container">
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-3">
+                        <a href="https://facebook.com/HackersFn" target="_blank"><img src="../../media/fb-icon.png" style="width:40px; height:40px;"></a>
+                        <a href="https://twitter.com/HackersFn" target="_blank"><img src="../../media/twitter-icon.png" style="width:40px; height:40px;"></a>
+                       <a  href="https://www.linkedin.com/company/hackersfriend/" target="_blank"><img src="../../media/linkedin-icon.png" style="width:35px; height:35px;"></a>
+                       <a  href="https://www.youtube.com/channel/UCbR73B5CesA1jjTPTWcLmKg/" target="_blank"><img src="../../media/youtube-icon.png" style="width:40px; height:40px;"></a>
+                      </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-10 offset-sm-1">
+                    <small style="color:grey;">&copy; HackersFriend | Some rights reserved | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
+                  </div>
+          
+              </div>
+                <br>
+            </div>
+          </div>
+          
+</footer>
+</body>
+
+<!-- Mirrored from 127.0.0.1:8000/codinglab/interview/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Dec 2018 05:45:01 GMT -->
+</html>
