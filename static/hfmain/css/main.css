@@ -40,12 +40,11 @@ body, wrapper {
 .show_title{
   height: 50px;
 }
-.show_case {
-  height: 275px;
-}
+
 .card-img-top{
   border-radius: 0px;
-  height: 150px;
+  height: 200px;
+  padding: 10px;
 }
 
 .cname {
