@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 127.0.0.1:8000/tutorials/TensorFlow/recurrent-neural-network by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jun 2019 18:12:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117151898-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117151898-1'); 
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recurrent Neural Networks - TensorFlow Tutorial  - HackersFriend</title>
+    
+    <link rel="stylesheet" href="../../static/hfmain/css/main.css" />
+    <script src="../../static/hfmain/js/offline.js"></script>
+    <link rel="stylesheet" href="../../static/hfmain/css/offline_theme.css" />
+    <link rel="stylesheet" href="../../static/hfmain/css/offline_english.css" />
+    <script src="../../static/hfmain/js/main.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <link rel="shortcut icon" type="image/png" href="../../media/favicon.png"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#005580">
+        <a class="navbar-brand" href="../../index.html">HackersFriend</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="collapse_target">
+        <ul class="navbar-nav  ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../../hackathons/index.html">Hackathons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../codinglab/index.html">CodingLab</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Tutorials</a>
+            </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../../articles/index.html">Articles</a>
+                    </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../../projects/index.html">Projects</a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="../../notifications/index.html" class="nav-link">  <i class="material-icons"> notifications </i></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+
+<link rel="stylesheet" href="../../static/hfmain/css/prism.css" />
+<script src="../../static/hfmain/js/prism.js"></script>
+<div class="container-fluid">
+  <br>
+  <br>
+  <p><a href="../../index.html">HackersFriend</a> / <a href="../index.html">Tutorials</a> / <a href="index.html">TensorFlow</a> / Recurrent Neural Networks</p>
+      <br>
+  <div class="row">
+    <div class="col-md-8">
+        
+        <div class="card" style="box-shadow:none;">
+            <div class="card-body">
+            <p class="lead text-center">Recurrent Neural Networks</p>
+            <hr>
+            
+              <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item">
+                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
+                      </li>
+                     
+                      <li class="nav-item">
+                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
+                        </li>
+                    </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                  <div id="notes" class="container tab-pane active"><br>
+                    
+                    
+                    
+                    <br>
+                      <p>Tutorial contents of Recurrent Neural Networks is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
+                    
+                    
+                  </div>
+                  <div id="problems" class="container-fluid tab-panes fade"><br>
+                    
+                      <p>No problems available for this topic.</p>
+                    
+                    
+                    
+                    
+                    <script>
+                        function onans(option, ans)
+                        {
+                          var x = option.slice(0,option.lastIndexOf('_'));
+                          var y = x+"_result";
+                          if(option[option.length-1]==ans){
+                            // we got to display correct icon and show explanation
+                            document.getElementById(y).innerHTML = "Correct Answer!";
+                            document.getElementById(y).style.color = "green";
+                            document.getElementById(y).style.display = "block";
+                            document.getElementById(option).style.color = "green";
+                            // console.log("Correct ans");
+                          }else{
+                            // we got to blur that option
+                            // console.log("Wrong ans");
+                            document.getElementById(option).style.color="#e0dbdb";
+                            document.getElementById(y).innerHTML = "Wrong Answer!";
+                            document.getElementById(y).style.color = "red";
+                            document.getElementById(y).style.display = "block";
+                          }
+                        }
+        
+                        function see_ans(x)
+                        {
+                          document.getElementById(x).style.display="block";
+                        }
+                    </script>
+                  </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-center"> Topics</div>
+        <div class="card-body">
+            <div class="list-group">
+                
+                
+                <a href="introduction.html" class="list-group-item">Introduction &amp; Installation</a>
+                
+                
+                
+                <a href="deep-learning-and-ai.html" class="list-group-item">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
+                
+                
+                
+                <a href="mathematics.html" class="list-group-item">Mathematics foundations</a>
+                
+                
+                
+                <a href="basics.html" class="list-group-item">TensorFlow Basics</a>
+                
+                
+                
+                <a href="convolutional-neural-network.html" class="list-group-item">Convolutional Neural Networks</a>
+                
+                
+                                
+                <a href="recurrent-neural-network.html" class="list-group-item active">Recurrent Neural Networks</a>
+                
+                
+                
+                <a href="TensorBoard-Visualization.html" class="list-group-item">TensorBoard Visualization</a>
+                
+                
+                
+                <a href="Word-Embedding.html" class="list-group-item">Word Embedding</a>
+                
+                
+                
+                <a href="Single-Layer-Perceptron.html" class="list-group-item">Single Layer Perceptron</a>
+                
+                
+                
+                <a href="Linear-Regression.html" class="list-group-item">Linear Regression</a>
+                
+                
+                
+                <a href="TFLearn.html" class="list-group-item">TFLearn</a>
+                
+                
+                
+                <a href="cnn-rnn-difference.html" class="list-group-item">Difference between CNN and RNN</a>
+                
+                
+                
+                <a href="keras.html" class="list-group-item">Keras</a>
+                
+                
+                
+                <a href="distributed.html" class="list-group-item">Distributed Computing</a>
+                
+                
+                
+                <a href="Exporting.html" class="list-group-item">Exporting</a>
+                
+                
+                
+                <a href="Multi-Layer-Perceptron-Learning.html" class="list-group-item">Multi-Layer Perceptron Learning</a>
+                
+                
+                
+                <a href="Hidden-Layers-Perceptron.html" class="list-group-item">Hidden Layers of Perceptron</a>
+                
+                
+                
+                <a href="Optimizers.html" class="list-group-item">Optimizers</a>
+                
+                
+                
+                <a href="XOR-Implementation.html" class="list-group-item">XOR Implementation</a>
+                
+                
+                
+                <a href="Gradient-Descent-Optimization.html" class="list-group-item">Gradient Descent Optimization</a>
+                
+                
+                
+                <a href="Forming-Graphs.html" class="list-group-item">Forming Graphs</a>
+                
+                
+                
+                <a href="Image-Recognition.html" class="list-group-item">Image Recognition</a>
+                
+                
+                
+                <a href="Neural-Network-Training.html" class="list-group-item">Neural Network Training</a>
+                
+                
+              </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+<script>
+  pr = document.getElementsByTagName("pre");
+  x = pr.length;
+  if( x > 0)
+  {
+      for(i = 0; i<x; i++){
+    pr[i].classList.add("line-numbers");
+  }
+  }
+  </script>
+
+<footer class="footer bg-dark mt-5 pt-3 text-light" style="margin-bottom: -1px;">
+    <div class="container text-center">
+      <h2>HackersFriend</h2>
+      <br>
+      <p><a href="../../jobs/index.html">Work with us</a> | <a href="../../intern/index.html" >Intern with us</a> | <a href="#">Beocome campus ambassdor</a> | <a href="../../verify-certificate.html">Verify certificate</a> | <a href="../../innovative-startup.html">Submit your startup for innovative startups list</a></p>
+    </div>
+          <div class="bg-bark">
+            <div class="container">
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-3">
+                        <a href="https://facebook.com/HackersFn" target="_blank"><img src="../../media/fb-icon.png" style="width:40px; height:40px;"></a>
+                        <a href="https://twitter.com/HackersFn" target="_blank"><img src="../../media/twitter-icon.png" style="width:40px; height:40px;"></a>
+                       <a  href="https://www.linkedin.com/company/hackersfriend/" target="_blank"><img src="../../media/linkedin-icon.png" style="width:35px; height:35px;"></a>
+                       <a  href="https://www.youtube.com/channel/UCbR73B5CesA1jjTPTWcLmKg/" target="_blank"><img src="../../media/youtube-icon.png" style="width:40px; height:40px;"></a>
+                      </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-10 offset-sm-1">
+                    <small style="color:grey;">&copy; HackersFriend | Some rights reserved | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
+                  </div>
+          
+              </div>
+                <br>
+            </div>
+          </div>
+          
+</footer>
+</body>
+
+<!-- Mirrored from 127.0.0.1:8000/tutorials/TensorFlow/recurrent-neural-network by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jun 2019 18:12:52 GMT -->
+</html>
