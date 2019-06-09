@@ -8,363 +8,618 @@
 
 <url>
   <loc>https://www.hackersfriend.com/</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/codinglab/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/tutorials/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/hackathons/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/workshops/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/projects/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/notifications/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/projects/outsource-project.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/Cognizant-Placement-Paper-apti</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/interview/how-many-squares-can-fit-in-triangle.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/interview/matrix-multiplication.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/interview/hello-world.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/nokia-interview-experience-bangalore.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/CTS-interview-experience.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/Cognizant-Placement-Paper-apti.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/how-to-write-effective-resume.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/tutorials/mathematics/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/tutorials/data-structures/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/tutorials/algorithms/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/login/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/workshops/2/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/workshops/1/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/jobs/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/articles/longest-subarry-maximum-mean.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/intern/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/articles/learn-full-stack-development-part-1.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/shuffle-elements-of-an-array-fisher-yates-algorithm.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/top-10-jobs-having-high-demand-future.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/projects/</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/machine-learning/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/pandas/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/r-programming/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/hadoop/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/hbase/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/mongodb/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/hive/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/cassandra/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/data-warehouse/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/tableau/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/manual-testing/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/selenium/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/cucumber/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/qtp/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/junit/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/mobile-app-testing/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/hp-alm/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/jmeter/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/material-design/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/bootstrap/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/angularJs/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/reactjs/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/vueJs/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/aws/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/linux/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/apache/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nodejs/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/php/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/python/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/django/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/sql/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/sqlite/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/postgresql/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/devOps/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/digital-marketing/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/ethical-hacking/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/agile/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/android/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/ios/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/verify-certificate.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/jobs/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/intern/index.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/innovative-startup.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/interview/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/mathematics/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/algorithm/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/codinglab/ds/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/tutorials/cp/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/tutorials/data-science/index.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/career-scopes-in-python.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/category/interview-experiences.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/category/career-talks.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/category/CTS-Placement.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>https://www.hackersfriend.com/articles/category/programming.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/projects/how-projects-work.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/projects/outsource-project.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/topic/coding-problems.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/topic/dev-tips.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/topic/career-talks.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/topic/innovations.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/topic/startups.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/topic/dev-lifestyle.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/projects/3.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/projects/2.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.hackersfriend.com/projects/1.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/articles/</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/introduction.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/input-output.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/deep-learning-and-ai.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/mathematics.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/complexity-analysis.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/basics.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/bit-manipulation.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/convolutional-neural-network.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/conditional-statements.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/recurrent-neural-network.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/loops.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/TensorBoard-Visualization.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/function.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Word-Embedding.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/recursion.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Single-Layer-Perceptron.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/backtracking.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Linear-Regression.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/input-output/input.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/TFLearn.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/input-output/output.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/cnn-rnn-difference.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/arithmetic-operators.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/keras.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/relational-operators.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/distributed.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/bitwise-operators.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Exporting.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/logical-operators.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Multi-Layer-Perceptron-Learning.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/assignment-operators.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Hidden-Layers-Perceptron.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/increment-decrement-operators.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Optimizers.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/conditional-operator.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/XOR-Implementation.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/operators/operator-precedence-associativity.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Gradient-Descent-Optimization.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/complexity-analysis/understanding-algorithm-analysis.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Forming-Graphs.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/complexity-analysis/asymptotic-notation.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Image-Recognition.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/complexity-analysis/calculate-complexity-from-code.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/TensorFlow/Neural-Network-Training.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/complexity-analysis/amortized-analysis.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/introduction.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/conditional-statements/if-else.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/tokenizing.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/conditional-statements/switch-case.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/stop-words.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/loops/while-loop.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/stemming.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/loops/do-while-loop.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/parts-of-speech.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.hackersfriend.com/tutorials/introduction-to-programming/loops/for-loop.html</loc>
-  <lastmod>2019-01-15T19:21:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Chunking.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Chinking.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/named-entity-recognition.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Lemmatizing.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/corpora.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Wordnet.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Text-Classification.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/converting-words.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/naive-bayes-nltk.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Saving-Classifiers.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Scikit-Learn-Sklearn-NLTK.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Combining-Algorithms-NLTK.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Investigating-bias.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/sentiment-analysis.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Sentiment-Analysis-module.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/Twitter-Sentiment-Analysis.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/twitter-sentiment-analysis-graph.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/stanford-NER.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/testing-nltk-stanford-NER.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/nltk/BIO-Tags.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/material-design/colors.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/tutorials/material-design/grid.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.hackersfriend.com/articles/top-5-tv-shows-programmers-must-watch.html</loc>
+  <lastmod>2019-06-09T08:57:39+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
