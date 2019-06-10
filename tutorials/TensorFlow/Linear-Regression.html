@@ -13,7 +13,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Linear Regression - TensorFlow Tutorial  - HackersFriend</title>
+    <title> TensorFlow Linear Regression tutorial - HackersFriend</title>
     
     <link rel="stylesheet" href="../../static/hfmain/css/main.css" />
     <script src="../../static/hfmain/js/offline.js"></script>
@@ -87,7 +87,7 @@
         
         <div class="card" style="box-shadow:none;">
             <div class="card-body">
-            <p class="lead text-center">Linear Regression</p>
+            <p class="lead text-center">TensorFlow - Linear Regression</p>
             <hr>
             
               <ul class="nav nav-tabs" role="tablist">
@@ -104,9 +104,95 @@
                   <div id="notes" class="container tab-pane active"><br>
                     
                     
+                    <p>In this tutorial we&#39;ll implmenet linear regression using TensorFlow. But before we do that, let&#39;s get a basic idea of what it is ?</p>
+
+<p><strong>What is Linear Regression ?</strong></p>
+
+<p>Linear regression is a supervised machine learning approach for the classification of order discrete categories. We also call it&nbsp;&nbsp;Logistic regression. We&#39;ll&nbsp;build a model by which a user can predict the relationship between predictor variables and one or more independent variables.</p>
+
+<p>We consider relationship&nbsp;between these two variables is linear.&nbsp;If y is the dependent variable and x is considered as the independent variable, our equation will look like:</p>
+
+<p>&nbsp;<span class="mathjax-latex">\(\)</span><span class="mathjax-latex">\(y = Ax+b\)</span></p>
+
+<p>Let&#39;s design an algorithm to implement Linear regression. There are&nbsp;two important concepts we need to know &minus;</p>
+
+<ul>
+	<li>Cost Function</li>
+	<li>Gradient descent algorithms</li>
+</ul>
+
+<p>We&#39;ll learn about both of these during designing algorithm. We&#39;ll breakdown it into steps for better understanding.&nbsp;</p>
+
+<p><strong>Step 1</strong></p>
+
+<p>First things first, let&#39;s import the necessary modules for plotting the linear regression module. We&#39;ll import NumPy and Matplotlib.</p>
+
+<pre>
+<code class="language-python">import numpy as np 
+import matplotlib.pyplot as plt</code></pre>
+
+<p>&nbsp;</p>
+
+<p><strong>Step 2</strong></p>
+
+<p>Define the number of coefficients necessary for linear&nbsp;regression.</p>
+
+<pre>
+<code class="language-python">number_of_points = 500 
+x_point = [] 
+y_point = [] 
+a = 0.22 
+b = 0.78</code></pre>
+
+<p>&nbsp;</p>
+
+<p><strong>Step 3</strong></p>
+
+<p>Iterate the variables for generating 300 random points around the regression equation &minus;</p>
+
+<p><span class="mathjax-latex">\(Y = 0.22x+0.78\)</span></p>
+
+<pre>
+<code class="language-python">for i in range(number_of_points): 
+   x = np.random.normal(0.0,0.5) 
+   y = a*x + b +np.random.normal(0.0,0.1) x_point.append([x]) 
+   y_point.append([y])</code></pre>
+
+<p>Let&#39;s&nbsp;View the generated points using Matplotlib.</p>
+
+<pre>
+<code class="language-python">fplt.plot(x_point,y_point, 'o', label = 'Input Data') plt.legend() plt.show()</code></pre>
+
+<p>&nbsp;</p>
+
+<p><strong>Putting it altogether</strong></p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="language-python">import numpy as np 
+import matplotlib.pyplot as plt 
+
+number_of_points = 500 
+x_point = [] 
+y_point = [] 
+a = 0.22 
+b = 0.78 
+
+for i in range(number_of_points): 
+   x = np.random.normal(0.0,0.5) 
+   y = a*x + b +np.random.normal(0.0,0.1) x_point.append([x]) 
+   y_point.append([y]) 
+   
+plt.plot(x_point,y_point, 'o', label = 'Input Data') plt.legend() 
+plt.show()</code></pre>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center"><img alt="" height="429" src="../../media/uploads/2019/06/09/linear_regression_input_data.jpg" width="606" /></p>
+
+<p>&nbsp;</p>
                     
-                    <br>
-                      <p>Tutorial contents of Linear Regression is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
                     
                     
                   </div>

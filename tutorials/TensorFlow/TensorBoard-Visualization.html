@@ -13,7 +13,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TensorBoard Visualization - TensorFlow Tutorial  - HackersFriend</title>
+    <title> TensorFlow TensorBoard Visualization tutorial - HackersFriend</title>
     
     <link rel="stylesheet" href="../../static/hfmain/css/main.css" />
     <script src="../../static/hfmain/js/offline.js"></script>
@@ -87,7 +87,7 @@
         
         <div class="card" style="box-shadow:none;">
             <div class="card-body">
-            <p class="lead text-center">TensorBoard Visualization</p>
+            <p class="lead text-center">TensorFlow - TensorBoard Visualization</p>
             <hr>
             
               <ul class="nav nav-tabs" role="tablist">
@@ -104,9 +104,52 @@
                   <div id="notes" class="container tab-pane active"><br>
                     
                     
+                    <p><strong>What is TensorBoard ?</strong></p>
+
+<p>TensorBoard is visualization tool of TensorFlow.&nbsp;It is used for analyzing Data Flow Graph and to understand machine learning models. TensorBoard provides&nbsp;a view of different types of statistics about the parameters and details of any graph in vertical alignment.&nbsp;</p>
+
+<p>Deep neural network includes up to 36,000 nodes. TensorBoard helps in collapsing these nodes in high-level blocks and highlighting the identical structures. This allows better analysis of graph focusing on the primary sections of the computation graph. The TensorBoard visualization is said to be very interactive where a user can pan, zoom and expand the nodes to display the details.</p>
+
+<p><strong>How TensorBoard works ?</strong></p>
+
+<p>Have a look at this figure to understand how TensorBoard visualization works.&nbsp;</p>
+
+<p style="text-align:center"><img alt="tensorboard_working" height="346" src="../../media/uploads/2019/06/09/tensorboard_working.jpg" width="593" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;Algorithms collapse nodes into high-level blocks and highlight the specific groups with identical structures, which separate high-degree nodes.</p>
+
+<p>TensorBoard&nbsp;created in&nbsp;this way is useful and is treated equally important for tuning a machine learning model. This visualization tool is designed for the configuration log file with summary information and details that need to be displayed.</p>
+
+<p><strong>Implementation</strong></p>
+
+<p>Let&#39;s now implement TensorBoard in code.</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf 
+
+# Constants for TensorBoard visualization 
+a = tf.constant(10,name = "a") 
+b = tf.constant(90,name = "b") 
+y = tf.Variable(a+b*2,name = 'y') 
+#Creating model 
+model = tf.initialize_all_variables()
+
+with tf.Session() as session: 
+   merged = tf.merge_all_summaries() 
+   writer = tf.train.SummaryWriter("/tmp/tensorflowlogs",session.graph) 
+   session.run(model) 
+   print(session.run(y))</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Here is a cheatsheet for TesorBoard visualization symbols.</p>
+
+<p style="text-align:center"><img alt="" height="386" src="../../media/uploads/2019/06/09/tensorboard-cheatsheet.jpg" width="593" /></p>
+
+<p>In the next tutorial we&#39;ll learn about word embedding.</p>
                     
-                    <br>
-                      <p>Tutorial contents of TensorBoard Visualization is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
                     
                     
                   </div>

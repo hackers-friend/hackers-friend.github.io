@@ -13,7 +13,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TFLearn - TensorFlow Tutorial  - HackersFriend</title>
+    <title> TensorFlow TFLearn tutorial - HackersFriend</title>
     
     <link rel="stylesheet" href="../../static/hfmain/css/main.css" />
     <script src="../../static/hfmain/js/offline.js"></script>
@@ -87,7 +87,7 @@
         
         <div class="card" style="box-shadow:none;">
             <div class="card-body">
-            <p class="lead text-center">TFLearn</p>
+            <p class="lead text-center">TensorFlow - TFLearn</p>
             <hr>
             
               <ul class="nav nav-tabs" role="tablist">
@@ -104,9 +104,74 @@
                   <div id="notes" class="container tab-pane active"><br>
                     
                     
+                    <p>TFLearn&nbsp;provides a higher level API to TensorFlow for facilitating and showing up new experiments.</p>
+
+<p>Important Features of TFLearn are:</p>
+
+<ul>
+	<li>
+	<p>TFLearn is easy to use and understand.</p>
+	</li>
+	<li>
+	<p>It includes easy concepts to build highly modular network layers, optimizers and various metrics embedded within them.</p>
+	</li>
+	<li>
+	<p>It includes full transparency with TensorFlow work system.</p>
+	</li>
+	<li>
+	<p>It includes powerful helper functions to train the built in tensors which accept multiple inputs, outputs and optimizers.</p>
+	</li>
+	<li>
+	<p>It includes easy and beautiful graph visualization.</p>
+	</li>
+	<li>
+	<p>The graph visualization includes various details of weights, gradients and activations.</p>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>Installation of TFLearn</strong></p>
+
+<p>In order to install TFLearn, we can use simple pip command as we always do.&nbsp;</p>
+
+<pre>
+<code class="language-bash">pip install tflearn</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Now that we have TFLearn installed let&#39;s use it&nbsp;with Random Forest classifier.</p>
+
+<pre>
+<code class="language-python">from __future__ import division, print_function, absolute_import
+
+#TFLearn module implementation
+import tflearn
+from tflearn.estimators import RandomForestClassifier
+
+# Data loading and pre-processing with respect to dataset
+import tflearn.datasets.mnist as mnist
+X, Y, testX, testY = mnist.load_data(one_hot = False)
+
+m = RandomForestClassifier(n_estimators = 100, max_nodes = 1000)
+m.fit(X, Y, batch_size = 10000, display_step = 10)
+
+print("Compute the accuracy on train data:")
+print(m.evaluate(X, Y, tflearn.accuracy_op))
+
+print("Compute the accuracy on test set:")
+print(m.evaluate(testX, testY, tflearn.accuracy_op))
+
+print("Digits for test images id 0 to 5:")
+print(m.predict(testX[:5]))
+
+print("True digits:")
+print(testY[:5])</code></pre>
+
+<p>&nbsp;</p>
+
+<p>In the next tutroal, we&#39;ll talk about difference between CNN and RNN.</p>
                     
-                    <br>
-                      <p>Tutorial contents of TFLearn is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
                     
                     
                   </div>
