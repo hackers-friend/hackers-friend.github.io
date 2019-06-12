@@ -104,9 +104,92 @@
                   <div id="notes" class="container tab-pane active"><br>
                     
                     
+                    <p>In this tutorial we&#39;ll learn about how to store models and restore them when needed.</p>
+
+<h1>What is TensorFlow model&nbsp;?</h1>
+
+<p>Once we train a neural network, what we want to do is,&nbsp;save it for future use and deploying to production. There comes, models.&nbsp;Tensorflow model primarily contains the network design or graph and values of the network parameters that we have trained.</p>
+
+<p>Tensorflow model has mainly two&nbsp;files:</p>
+
+<ol>
+	<li>Meta graph</li>
+	<li>Checkpoint Files.</li>
+</ol>
+
+<p>Meta graph is a protocol buffer. It saves the complete Tensorflow graph; i.e. all variables, operations, collections etc. This file has&nbsp;<strong>.meta</strong>&nbsp;extension.</p>
+
+<p>Checkpoint File is&nbsp;binary file. It contains all the values of the weights, biases, gradients and all the other variables saved. This file has an extension .<strong>ckpt.</strong></p>
+
+<p><strong>Update:</strong>&nbsp;from version 0.11,&nbsp;instead of 1&nbsp;.ckpt file, we have two files.</p>
+
+<ol>
+	<li>mymodel.data-00000-of-00001</li>
+	<li>mymodel.index</li>
+</ol>
+
+<p>our training variables are in .data files.&nbsp;Along with these files, we have&nbsp;a file named&nbsp;<strong>checkpoint</strong>&nbsp;which only&nbsp;keeps a record of latest checkpoint files saved.</p>
+
+<p>Let&#39;s come back to point now.</p>
+
+<h1>How to save a TensorFlow Model ?</h1>
+
+<p>Suppose we&nbsp;are training a CNN for Image classification.&nbsp;As a standard practice, we&#39;ll&nbsp;keep track&nbsp;of&nbsp;loss and accuracy numbers. Once we&nbsp;find&nbsp;that the network has converged, we can stop the training manually or we&nbsp;will run the training for fixed number of epochs. After the training is done, we&nbsp;want to save all the variables and network graph to a file for future use. So, in Tensorflow, to do that, we shall be creating an instance of<strong> tf.train.Saver()</strong> class.</p>
+
+<pre>
+<code class="language-python">saver = tf.train.Saver()</code></pre>
+
+<p>Note that Tensorflow variables are only alive inside a session.</p>
+
+<p>So, you have to save the model inside a session by calling save method on saver object which we just created.</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="language-python">saver.save(sess, 'hackersfriend-model')</code></pre>
+
+<p>Here, sess is the session object, while &lsquo;hackersfriend-model&rsquo; is the name we&nbsp;want to give to our&nbsp;model. Here is full code:</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+w1 = tf.Variable(tf.random_normal(shape=[2]), name='w1')
+w2 = tf.Variable(tf.random_normal(shape=[5]), name='w2')
+saver = tf.train.Saver()
+# Creating a session with name sess
+sess = tf.Session()
+
+sess.run(tf.global_variables_initializer())
+
+# Saving the model with name hackersfriend-model
+saver.save(sess, 'hackersfriend-model')
+
+# This will generate following files
+# hackersfriend-model.data-00000-of-00001
+# hackersfriend-model.index
+# hackersfriend.meta
+# checkpoint</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Now suppose, we are saving the model after 1000 iterations. Then,&nbsp;we shall call save by passing the step count:</p>
+
+<pre>
+<code class="language-python">saver.save(sess, 'hackersfriend-model',global_step=1000)</code></pre>
+
+<p>This will just append &lsquo;-1000&rsquo; to the model name and following files will be generated:</p>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li>hackersfriend-model-1000.index</li>
+	<li>hackersfriend-model-1000.meta</li>
+	<li>hackersfriend-1000.data-00000-of-00001</li>
+	<li>checkpoint</li>
+</ol>
+
+<p>&nbsp;</p>
                     
-                    <br>
-                      <p>Tutorial contents of Exporting is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
                     
                     
                   </div>

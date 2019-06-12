@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /static/
+Sitemap: https://www.hackersfriend.com/sitemap.xml
