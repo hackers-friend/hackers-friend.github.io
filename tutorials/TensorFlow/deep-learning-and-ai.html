@@ -24,41 +24,44 @@
      <link rel="shortcut icon" type="image/png" href="../../media/favicon.png"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#005580">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:	#375877">
         <a class="navbar-brand" href="../../index.html">HackersFriend</a>
+        
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapse_target">
-        <ul class="navbar-nav  ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../../hackathons/index.html">Hackathons</a>
-              </li>
+          <ul class="navbar-nav ">
               <li class="nav-item">
-                <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+                  <a class="nav-link" href="../../hackathons/index.html">Hackathons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Tutorials</a>
               </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Tutorials</a>
-            </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../../articles/index.html">Articles</a>
-                    </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="../../projects/index.html">Projects</a>
-            </li>
-            
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../articles/index.html">Articles</a>
+                      </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="../../projects/index.html">Projects</a>
+              </li>
+              
+          </ul>
+        <ul class="navbar-nav  ml-auto">
+         
             <li class="nav-item">
               <a href="../../notifications/index.html" class="nav-link"><i class="material-icons"> notifications </i></a>
             </li>
-            <li class="nav-item">
-              <div class="dropdown">
-                  <a href="#" class="nav-link" data-toggle="dropdown"> <i class="material-icons">account_circle</i></a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="../../notifications/index.html">My Profile</a>
-                  <a class="dropdown-item" href="../../login/index.html">Login</a>
-                </div>
-              </div>
-            </li>
+            <li class="nav-item mr-2">
+                <a href="../../login/index.html" class="nav-link btn btn-outline-secondary">Login</a>
+              </li>
+
+           <li class="nav-item">
+             <a href="../../login/index.html" class="nav-link btn btn-outline-danger">Sign up</a>
+           </li>
           </ul>
+          
         </div>
     </nav>
     <br>
@@ -70,6 +73,76 @@
     max-width:100%;
     height: auto;
   }
+  .sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+.sidenav-inner{
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:black;
+  background-color:whitesmoke;
+}
+
+.main {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  background-color: white;
+  padding: 0px 10px;
+  padding-bottom: 200px;
+}
+footer{
+  display: none;
+}
+.dropdown-topics{
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 1024px) {
+  .sidenav {
+    display: none;
+  }
+ div.main{
+   width: 100%;
+   margin: 0;
+ }
+ div.dropdown-topics{
+   display: block;
+   margin-top: 60px;
+   width: 100%;
+   margin-bottom: 60px;
+  
+ }
+ div.dropdown-menu{
+   padding-top:80px;
+  overflow: auto;
+  background-color: #818181;
+ }
+}
+
   </style>
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -78,37 +151,239 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
 <link rel="stylesheet" href="../../static/hfmain/css/prism.css" />
 <script src="../../static/hfmain/js/prism.js"></script>
-<div class="container-fluid">
-  <br>
-  <br>
+<div>
   
-  <div class="row">
-    <div class="col-md-8">
-        
-        <div class="card" style="box-shadow:none;">
-            <div class="card-body">
-            <p class="lead text-center">TensorFlow - Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul>
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p><strong>What is Artificial Intelligence ?</strong></p>
+  <div class="sidenav">
+      <div class="sidenav-inner">
+        <br>
+      <p class="text-center "><a href="../index.html" style="padding: 0; display:inline; ">Tutorials</a> &gt; <a style="padding: 0; display:inline;" href="index.html">TensorFlow</a></p>
+                  <br>
+           <div class="list-group">
+                
+                 
+                <a href="introduction.html" class="list-group-item">Introduction &amp; Installation</a>
+                
+                
+                                 
+                <a href="deep-learning-and-ai.html" class="list-group-item active">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
+                
+                
+                 
+                <a href="mathematics.html" class="list-group-item">Mathematics foundations</a>
+                
+                
+                 
+                <a href="basics.html" class="list-group-item">TensorFlow Basics</a>
+                
+                
+                 
+                <a href="convolutional-neural-network.html" class="list-group-item">Convolutional Neural Networks</a>
+                
+                
+                 
+                <a href="recurrent-neural-network.html" class="list-group-item">Recurrent Neural Networks</a>
+                
+                
+                 
+                <a href="TensorBoard-Visualization.html" class="list-group-item">TensorBoard Visualization</a>
+                
+                
+                 
+                <a href="Word-Embedding.html" class="list-group-item">Word Embedding</a>
+                
+                
+                 
+                <a href="Single-Layer-Perceptron.html" class="list-group-item">Single Layer Perceptron</a>
+                
+                
+                 
+                <a href="Linear-Regression.html" class="list-group-item">Linear Regression</a>
+                
+                
+                 
+                <a href="TFLearn.html" class="list-group-item">TFLearn</a>
+                
+                
+                 
+                <a href="cnn-rnn-difference.html" class="list-group-item">Difference between CNN and RNN</a>
+                
+                
+                 
+                <a href="keras.html" class="list-group-item">Keras</a>
+                
+                
+                 
+                <a href="distributed.html" class="list-group-item">Distributed Computing</a>
+                
+                
+                 
+                <a href="Exporting.html" class="list-group-item">Exporting</a>
+                
+                
+                 
+                <a href="Multi-Layer-Perceptron-Learning.html" class="list-group-item">Multi-Layer Perceptron Learning</a>
+                
+                
+                 
+                <a href="Hidden-Layers-Perceptron.html" class="list-group-item">Hidden Layers of Perceptron</a>
+                
+                
+                 
+                <a href="Optimizers.html" class="list-group-item">Optimizers</a>
+                
+                
+                 
+                <a href="XOR-Implementation.html" class="list-group-item">XOR Implementation</a>
+                
+                
+                 
+                <a href="Gradient-Descent-Optimization.html" class="list-group-item">Gradient Descent Optimization</a>
+                
+                
+                 
+                <a href="Forming-Graphs.html" class="list-group-item">Forming Graphs</a>
+                
+                
+                 
+                <a href="Image-Recognition.html" class="list-group-item">Image Recognition</a>
+                
+                
+                 
+                <a href="Neural-Network-Training.html" class="list-group-item">Neural Network Training</a>
+                
+                
+              </div>
+      </div>    
 
-<p>Artificial Intelligence includes the simulation process of human intelligence by machines. Examples of artificial intelligence include learning, reasoning and self-correction. Applications of AI are&nbsp;speech recognition, expert systems, and image recognition and machine vision.</p>
+  </div>
+  <div class="dropdown-topics">
+      <div class="dropdown">
+          <button type="button" style="width:100%"class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+           Topics
+          </button>
+          <div class="dropdown-menu" style="width: 100%">
+                  
+                   
+                  <a href="introduction.html" class="dropdown-item">Introduction &amp; Installation</a>
+                  
+                  
+                   
+                   <a class="dropdown-item active" href="deep-learning-and-ai.html">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>                
+                  
+                  
+                   
+                  <a href="mathematics.html" class="dropdown-item">Mathematics foundations</a>
+                  
+                  
+                   
+                  <a href="basics.html" class="dropdown-item">TensorFlow Basics</a>
+                  
+                  
+                   
+                  <a href="convolutional-neural-network.html" class="dropdown-item">Convolutional Neural Networks</a>
+                  
+                  
+                   
+                  <a href="recurrent-neural-network.html" class="dropdown-item">Recurrent Neural Networks</a>
+                  
+                  
+                   
+                  <a href="TensorBoard-Visualization.html" class="dropdown-item">TensorBoard Visualization</a>
+                  
+                  
+                   
+                  <a href="Word-Embedding.html" class="dropdown-item">Word Embedding</a>
+                  
+                  
+                   
+                  <a href="Single-Layer-Perceptron.html" class="dropdown-item">Single Layer Perceptron</a>
+                  
+                  
+                   
+                  <a href="Linear-Regression.html" class="dropdown-item">Linear Regression</a>
+                  
+                  
+                   
+                  <a href="TFLearn.html" class="dropdown-item">TFLearn</a>
+                  
+                  
+                   
+                  <a href="cnn-rnn-difference.html" class="dropdown-item">Difference between CNN and RNN</a>
+                  
+                  
+                   
+                  <a href="keras.html" class="dropdown-item">Keras</a>
+                  
+                  
+                   
+                  <a href="distributed.html" class="dropdown-item">Distributed Computing</a>
+                  
+                  
+                   
+                  <a href="Exporting.html" class="dropdown-item">Exporting</a>
+                  
+                  
+                   
+                  <a href="Multi-Layer-Perceptron-Learning.html" class="dropdown-item">Multi-Layer Perceptron Learning</a>
+                  
+                  
+                   
+                  <a href="Hidden-Layers-Perceptron.html" class="dropdown-item">Hidden Layers of Perceptron</a>
+                  
+                  
+                   
+                  <a href="Optimizers.html" class="dropdown-item">Optimizers</a>
+                  
+                  
+                   
+                  <a href="XOR-Implementation.html" class="dropdown-item">XOR Implementation</a>
+                  
+                  
+                   
+                  <a href="Gradient-Descent-Optimization.html" class="dropdown-item">Gradient Descent Optimization</a>
+                  
+                  
+                   
+                  <a href="Forming-Graphs.html" class="dropdown-item">Forming Graphs</a>
+                  
+                  
+                   
+                  <a href="Image-Recognition.html" class="dropdown-item">Image Recognition</a>
+                  
+                  
+                   
+                  <a href="Neural-Network-Training.html" class="dropdown-item">Neural Network Training</a>
+                  
+                  
+          </div>
+        </div>
 
-<p><strong>So, What is Machine Learning ?</strong></p>
+  </div>
+  <div class="main">
+      <br>
+      <br>
+      <p class="lead text-center">TensorFlow - Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</p>
+      
+      
+        <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
+                  </li>
+              </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+            <div id="notes" class="container tab-pane active"><br>
+              
+              
+              <h1>What is Artificial Intelligence ?</h1>
+
+<p>Artificial Intelligence is the simulation process of human intelligence by using machines. Examples of artificial intelligence include learning, reasoning and self-correction. Applications of AI are&nbsp;speech recognition, expert systems, and image recognition and machine vision.</p>
+
+<h1>So, What is Machine Learning ?</h1>
 
 <p>Machine learning is a subset&nbsp;of artificial intelligence, which deals with systems and algorithms that can learn any new data and data patterns. Deep learning is subest of ML. Have a look at&nbsp;on the Venn diagram&nbsp;below.</p>
 
@@ -131,7 +406,7 @@
 
 <p>Each algorithm in deep learning goes through the same process. It includes a hierarchy of nonlinear transformation of input that can be used to generate a statistical model as output.</p>
 
-<p><strong>How Machine Learning Differs from Deep Learning ?</strong></p>
+<h1>How Machine Learning Differs from Deep Learning ?</h1>
 
 <ul>
 	<li>Amount of data</li>
@@ -155,7 +430,7 @@
 	</li>
 </ul>
 
-<p><strong>Enough Talking! Where do we use Machine Learning and Deep Learning ?</strong></p>
+<h1>Enough Talking! Where do we use Machine Learning and Deep Learning ?</h1>
 
 <p>ML and DL are used at a lot of places. Some of them are:</p>
 
@@ -180,7 +455,173 @@
 	</li>
 </ul>
 
-<p><strong>What&#39;s the future ?</strong></p>
+<h2>What&#39;s the future ?</h2>
+
+<ul>
+	<li>
+	<p>With the increasing trend of using data science and machine learning in the industry, it will become important for each organization to inculcate machine learning in their businesses.</p>
+	</li>
+	<li>
+	<p>Deep learning is gaining more importance than machine learning. Deep learning is proving to be one of the best techniques in state-of-art performance.</p>
+	</li>
+	<li>
+	<p>Machine learning and deep learning will prove beneficial in research and academics field.</p>
+	</li>
+</ul>
+
+<p>In next tutorial we&#39;ll learn the mathematics we need to know to become ML engineery. Yay!&nbsp;</p>
+              
+              
+              
+            </div>
+            <div id="problems" class="container-fluid tab-panes fade"><br>
+              
+                <p>No problems available for this topic.</p>
+              
+              
+              
+              
+              <script>
+                  function onans(option, ans)
+                  {
+                    var x = option.slice(0,option.lastIndexOf('_'));
+                    var y = x+"_result";
+                    if(option[option.length-1]==ans){
+                      // we got to display correct icon and show explanation
+                      document.getElementById(y).innerHTML = "Correct Answer!";
+                      document.getElementById(y).style.color = "green";
+                      document.getElementById(y).style.display = "block";
+                      document.getElementById(option).style.color = "green";
+                      // console.log("Correct ans");
+                    }else{
+                      // we got to blur that option
+                      // console.log("Wrong ans");
+                      document.getElementById(option).style.color="#e0dbdb";
+                      document.getElementById(y).innerHTML = "Wrong Answer!";
+                      document.getElementById(y).style.color = "red";
+                      document.getElementById(y).style.display = "block";
+                    }
+                  }
+  
+                  function see_ans(x)
+                  {
+                    document.getElementById(x).style.display="block";
+                  }
+              </script>
+           
+          </div>
+          <hr>
+          <br>
+        <br>
+          <center>
+        <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/deep-learning-and-ai.html" data-width="" data-numposts="10"></div>
+      </center>
+        </div>
+  </div>
+  <!--
+  <div class="row">
+      <div class="col-md-3" >
+         
+            
+        </div>
+    <div class="col-md-9" style="background-color: white;">
+      <br>
+            <p class="lead text-center">TensorFlow - Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</p>
+            <hr>
+            
+              <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item">
+                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
+                      </li>
+                     
+                      <li class="nav-item">
+                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
+                        </li>
+                    </ul> -->
+
+                  <!-- Tab panes -->
+                  <!--
+                  <div class="tab-content">
+                  <div id="notes" class="container tab-pane active"><br>
+                    
+                    
+                    <h1>What is Artificial Intelligence ?</h1>
+
+<p>Artificial Intelligence is the simulation process of human intelligence by using machines. Examples of artificial intelligence include learning, reasoning and self-correction. Applications of AI are&nbsp;speech recognition, expert systems, and image recognition and machine vision.</p>
+
+<h1>So, What is Machine Learning ?</h1>
+
+<p>Machine learning is a subset&nbsp;of artificial intelligence, which deals with systems and algorithms that can learn any new data and data patterns. Deep learning is subest of ML. Have a look at&nbsp;on the Venn diagram&nbsp;below.</p>
+
+<p style="text-align:center"><img alt="Relation Between AI ML and DL" height="427" src="/media/uploads/2019/06/07/ai_ml-_dl.png" width="597" /></p>
+
+<p>&nbsp;</p>
+
+<p>The main motive of data transformation is to improve its knowledge in order to achieve better results in the future, provide output closer to the desired output for that particular system.&nbsp;Machine learning includes &ldquo;pattern recognition&rdquo; which includes the ability to recognize the patterns in data. Patterns should be trained to show the output in desirable manner.</p>
+
+<p>Machine learning can be trained in two ways &minus;</p>
+
+<ul>
+	<li>Supervised training</li>
+	<li>Unsupervised training</li>
+</ul>
+
+<p><strong>Alright. Lets talk about Deep Learning.</strong></p>
+
+<p>Deep learning is a subfield of machine learning where concerned algorithms are inspired by the structure and function of the brain called artificial neural networks.&nbsp; All the value today of deep learning is through supervised learning or learning from labelled data and algorithms.</p>
+
+<p>Each algorithm in deep learning goes through the same process. It includes a hierarchy of nonlinear transformation of input that can be used to generate a statistical model as output.</p>
+
+<h1>How Machine Learning Differs from Deep Learning ?</h1>
+
+<ul>
+	<li>Amount of data</li>
+</ul>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Machine learning works with large amounts of data. It is useful for small amounts of data too. Deep learning on the other hand works efficiently &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if the amount of data increases rapidly.&nbsp;</p>
+
+<ul>
+	<li>
+	<p>Hardware Dependencies</p>
+	&nbsp;Deep learning algorithms are designed to heavily depend on high-end machines unlike the traditional machine learning algorithms. Deep learning algorithms perform a number of matrix multiplication operations, which require a large amount of hardware support</li>
+	<li>
+	<p>Problem Solving Approach</p>
+	The traditional machine learning algorithms follow a standard procedure to solve the problem. It breaks the problem into parts, solve each one of them and combine them to get the required result. Deep learning focusses in solving the problem from end to end instead of breaking them into divisions.</li>
+	<li>
+	<p>Feature Engineering</p>
+
+	<p>Feature engineering is the process of putting domain knowledge into specified features to reduce the complexity of data and make patterns that are visible to learning algorithms it works.</p>
+
+	<p>For Example &minus; Traditional machine learning patterns focus on pixels and other attributes needed for feature engineering process. Deep learning algorithms focus on high-level features from data. It reduces the task of developing new feature extractor of every new problem.</p>
+	</li>
+</ul>
+
+<h1>Enough Talking! Where do we use Machine Learning and Deep Learning ?</h1>
+
+<p>ML and DL are used at a lot of places. Some of them are:</p>
+
+<ul>
+	<li>
+	<p><strong>Computer vision,</strong> which is used for facial recognition and attendance mark through fingerprints or vehicle identification through number plate.</p>
+	</li>
+	<li>
+	<p>Information Retrieval from search engines like text search for image search.</p>
+	</li>
+	<li>
+	<p>Automated email marketing with specified target identification.</p>
+	</li>
+	<li>
+	<p>Medical diagnosis of cancer tumors or anomaly identification of any chronic disease.</p>
+	</li>
+	<li>
+	<p>Natural language processing for applications like photo tagging. The best example to explain this scenario is used in Facebook.</p>
+	</li>
+	<li>
+	<p>Online Advertising.</p>
+	</li>
+</ul>
+
+<h2>What&#39;s the future ?</h2>
 
 <ul>
 	<li>
@@ -233,8 +674,7 @@
                           document.getElementById(x).style.display="block";
                         }
                     </script>
-                  </div>
-                  </div>
+                 
                 </div>
                 <hr>
                 <br>
@@ -244,110 +684,7 @@
             </center>
               </div>
               </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header text-center"> Topics</div>
-        <div class="card-body">
-            <div class="list-group">
-                
-                
-                <a href="introduction.html" class="list-group-item">Introduction &amp; Installation</a>
-                
-                
-                                
-                <a href="deep-learning-and-ai.html" class="list-group-item active">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
-                
-                
-                
-                <a href="mathematics.html" class="list-group-item">Mathematics foundations</a>
-                
-                
-                
-                <a href="basics.html" class="list-group-item">TensorFlow Basics</a>
-                
-                
-                
-                <a href="convolutional-neural-network.html" class="list-group-item">Convolutional Neural Networks</a>
-                
-                
-                
-                <a href="recurrent-neural-network.html" class="list-group-item">Recurrent Neural Networks</a>
-                
-                
-                
-                <a href="TensorBoard-Visualization.html" class="list-group-item">TensorBoard Visualization</a>
-                
-                
-                
-                <a href="Word-Embedding.html" class="list-group-item">Word Embedding</a>
-                
-                
-                
-                <a href="Single-Layer-Perceptron.html" class="list-group-item">Single Layer Perceptron</a>
-                
-                
-                
-                <a href="Linear-Regression.html" class="list-group-item">Linear Regression</a>
-                
-                
-                
-                <a href="TFLearn.html" class="list-group-item">TFLearn</a>
-                
-                
-                
-                <a href="cnn-rnn-difference.html" class="list-group-item">Difference between CNN and RNN</a>
-                
-                
-                
-                <a href="keras.html" class="list-group-item">Keras</a>
-                
-                
-                
-                <a href="distributed.html" class="list-group-item">Distributed Computing</a>
-                
-                
-                
-                <a href="Exporting.html" class="list-group-item">Exporting</a>
-                
-                
-                
-                <a href="Multi-Layer-Perceptron-Learning.html" class="list-group-item">Multi-Layer Perceptron Learning</a>
-                
-                
-                
-                <a href="Hidden-Layers-Perceptron.html" class="list-group-item">Hidden Layers of Perceptron</a>
-                
-                
-                
-                <a href="Optimizers.html" class="list-group-item">Optimizers</a>
-                
-                
-                
-                <a href="XOR-Implementation.html" class="list-group-item">XOR Implementation</a>
-                
-                
-                
-                <a href="Gradient-Descent-Optimization.html" class="list-group-item">Gradient Descent Optimization</a>
-                
-                
-                
-                <a href="Forming-Graphs.html" class="list-group-item">Forming Graphs</a>
-                
-                
-                
-                <a href="Image-Recognition.html" class="list-group-item">Image Recognition</a>
-                
-                
-                
-                <a href="Neural-Network-Training.html" class="list-group-item">Neural Network Training</a>
-                
-                
-              </div>
-        </div>
-      </div>
-        
-    </div>
-  </div>
+  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");
@@ -432,36 +769,7 @@
       <small style="color:grey;">&copy; HackersFriend | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
   </center>
   
-</div>
-
-  <!--   
-    <div class="container text-center">
-      <h2>HackersFriend</h2>
-      <br>
-      <p><a href="/jobs/">Work with us</a> | <a href="/intern/" >Intern with us</a> | <a href="#">Beocome campus ambassdor</a> | <a href="/verify-certificate">Verify certificate</a> | <a href="/innovative-startup">Submit your startup for innovative startups list</a></p>
-    </div>
-          <div class="bg-bark">
-            <div class="container">
-                <hr>
-                <div class="row">
-                    <div class="col-sm-6 offset-sm-3">
-                        <a href="https://facebook.com/HackersFn" target="_blank"><img src="/media/fb-icon.png" style="width:40px; height:40px;"></a>
-                        <a href="https://twitter.com/HackersFn" target="_blank"><img src="/media/twitter-icon.png" style="width:40px; height:40px;"></a>
-                       <a  href="https://www.linkedin.com/company/hackersfriend/" target="_blank"><img src="/media/linkedin-icon.png" style="width:35px; height:35px;"></a>
-                       <a  href="https://www.youtube.com/channel/UCbR73B5CesA1jjTPTWcLmKg/" target="_blank"><img src="/media/youtube-icon.png" style="width:40px; height:40px;"></a>
-                      </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-10 offset-sm-1">
-                    <small style="color:grey;">&copy; HackersFriend | Some rights reserved | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
-                  </div>
-          
-              </div>
-                <br>
-            </div>
-          </div> -->
-          
+</div>        
 </footer>
 </body>
 </html>

@@ -24,41 +24,44 @@
      <link rel="shortcut icon" type="image/png" href="../../media/favicon.png"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#005580">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:	#375877">
         <a class="navbar-brand" href="../../index.html">HackersFriend</a>
+        
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapse_target">
-        <ul class="navbar-nav  ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../../hackathons/index.html">Hackathons</a>
-              </li>
+          <ul class="navbar-nav ">
               <li class="nav-item">
-                <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+                  <a class="nav-link" href="../../hackathons/index.html">Hackathons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Tutorials</a>
               </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Tutorials</a>
-            </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../../articles/index.html">Articles</a>
-                    </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="../../projects/index.html">Projects</a>
-            </li>
-            
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../articles/index.html">Articles</a>
+                      </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="../../projects/index.html">Projects</a>
+              </li>
+              
+          </ul>
+        <ul class="navbar-nav  ml-auto">
+         
             <li class="nav-item">
               <a href="../../notifications/index.html" class="nav-link"><i class="material-icons"> notifications </i></a>
             </li>
-            <li class="nav-item">
-              <div class="dropdown">
-                  <a href="#" class="nav-link" data-toggle="dropdown"> <i class="material-icons">account_circle</i></a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="../../notifications/index.html">My Profile</a>
-                  <a class="dropdown-item" href="../../login/index.html">Login</a>
-                </div>
-              </div>
-            </li>
+            <li class="nav-item mr-2">
+                <a href="../../login/index.html" class="nav-link btn btn-outline-secondary">Login</a>
+              </li>
+
+           <li class="nav-item">
+             <a href="../../login/index.html" class="nav-link btn btn-outline-danger">Sign up</a>
+           </li>
           </ul>
+          
         </div>
     </nav>
     <br>
@@ -70,6 +73,76 @@
     max-width:100%;
     height: auto;
   }
+  .sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+.sidenav-inner{
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:black;
+  background-color:whitesmoke;
+}
+
+.main {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  background-color: white;
+  padding: 0px 10px;
+  padding-bottom: 200px;
+}
+footer{
+  display: none;
+}
+.dropdown-topics{
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 1024px) {
+  .sidenav {
+    display: none;
+  }
+ div.main{
+   width: 100%;
+   margin: 0;
+ }
+ div.dropdown-topics{
+   display: block;
+   margin-top: 60px;
+   width: 100%;
+   margin-bottom: 60px;
+  
+ }
+ div.dropdown-menu{
+   padding-top:80px;
+  overflow: auto;
+  background-color: #818181;
+ }
+}
+
   </style>
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -78,33 +151,235 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
 <link rel="stylesheet" href="../../static/hfmain/css/prism.css" />
 <script src="../../static/hfmain/js/prism.js"></script>
-<div class="container-fluid">
-  <br>
-  <br>
+<div>
   
-  <div class="row">
-    <div class="col-md-8">
-        
-        <div class="card" style="box-shadow:none;">
-            <div class="card-body">
-            <p class="lead text-center">TensorFlow - Single Layer Perceptron</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul>
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>Before we start getting into Single Layer Perceptron, lets understand&nbsp;Artificial Neural Networks (ANN) first.</p>
+  <div class="sidenav">
+      <div class="sidenav-inner">
+        <br>
+      <p class="text-center "><a href="../index.html" style="padding: 0; display:inline; ">Tutorials</a> &gt; <a style="padding: 0; display:inline;" href="index.html">TensorFlow</a></p>
+                  <br>
+           <div class="list-group">
+                
+                 
+                <a href="introduction.html" class="list-group-item">Introduction &amp; Installation</a>
+                
+                
+                 
+                <a href="deep-learning-and-ai.html" class="list-group-item">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
+                
+                
+                 
+                <a href="mathematics.html" class="list-group-item">Mathematics foundations</a>
+                
+                
+                 
+                <a href="basics.html" class="list-group-item">TensorFlow Basics</a>
+                
+                
+                 
+                <a href="convolutional-neural-network.html" class="list-group-item">Convolutional Neural Networks</a>
+                
+                
+                 
+                <a href="recurrent-neural-network.html" class="list-group-item">Recurrent Neural Networks</a>
+                
+                
+                 
+                <a href="TensorBoard-Visualization.html" class="list-group-item">TensorBoard Visualization</a>
+                
+                
+                 
+                <a href="Word-Embedding.html" class="list-group-item">Word Embedding</a>
+                
+                
+                                 
+                <a href="Single-Layer-Perceptron.html" class="list-group-item active">Single Layer Perceptron</a>
+                
+                
+                 
+                <a href="Linear-Regression.html" class="list-group-item">Linear Regression</a>
+                
+                
+                 
+                <a href="TFLearn.html" class="list-group-item">TFLearn</a>
+                
+                
+                 
+                <a href="cnn-rnn-difference.html" class="list-group-item">Difference between CNN and RNN</a>
+                
+                
+                 
+                <a href="keras.html" class="list-group-item">Keras</a>
+                
+                
+                 
+                <a href="distributed.html" class="list-group-item">Distributed Computing</a>
+                
+                
+                 
+                <a href="Exporting.html" class="list-group-item">Exporting</a>
+                
+                
+                 
+                <a href="Multi-Layer-Perceptron-Learning.html" class="list-group-item">Multi-Layer Perceptron Learning</a>
+                
+                
+                 
+                <a href="Hidden-Layers-Perceptron.html" class="list-group-item">Hidden Layers of Perceptron</a>
+                
+                
+                 
+                <a href="Optimizers.html" class="list-group-item">Optimizers</a>
+                
+                
+                 
+                <a href="XOR-Implementation.html" class="list-group-item">XOR Implementation</a>
+                
+                
+                 
+                <a href="Gradient-Descent-Optimization.html" class="list-group-item">Gradient Descent Optimization</a>
+                
+                
+                 
+                <a href="Forming-Graphs.html" class="list-group-item">Forming Graphs</a>
+                
+                
+                 
+                <a href="Image-Recognition.html" class="list-group-item">Image Recognition</a>
+                
+                
+                 
+                <a href="Neural-Network-Training.html" class="list-group-item">Neural Network Training</a>
+                
+                
+              </div>
+      </div>    
+
+  </div>
+  <div class="dropdown-topics">
+      <div class="dropdown">
+          <button type="button" style="width:100%"class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+           Topics
+          </button>
+          <div class="dropdown-menu" style="width: 100%">
+                  
+                   
+                  <a href="introduction.html" class="dropdown-item">Introduction &amp; Installation</a>
+                  
+                  
+                   
+                  <a href="deep-learning-and-ai.html" class="dropdown-item">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
+                  
+                  
+                   
+                  <a href="mathematics.html" class="dropdown-item">Mathematics foundations</a>
+                  
+                  
+                   
+                  <a href="basics.html" class="dropdown-item">TensorFlow Basics</a>
+                  
+                  
+                   
+                  <a href="convolutional-neural-network.html" class="dropdown-item">Convolutional Neural Networks</a>
+                  
+                  
+                   
+                  <a href="recurrent-neural-network.html" class="dropdown-item">Recurrent Neural Networks</a>
+                  
+                  
+                   
+                  <a href="TensorBoard-Visualization.html" class="dropdown-item">TensorBoard Visualization</a>
+                  
+                  
+                   
+                  <a href="Word-Embedding.html" class="dropdown-item">Word Embedding</a>
+                  
+                  
+                   
+                   <a class="dropdown-item active" href="Single-Layer-Perceptron.html">Single Layer Perceptron</a>                
+                  
+                  
+                   
+                  <a href="Linear-Regression.html" class="dropdown-item">Linear Regression</a>
+                  
+                  
+                   
+                  <a href="TFLearn.html" class="dropdown-item">TFLearn</a>
+                  
+                  
+                   
+                  <a href="cnn-rnn-difference.html" class="dropdown-item">Difference between CNN and RNN</a>
+                  
+                  
+                   
+                  <a href="keras.html" class="dropdown-item">Keras</a>
+                  
+                  
+                   
+                  <a href="distributed.html" class="dropdown-item">Distributed Computing</a>
+                  
+                  
+                   
+                  <a href="Exporting.html" class="dropdown-item">Exporting</a>
+                  
+                  
+                   
+                  <a href="Multi-Layer-Perceptron-Learning.html" class="dropdown-item">Multi-Layer Perceptron Learning</a>
+                  
+                  
+                   
+                  <a href="Hidden-Layers-Perceptron.html" class="dropdown-item">Hidden Layers of Perceptron</a>
+                  
+                  
+                   
+                  <a href="Optimizers.html" class="dropdown-item">Optimizers</a>
+                  
+                  
+                   
+                  <a href="XOR-Implementation.html" class="dropdown-item">XOR Implementation</a>
+                  
+                  
+                   
+                  <a href="Gradient-Descent-Optimization.html" class="dropdown-item">Gradient Descent Optimization</a>
+                  
+                  
+                   
+                  <a href="Forming-Graphs.html" class="dropdown-item">Forming Graphs</a>
+                  
+                  
+                   
+                  <a href="Image-Recognition.html" class="dropdown-item">Image Recognition</a>
+                  
+                  
+                   
+                  <a href="Neural-Network-Training.html" class="dropdown-item">Neural Network Training</a>
+                  
+                  
+          </div>
+        </div>
+
+  </div>
+  <div class="main">
+      <br>
+      <br>
+      <p class="lead text-center">TensorFlow - Single Layer Perceptron</p>
+      
+      
+        <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
+                  </li>
+              </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+            <div id="notes" class="container tab-pane active"><br>
+              
+              
+              <p>Before we start getting into Single Layer Perceptron, lets understand&nbsp;Artificial Neural Networks (ANN) first.</p>
 
 <p><strong>What is&nbsp;Artificial Neural Networks (ANN) ?</strong></p>
 
@@ -248,6 +523,225 @@ with tf.Session() as sess:
 <p>&nbsp;</p>
 
 <p>In the next turial we&#39;ll learn about Linear regression.</p>
+              
+              
+              
+            </div>
+            <div id="problems" class="container-fluid tab-panes fade"><br>
+              
+                <p>No problems available for this topic.</p>
+              
+              
+              
+              
+              <script>
+                  function onans(option, ans)
+                  {
+                    var x = option.slice(0,option.lastIndexOf('_'));
+                    var y = x+"_result";
+                    if(option[option.length-1]==ans){
+                      // we got to display correct icon and show explanation
+                      document.getElementById(y).innerHTML = "Correct Answer!";
+                      document.getElementById(y).style.color = "green";
+                      document.getElementById(y).style.display = "block";
+                      document.getElementById(option).style.color = "green";
+                      // console.log("Correct ans");
+                    }else{
+                      // we got to blur that option
+                      // console.log("Wrong ans");
+                      document.getElementById(option).style.color="#e0dbdb";
+                      document.getElementById(y).innerHTML = "Wrong Answer!";
+                      document.getElementById(y).style.color = "red";
+                      document.getElementById(y).style.display = "block";
+                    }
+                  }
+  
+                  function see_ans(x)
+                  {
+                    document.getElementById(x).style.display="block";
+                  }
+              </script>
+           
+          </div>
+          <hr>
+          <br>
+        <br>
+          <center>
+        <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/Single-Layer-Perceptron.html" data-width="" data-numposts="10"></div>
+      </center>
+        </div>
+  </div>
+  <!--
+  <div class="row">
+      <div class="col-md-3" >
+         
+            
+        </div>
+    <div class="col-md-9" style="background-color: white;">
+      <br>
+            <p class="lead text-center">TensorFlow - Single Layer Perceptron</p>
+            <hr>
+            
+              <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item">
+                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
+                      </li>
+                     
+                      <li class="nav-item">
+                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
+                        </li>
+                    </ul> -->
+
+                  <!-- Tab panes -->
+                  <!--
+                  <div class="tab-content">
+                  <div id="notes" class="container tab-pane active"><br>
+                    
+                    
+                    <p>Before we start getting into Single Layer Perceptron, lets understand&nbsp;Artificial Neural Networks (ANN) first.</p>
+
+<p><strong>What is&nbsp;Artificial Neural Networks (ANN) ?</strong></p>
+
+<p>Artificial neural networks is&nbsp;information processing system whose mechanism&nbsp;is inspired with&nbsp;functionality of biological neural circuits. An artificial neural network possesses many processing units connected to each other.</p>
+
+<div style="text-align:center">
+<figure class="image" style="display:inline-block"><img alt="" height="481" src="/media/uploads/2019/06/09/ann.png" width="400" />
+<figcaption>Artifical Neural Networks</figcaption>
+</figure>
+</div>
+
+<p>&nbsp;Hidden units communicate with the external layer. While the input and output units communicate only through hidden layer of the network.</p>
+
+<p>Pattern of connection with nodes, total number of layers and level of nodes between inputs and outputs with the number of neurons per layer define &nbsp;architecture of a neural network.</p>
+
+<p>There are two types of architecture on the basis of&nbsp;functionality&nbsp;&minus;</p>
+
+<ul>
+	<li>Single Layer Perceptron</li>
+	<li>Multi-Layer Perceptron</li>
+</ul>
+
+<p>Now, you have got the idea of what is Single Layer Perceptron. Let&#39;s talk about it in details.</p>
+
+<p><strong>What is Sinlge Layer perceptron ?</strong></p>
+
+<p>Single layer perceptron is the first proposed neural model created. Content of local memory of the neuron consists of a vector of weights. Computation of a single layer perceptron is performed over the calculation of sum of the input vector each with the value multiplied by corresponding element of vector of the weights. Value which is displayed in output will be the input of an activation function.</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center"><img alt="Single layer perceptron" height="247" src="/media/uploads/2019/06/09/slp.JPG" width="603" /></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Implementation</strong></p>
+
+<p>Now we&#39;ll implement&nbsp;single layer perceptron for an image classification problem using TensorFlow. The best example to illustrate single layer perceptron is through representation of &ldquo;Logistic Regression&rdquo;.</p>
+
+<p style="text-align:center"><img alt="Logistic regression" height="443" src="/media/uploads/2019/06/09/logistic-regression.JPG" width="601" /></p>
+
+<p>&nbsp;</p>
+
+<p>Basic steps in training&nbsp;logistic regression are &minus;</p>
+
+<ol>
+	<li>
+	<p>Weights are initialized with random values at the beginning of the training.</p>
+	</li>
+	<li>
+	<p>For each element of&nbsp;training set, error is calculated with difference between desired output and actual output. Error calculated is used to adjust the weights.</p>
+	</li>
+	<li>
+	<p>Process is repeated until the error made on entire training set is not less than&nbsp;specified threshold, until the maximum number of iterations is reached.</p>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>Now, Let&#39;s implement it in code.</p>
+
+<pre>
+<code class="language-python"># Import MINST data 
+from tensorflow.examples.tutorials.mnist import input_data 
+mnist = input_data.read_data_sets("/tmp/data/", one_hot = True) 
+
+import tensorflow as tf 
+import matplotlib.pyplot as plt 
+
+# Parameters 
+learning_rate = 0.01 
+training_epochs = 25 
+batch_size = 100 
+display_step = 1 
+
+# tf Graph Input 
+x = tf.placeholder("float", [None, 784]) # mnist data image of shape 28*28 = 784 
+y = tf.placeholder("float", [None, 10]) # 0-9 digits recognition =&gt; 10 classes 
+
+# Create model 
+# Set model weights 
+W = tf.Variable(tf.zeros([784, 10])) 
+b = tf.Variable(tf.zeros([10])) 
+
+# Construct model 
+activation = tf.nn.softmax(tf.matmul(x, W) + b) # Softmax 
+
+# Minimize error using cross entropy 
+cross_entropy = y*tf.log(activation) 
+cost = tf.reduce_mean\ (-tf.reduce_sum\ (cross_entropy,reduction_indices = 1)) 
+
+optimizer = tf.train.\ GradientDescentOptimizer(learning_rate).minimize(cost) 
+
+#Plot settings 
+avg_set = [] 
+epoch_set = [] 
+
+# Initializing the variables init = tf.initialize_all_variables()
+# Launch the graph 
+with tf.Session() as sess:
+   sess.run(init)
+   
+   # Training cycle
+   for epoch in range(training_epochs):
+      avg_cost = 0.
+      total_batch = int(mnist.train.num_examples/batch_size)
+      
+      # Loop over all batches
+      for i in range(total_batch):
+         batch_xs, batch_ys = \ mnist.train.next_batch(batch_size)
+         # Fit training using batch data sess.run(optimizer, \ feed_dict = {
+            x: batch_xs, y: batch_ys}) 
+         # Compute average loss avg_cost += sess.run(cost, \ feed_dict = {
+            x: batch_xs, \ y: batch_ys})/total_batch
+      # Display logs per epoch step
+      if epoch % display_step == 0:
+         print ("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(avg_cost))
+            avg_set.append(avg_cost) epoch_set.append(epoch+1)
+   print ("Training phase finished")
+    
+   plt.plot(epoch_set,avg_set, 'o', label = 'Logistic Regression Training phase') 
+   plt.ylabel('cost') 
+   plt.xlabel('epoch') 
+   plt.legend() 
+   plt.show() 
+    
+   # Test model 
+   correct_prediction = tf.equal(tf.argmax(activation, 1), tf.argmax(y, 1)) 
+   
+   # Calculate accuracy 
+   accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float")) print 
+      ("Model accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels}))</code></pre>
+
+<p>&nbsp;</p>
+
+<p>The logistic regression is considered as a predictive analysis. Logistic regression is used to describe data and to explain the relationship between one dependent binary variable and one or more nominal or independent variables.</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center"><img alt="Logistic regression training" height="437" src="/media/uploads/2019/06/09/logistic_regression_training.JPG" width="605" /></p>
+
+<p>&nbsp;</p>
+
+<p>In the next turial we&#39;ll learn about Linear regression.</p>
                     
                     
                     
@@ -286,8 +780,7 @@ with tf.Session() as sess:
                           document.getElementById(x).style.display="block";
                         }
                     </script>
-                  </div>
-                  </div>
+                 
                 </div>
                 <hr>
                 <br>
@@ -297,110 +790,7 @@ with tf.Session() as sess:
             </center>
               </div>
               </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header text-center"> Topics</div>
-        <div class="card-body">
-            <div class="list-group">
-                
-                
-                <a href="introduction.html" class="list-group-item">Introduction &amp; Installation</a>
-                
-                
-                
-                <a href="deep-learning-and-ai.html" class="list-group-item">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
-                
-                
-                
-                <a href="mathematics.html" class="list-group-item">Mathematics foundations</a>
-                
-                
-                
-                <a href="basics.html" class="list-group-item">TensorFlow Basics</a>
-                
-                
-                
-                <a href="convolutional-neural-network.html" class="list-group-item">Convolutional Neural Networks</a>
-                
-                
-                
-                <a href="recurrent-neural-network.html" class="list-group-item">Recurrent Neural Networks</a>
-                
-                
-                
-                <a href="TensorBoard-Visualization.html" class="list-group-item">TensorBoard Visualization</a>
-                
-                
-                
-                <a href="Word-Embedding.html" class="list-group-item">Word Embedding</a>
-                
-                
-                                
-                <a href="Single-Layer-Perceptron.html" class="list-group-item active">Single Layer Perceptron</a>
-                
-                
-                
-                <a href="Linear-Regression.html" class="list-group-item">Linear Regression</a>
-                
-                
-                
-                <a href="TFLearn.html" class="list-group-item">TFLearn</a>
-                
-                
-                
-                <a href="cnn-rnn-difference.html" class="list-group-item">Difference between CNN and RNN</a>
-                
-                
-                
-                <a href="keras.html" class="list-group-item">Keras</a>
-                
-                
-                
-                <a href="distributed.html" class="list-group-item">Distributed Computing</a>
-                
-                
-                
-                <a href="Exporting.html" class="list-group-item">Exporting</a>
-                
-                
-                
-                <a href="Multi-Layer-Perceptron-Learning.html" class="list-group-item">Multi-Layer Perceptron Learning</a>
-                
-                
-                
-                <a href="Hidden-Layers-Perceptron.html" class="list-group-item">Hidden Layers of Perceptron</a>
-                
-                
-                
-                <a href="Optimizers.html" class="list-group-item">Optimizers</a>
-                
-                
-                
-                <a href="XOR-Implementation.html" class="list-group-item">XOR Implementation</a>
-                
-                
-                
-                <a href="Gradient-Descent-Optimization.html" class="list-group-item">Gradient Descent Optimization</a>
-                
-                
-                
-                <a href="Forming-Graphs.html" class="list-group-item">Forming Graphs</a>
-                
-                
-                
-                <a href="Image-Recognition.html" class="list-group-item">Image Recognition</a>
-                
-                
-                
-                <a href="Neural-Network-Training.html" class="list-group-item">Neural Network Training</a>
-                
-                
-              </div>
-        </div>
-      </div>
-        
-    </div>
-  </div>
+  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");
@@ -485,36 +875,7 @@ with tf.Session() as sess:
       <small style="color:grey;">&copy; HackersFriend | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
   </center>
   
-</div>
-
-  <!--   
-    <div class="container text-center">
-      <h2>HackersFriend</h2>
-      <br>
-      <p><a href="/jobs/">Work with us</a> | <a href="/intern/" >Intern with us</a> | <a href="#">Beocome campus ambassdor</a> | <a href="/verify-certificate">Verify certificate</a> | <a href="/innovative-startup">Submit your startup for innovative startups list</a></p>
-    </div>
-          <div class="bg-bark">
-            <div class="container">
-                <hr>
-                <div class="row">
-                    <div class="col-sm-6 offset-sm-3">
-                        <a href="https://facebook.com/HackersFn" target="_blank"><img src="/media/fb-icon.png" style="width:40px; height:40px;"></a>
-                        <a href="https://twitter.com/HackersFn" target="_blank"><img src="/media/twitter-icon.png" style="width:40px; height:40px;"></a>
-                       <a  href="https://www.linkedin.com/company/hackersfriend/" target="_blank"><img src="/media/linkedin-icon.png" style="width:35px; height:35px;"></a>
-                       <a  href="https://www.youtube.com/channel/UCbR73B5CesA1jjTPTWcLmKg/" target="_blank"><img src="/media/youtube-icon.png" style="width:40px; height:40px;"></a>
-                      </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-10 offset-sm-1">
-                    <small style="color:grey;">&copy; HackersFriend | Some rights reserved | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
-                  </div>
-          
-              </div>
-                <br>
-            </div>
-          </div> -->
-          
+</div>        
 </footer>
 </body>
 </html>

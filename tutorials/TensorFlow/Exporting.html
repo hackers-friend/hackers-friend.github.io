@@ -24,41 +24,44 @@
      <link rel="shortcut icon" type="image/png" href="../../media/favicon.png"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#005580">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:	#375877">
         <a class="navbar-brand" href="../../index.html">HackersFriend</a>
+        
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="collapse_target">
-        <ul class="navbar-nav  ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../../hackathons/index.html">Hackathons</a>
-              </li>
+          <ul class="navbar-nav ">
               <li class="nav-item">
-                <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+                  <a class="nav-link" href="../../hackathons/index.html">Hackathons</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../../workshops/index.html">Workshops</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Tutorials</a>
               </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Tutorials</a>
-            </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="../../articles/index.html">Articles</a>
-                    </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="../../projects/index.html">Projects</a>
-            </li>
-            
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../articles/index.html">Articles</a>
+                      </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="../../projects/index.html">Projects</a>
+              </li>
+              
+          </ul>
+        <ul class="navbar-nav  ml-auto">
+         
             <li class="nav-item">
               <a href="../../notifications/index.html" class="nav-link"><i class="material-icons"> notifications </i></a>
             </li>
-            <li class="nav-item">
-              <div class="dropdown">
-                  <a href="#" class="nav-link" data-toggle="dropdown"> <i class="material-icons">account_circle</i></a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="../../notifications/index.html">My Profile</a>
-                  <a class="dropdown-item" href="../../login/index.html">Login</a>
-                </div>
-              </div>
-            </li>
+            <li class="nav-item mr-2">
+                <a href="../../login/index.html" class="nav-link btn btn-outline-secondary">Login</a>
+              </li>
+
+           <li class="nav-item">
+             <a href="../../login/index.html" class="nav-link btn btn-outline-danger">Sign up</a>
+           </li>
           </ul>
+          
         </div>
     </nav>
     <br>
@@ -70,6 +73,76 @@
     max-width:100%;
     height: auto;
   }
+  .sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+.sidenav-inner{
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:black;
+  background-color:whitesmoke;
+}
+
+.main {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  background-color: white;
+  padding: 0px 10px;
+  padding-bottom: 200px;
+}
+footer{
+  display: none;
+}
+.dropdown-topics{
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 1024px) {
+  .sidenav {
+    display: none;
+  }
+ div.main{
+   width: 100%;
+   margin: 0;
+ }
+ div.dropdown-topics{
+   display: block;
+   margin-top: 60px;
+   width: 100%;
+   margin-bottom: 60px;
+  
+ }
+ div.dropdown-menu{
+   padding-top:80px;
+  overflow: auto;
+  background-color: #818181;
+ }
+}
+
   </style>
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -78,15 +151,513 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
 <link rel="stylesheet" href="../../static/hfmain/css/prism.css" />
 <script src="../../static/hfmain/js/prism.js"></script>
-<div class="container-fluid">
-  <br>
-  <br>
+<div>
   
+  <div class="sidenav">
+      <div class="sidenav-inner">
+        <br>
+      <p class="text-center "><a href="../index.html" style="padding: 0; display:inline; ">Tutorials</a> &gt; <a style="padding: 0; display:inline;" href="index.html">TensorFlow</a></p>
+                  <br>
+           <div class="list-group">
+                
+                 
+                <a href="introduction.html" class="list-group-item">Introduction &amp; Installation</a>
+                
+                
+                 
+                <a href="deep-learning-and-ai.html" class="list-group-item">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
+                
+                
+                 
+                <a href="mathematics.html" class="list-group-item">Mathematics foundations</a>
+                
+                
+                 
+                <a href="basics.html" class="list-group-item">TensorFlow Basics</a>
+                
+                
+                 
+                <a href="convolutional-neural-network.html" class="list-group-item">Convolutional Neural Networks</a>
+                
+                
+                 
+                <a href="recurrent-neural-network.html" class="list-group-item">Recurrent Neural Networks</a>
+                
+                
+                 
+                <a href="TensorBoard-Visualization.html" class="list-group-item">TensorBoard Visualization</a>
+                
+                
+                 
+                <a href="Word-Embedding.html" class="list-group-item">Word Embedding</a>
+                
+                
+                 
+                <a href="Single-Layer-Perceptron.html" class="list-group-item">Single Layer Perceptron</a>
+                
+                
+                 
+                <a href="Linear-Regression.html" class="list-group-item">Linear Regression</a>
+                
+                
+                 
+                <a href="TFLearn.html" class="list-group-item">TFLearn</a>
+                
+                
+                 
+                <a href="cnn-rnn-difference.html" class="list-group-item">Difference between CNN and RNN</a>
+                
+                
+                 
+                <a href="keras.html" class="list-group-item">Keras</a>
+                
+                
+                 
+                <a href="distributed.html" class="list-group-item">Distributed Computing</a>
+                
+                
+                                 
+                <a href="Exporting.html" class="list-group-item active">Exporting</a>
+                
+                
+                 
+                <a href="Multi-Layer-Perceptron-Learning.html" class="list-group-item">Multi-Layer Perceptron Learning</a>
+                
+                
+                 
+                <a href="Hidden-Layers-Perceptron.html" class="list-group-item">Hidden Layers of Perceptron</a>
+                
+                
+                 
+                <a href="Optimizers.html" class="list-group-item">Optimizers</a>
+                
+                
+                 
+                <a href="XOR-Implementation.html" class="list-group-item">XOR Implementation</a>
+                
+                
+                 
+                <a href="Gradient-Descent-Optimization.html" class="list-group-item">Gradient Descent Optimization</a>
+                
+                
+                 
+                <a href="Forming-Graphs.html" class="list-group-item">Forming Graphs</a>
+                
+                
+                 
+                <a href="Image-Recognition.html" class="list-group-item">Image Recognition</a>
+                
+                
+                 
+                <a href="Neural-Network-Training.html" class="list-group-item">Neural Network Training</a>
+                
+                
+              </div>
+      </div>    
+
+  </div>
+  <div class="dropdown-topics">
+      <div class="dropdown">
+          <button type="button" style="width:100%"class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+           Topics
+          </button>
+          <div class="dropdown-menu" style="width: 100%">
+                  
+                   
+                  <a href="introduction.html" class="dropdown-item">Introduction &amp; Installation</a>
+                  
+                  
+                   
+                  <a href="deep-learning-and-ai.html" class="dropdown-item">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
+                  
+                  
+                   
+                  <a href="mathematics.html" class="dropdown-item">Mathematics foundations</a>
+                  
+                  
+                   
+                  <a href="basics.html" class="dropdown-item">TensorFlow Basics</a>
+                  
+                  
+                   
+                  <a href="convolutional-neural-network.html" class="dropdown-item">Convolutional Neural Networks</a>
+                  
+                  
+                   
+                  <a href="recurrent-neural-network.html" class="dropdown-item">Recurrent Neural Networks</a>
+                  
+                  
+                   
+                  <a href="TensorBoard-Visualization.html" class="dropdown-item">TensorBoard Visualization</a>
+                  
+                  
+                   
+                  <a href="Word-Embedding.html" class="dropdown-item">Word Embedding</a>
+                  
+                  
+                   
+                  <a href="Single-Layer-Perceptron.html" class="dropdown-item">Single Layer Perceptron</a>
+                  
+                  
+                   
+                  <a href="Linear-Regression.html" class="dropdown-item">Linear Regression</a>
+                  
+                  
+                   
+                  <a href="TFLearn.html" class="dropdown-item">TFLearn</a>
+                  
+                  
+                   
+                  <a href="cnn-rnn-difference.html" class="dropdown-item">Difference between CNN and RNN</a>
+                  
+                  
+                   
+                  <a href="keras.html" class="dropdown-item">Keras</a>
+                  
+                  
+                   
+                  <a href="distributed.html" class="dropdown-item">Distributed Computing</a>
+                  
+                  
+                   
+                   <a class="dropdown-item active" href="Exporting.html">Exporting</a>                
+                  
+                  
+                   
+                  <a href="Multi-Layer-Perceptron-Learning.html" class="dropdown-item">Multi-Layer Perceptron Learning</a>
+                  
+                  
+                   
+                  <a href="Hidden-Layers-Perceptron.html" class="dropdown-item">Hidden Layers of Perceptron</a>
+                  
+                  
+                   
+                  <a href="Optimizers.html" class="dropdown-item">Optimizers</a>
+                  
+                  
+                   
+                  <a href="XOR-Implementation.html" class="dropdown-item">XOR Implementation</a>
+                  
+                  
+                   
+                  <a href="Gradient-Descent-Optimization.html" class="dropdown-item">Gradient Descent Optimization</a>
+                  
+                  
+                   
+                  <a href="Forming-Graphs.html" class="dropdown-item">Forming Graphs</a>
+                  
+                  
+                   
+                  <a href="Image-Recognition.html" class="dropdown-item">Image Recognition</a>
+                  
+                  
+                   
+                  <a href="Neural-Network-Training.html" class="dropdown-item">Neural Network Training</a>
+                  
+                  
+          </div>
+        </div>
+
+  </div>
+  <div class="main">
+      <br>
+      <br>
+      <p class="lead text-center">TensorFlow - Exporting</p>
+      
+      
+        <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
+                  </li>
+              </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+            <div id="notes" class="container tab-pane active"><br>
+              
+              
+              <p>In this tutorial we&#39;ll learn about how to store models and restore them when needed.</p>
+
+<h1>What is TensorFlow model&nbsp;?</h1>
+
+<p>Once we train a neural network, what we want to do is,&nbsp;save it for future use and deploying to production. There comes, models.&nbsp;Tensorflow model primarily contains the network design or graph and values of the network parameters that we have trained.</p>
+
+<p>Tensorflow model has mainly two&nbsp;files:</p>
+
+<ol>
+	<li>Meta graph</li>
+	<li>Checkpoint Files.</li>
+</ol>
+
+<p>Meta graph is a protocol buffer. It saves the complete Tensorflow graph; i.e. all variables, operations, collections etc. This file has&nbsp;<strong>.meta</strong>&nbsp;extension.</p>
+
+<p>Checkpoint File is&nbsp;binary file. It contains all the values of the weights, biases, gradients and all the other variables saved. This file has an extension .<strong>ckpt.</strong></p>
+
+<p><strong>Update:</strong>&nbsp;from version 0.11,&nbsp;instead of 1&nbsp;.ckpt file, we have two files.</p>
+
+<ol>
+	<li>mymodel.data-00000-of-00001</li>
+	<li>mymodel.index</li>
+</ol>
+
+<p>our training variables are in .data files.&nbsp;Along with these files, we have&nbsp;a file named&nbsp;<strong>checkpoint</strong>&nbsp;which only&nbsp;keeps a record of latest checkpoint files saved.</p>
+
+<p>Let&#39;s come back to point now.</p>
+
+<h1>How to save a TensorFlow Model ?</h1>
+
+<p>Suppose we&nbsp;are training a CNN for Image classification.&nbsp;As a standard practice, we&#39;ll&nbsp;keep track&nbsp;of&nbsp;loss and accuracy numbers. Once we&nbsp;find&nbsp;that the network has converged, we can stop the training manually or we&nbsp;will run the training for fixed number of epochs. After the training is done, we&nbsp;want to save all the variables and network graph to a file for future use. So, in Tensorflow, to do that, we shall be creating an instance of<strong> tf.train.Saver()</strong> class.</p>
+
+<pre>
+<code class="language-python">saver = tf.train.Saver()</code></pre>
+
+<p>Note that Tensorflow variables are only alive inside a session.</p>
+
+<p>So, you have to save the model inside a session by calling save method on saver object which we just created.</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="language-python">saver.save(sess, 'hackersfriend-model')</code></pre>
+
+<p>Here, sess is the session object, while &lsquo;hackersfriend-model&rsquo; is the name we&nbsp;want to give to our&nbsp;model. Here is full code:</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+w1 = tf.Variable(tf.random_normal(shape=[2]), name='w1')
+w2 = tf.Variable(tf.random_normal(shape=[5]), name='w2')
+saver = tf.train.Saver()
+# Creating a session with name sess
+sess = tf.Session()
+
+sess.run(tf.global_variables_initializer())
+
+# Saving the model with name hackersfriend-model
+saver.save(sess, 'hackersfriend-model')
+
+# This will generate following files
+# hackersfriend-model.data-00000-of-00001
+# hackersfriend-model.index
+# hackersfriend.meta
+# checkpoint</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Now suppose, we are saving the model after 1000 iterations. Then,&nbsp;we shall call save by passing the step count:</p>
+
+<pre>
+<code class="language-python">saver.save(sess, 'hackersfriend-model',global_step=1000)</code></pre>
+
+<p>This will just append &lsquo;-1000&rsquo; to the model name and following files will be generated:</p>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li>hackersfriend-model-1000.index</li>
+	<li>hackersfriend-model-1000.meta</li>
+	<li>hackersfriend-1000.data-00000-of-00001</li>
+	<li>checkpoint</li>
+</ol>
+
+<p>In this particular example,&nbsp;while training, we are saving our model after every 1000 iterations, so .meta file is created the first time(on 1000th iteration) and we don&rsquo;t need to recreate the .meta file each time(so, we don&rsquo;t save the .meta file at 2000, 3000.. or any other iteration). Since,&nbsp;graph will not change, we&#39;ll only save the model for further iterations.We don&#39;t need to meta graph again and again. So, in code, we&#39;ll do it this way.</p>
+
+<pre>
+<code class="language-python">saver.save(sess, 'hackersfriend-model', global_step=step,write_meta_graph=False)</code></pre>
+
+<p>Suppose, we want to keep only 5&nbsp;latest models and want to save 1&nbsp;model after every 2 hours. To acheive this, we can&nbsp;&nbsp;use max_to_keep and keep_checkpoint_every_n_hours during training. Here is how to code it.</p>
+
+<pre>
+<code class="language-python">saver = tf.train.Saver(max_to_keep=5, keep_checkpoint_every_n_hours=2)</code></pre>
+
+<p>Now, let&#39;s get more control over what we store.&nbsp;What if, we don&rsquo;t want to save all the variables and just some of them.&nbsp; When we dont specify, anything in the <strong>tf.train.Saver(),&nbsp;</strong>it saves all variables.</p>
+
+<p>While creating the tf.train.Saver instance we can specify what we want to save. We have to pass it as list or dictionary of variables. Let&#39;s code it.</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+w1 = tf.Variable(tf.random_normal(shape=[2]), name='w1')
+w2 = tf.Variable(tf.random_normal(shape=[5]), name='w2')
+saver = tf.train.Saver([w1,w2])
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+saver.save(sess, 'hackersfriend-model', global_step=1000)</code></pre>
+
+<p>&nbsp;</p>
+
+<p>That was all about how to save a model. Now, let&#39;s understand how to re-use any saved model.</p>
+
+<h1>How to import a pre-trained model in TensorFlow ?</h1>
+
+<p>To use any-pretrained model in Tensor we have to first create network and then load varaibles. For better understanding, we have broken it down into steps.</p>
+
+<ol>
+	<li><strong>Create Network</strong>&nbsp; &nbsp;</li>
+</ol>
+
+<p>&nbsp;To create Network, we have 2 ways. One is to re-create each and every layer manually as the original model. And 2nd is, to&nbsp;&nbsp;use .meta file file and&nbsp;recreate the network using tf.train.import() function. Here is how code it.</p>
+
+<pre>
+<code class="language-python">saver = tf.train.import_meta_graph('hackersfriend-model-1000.meta')</code></pre>
+
+<p>What happens behind scences when you do it is,&nbsp;import_meta_graph appends the network defined in .meta file to the current graph.&nbsp;</p>
+
+<p>Now, this way, we have got the graph or network, which we need. But, it still needs, value of prameters. Let&#39;s do that as well.&nbsp;</p>
+
+<ol start="2">
+	<li><strong>Load the parameters</strong></li>
+</ol>
+
+<p>To load parameters of previously stored model, in our current model, we can call restore on&nbsp;instance of tf.train.Saver() class. Let&#39;s code it.&nbsp;</p>
+
+<pre>
+<code class="language-python">with tf.Session() as sess:    
+    saver = tf.train.import_meta_graph('hackersfriend-model-1000.meta')
+    saver.restore(sess,tf.train.latest_checkpoint('./'))
+    print(sess.run('w1:0'))  #This will work and print the saved value of w1. because Model has been restored.</code></pre>
+
+<p>Now, that we have restore our model. Let&#39;s start working with it.</p>
+
+<h1>How to&nbsp;Work&nbsp;with restored models in TensorFlow ?</h1>
+
+<p>Till now, we have learned about what is a TensorFlow Model, how to save a model and import it when needed. Now, let&#39;s get a practicle guide to how to use any model after resotoring it.</p>
+
+<p>Here, we will resotre a saved model and use it for further training, prediction, fine tuning etc.&nbsp;</p>
+
+<p>Whenever we create a TensorFlow Model, we feed training data into it, and some other stuffs like,&nbsp;earning rate, global step etc. We feed all these data using placeholders.</p>
+
+<p>Note: Whenever we save the network, values of placeholders are not saved. Let&#39;s code a network using placeholders and&nbsp;store it.&nbsp;</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+# Let's create feed input, i.e. feed_dict and placeholders
+
+w1 = tf.placeholder("float", name="w1")
+w2 = tf.placeholder("float", name="w2")
+b1= tf.Variable(2.0,name="bias")
+feed_dict ={w1:4,w2:8}
+
+#Define a test operation that we will restore
+w3 = tf.add(w1,w2)
+w4 = tf.multiply(w3,b1,name="op_to_restore")
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+
+#Create a saver object which will save all the variables
+saver = tf.train.Saver()
+
+#Run the operation with feeding input
+print sess.run(w4,feed_dict)
+#Prints 24 which is sum of (w1+w2)*b1 
+
+#Now, save the graph
+saver.save(sess, 'hackersfriend-model',global_step=1000)</code></pre>
+
+<p>&nbsp;</p>
+
+<p>We have saved the network. Now, let&#39;s restore it.</p>
+
+<p>Here, when we are trying to restore it, we not only have to restore the graph and weights, but also prepare a new feed_dict that will feed the new training data to the network.&nbsp;</p>
+
+<p>We can use <strong>graph.get_tensor_by_name() </strong>method to&nbsp;get reference to saved operations and placeholder variables.</p>
+
+<pre>
+<code class="language-python">#Accessing saved variable/Tensor/placeholders 
+w1 = graph.get_tensor_by_name("w1:0")
+
+#Acessing saved operation
+op_to_restore = graph.get_tensor_by_name("op_to_restore:0")</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Now, suppose, if we want to run&nbsp;run the same network with different data, we can do that too. We just have to pass the new data via feed_dict to the network.</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+sess=tf.Session()    
+
+# we need to load meta graph and restore weights first.
+saver = tf.train.import_meta_graph('hackersfriend-model-1000.meta')
+saver.restore(sess,tf.train.latest_checkpoint('./'))
+
+
+# Then, we will access and create placeholders variables and create feed-dict to feed new data
+
+graph = tf.get_default_graph()
+w1 = graph.get_tensor_by_name("w1:0")
+w2 = graph.get_tensor_by_name("w2:0")
+feed_dict ={w1:13.0,w2:17.0}
+
+#Now, access the op that we want to run. 
+op_to_restore = graph.get_tensor_by_name("op_to_restore:0")
+
+print sess.run(op_to_restore,feed_dict)
+</code></pre>
+
+<p>&nbsp;</p>
+
+<p>we can use <strong>graph.get_tensor_by_name()</strong> method to restore part of the old graph and add-on to that for fine-tuning.&nbsp;</p>
+              
+              
+              
+            </div>
+            <div id="problems" class="container-fluid tab-panes fade"><br>
+              
+                <p>No problems available for this topic.</p>
+              
+              
+              
+              
+              <script>
+                  function onans(option, ans)
+                  {
+                    var x = option.slice(0,option.lastIndexOf('_'));
+                    var y = x+"_result";
+                    if(option[option.length-1]==ans){
+                      // we got to display correct icon and show explanation
+                      document.getElementById(y).innerHTML = "Correct Answer!";
+                      document.getElementById(y).style.color = "green";
+                      document.getElementById(y).style.display = "block";
+                      document.getElementById(option).style.color = "green";
+                      // console.log("Correct ans");
+                    }else{
+                      // we got to blur that option
+                      // console.log("Wrong ans");
+                      document.getElementById(option).style.color="#e0dbdb";
+                      document.getElementById(y).innerHTML = "Wrong Answer!";
+                      document.getElementById(y).style.color = "red";
+                      document.getElementById(y).style.display = "block";
+                    }
+                  }
+  
+                  function see_ans(x)
+                  {
+                    document.getElementById(x).style.display="block";
+                  }
+              </script>
+           
+          </div>
+          <hr>
+          <br>
+        <br>
+          <center>
+        <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/Exporting.html" data-width="" data-numposts="10"></div>
+      </center>
+        </div>
+  </div>
+  <!--
   <div class="row">
-    <div class="col-md-8">
-        
-        <div class="card" style="box-shadow:none;">
-            <div class="card-body">
+      <div class="col-md-3" >
+         
+            
+        </div>
+    <div class="col-md-9" style="background-color: white;">
+      <br>
             <p class="lead text-center">TensorFlow - Exporting</p>
             <hr>
             
@@ -98,8 +669,10 @@
                       <li class="nav-item">
                           <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
                         </li>
-                    </ul>
+                    </ul> -->
+
                   <!-- Tab panes -->
+                  <!--
                   <div class="tab-content">
                   <div id="notes" class="container tab-pane active"><br>
                     
@@ -188,7 +761,145 @@ saver.save(sess, 'hackersfriend-model')
 	<li>checkpoint</li>
 </ol>
 
+<p>In this particular example,&nbsp;while training, we are saving our model after every 1000 iterations, so .meta file is created the first time(on 1000th iteration) and we don&rsquo;t need to recreate the .meta file each time(so, we don&rsquo;t save the .meta file at 2000, 3000.. or any other iteration). Since,&nbsp;graph will not change, we&#39;ll only save the model for further iterations.We don&#39;t need to meta graph again and again. So, in code, we&#39;ll do it this way.</p>
+
+<pre>
+<code class="language-python">saver.save(sess, 'hackersfriend-model', global_step=step,write_meta_graph=False)</code></pre>
+
+<p>Suppose, we want to keep only 5&nbsp;latest models and want to save 1&nbsp;model after every 2 hours. To acheive this, we can&nbsp;&nbsp;use max_to_keep and keep_checkpoint_every_n_hours during training. Here is how to code it.</p>
+
+<pre>
+<code class="language-python">saver = tf.train.Saver(max_to_keep=5, keep_checkpoint_every_n_hours=2)</code></pre>
+
+<p>Now, let&#39;s get more control over what we store.&nbsp;What if, we don&rsquo;t want to save all the variables and just some of them.&nbsp; When we dont specify, anything in the <strong>tf.train.Saver(),&nbsp;</strong>it saves all variables.</p>
+
+<p>While creating the tf.train.Saver instance we can specify what we want to save. We have to pass it as list or dictionary of variables. Let&#39;s code it.</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+w1 = tf.Variable(tf.random_normal(shape=[2]), name='w1')
+w2 = tf.Variable(tf.random_normal(shape=[5]), name='w2')
+saver = tf.train.Saver([w1,w2])
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+saver.save(sess, 'hackersfriend-model', global_step=1000)</code></pre>
+
 <p>&nbsp;</p>
+
+<p>That was all about how to save a model. Now, let&#39;s understand how to re-use any saved model.</p>
+
+<h1>How to import a pre-trained model in TensorFlow ?</h1>
+
+<p>To use any-pretrained model in Tensor we have to first create network and then load varaibles. For better understanding, we have broken it down into steps.</p>
+
+<ol>
+	<li><strong>Create Network</strong>&nbsp; &nbsp;</li>
+</ol>
+
+<p>&nbsp;To create Network, we have 2 ways. One is to re-create each and every layer manually as the original model. And 2nd is, to&nbsp;&nbsp;use .meta file file and&nbsp;recreate the network using tf.train.import() function. Here is how code it.</p>
+
+<pre>
+<code class="language-python">saver = tf.train.import_meta_graph('hackersfriend-model-1000.meta')</code></pre>
+
+<p>What happens behind scences when you do it is,&nbsp;import_meta_graph appends the network defined in .meta file to the current graph.&nbsp;</p>
+
+<p>Now, this way, we have got the graph or network, which we need. But, it still needs, value of prameters. Let&#39;s do that as well.&nbsp;</p>
+
+<ol start="2">
+	<li><strong>Load the parameters</strong></li>
+</ol>
+
+<p>To load parameters of previously stored model, in our current model, we can call restore on&nbsp;instance of tf.train.Saver() class. Let&#39;s code it.&nbsp;</p>
+
+<pre>
+<code class="language-python">with tf.Session() as sess:    
+    saver = tf.train.import_meta_graph('hackersfriend-model-1000.meta')
+    saver.restore(sess,tf.train.latest_checkpoint('./'))
+    print(sess.run('w1:0'))  #This will work and print the saved value of w1. because Model has been restored.</code></pre>
+
+<p>Now, that we have restore our model. Let&#39;s start working with it.</p>
+
+<h1>How to&nbsp;Work&nbsp;with restored models in TensorFlow ?</h1>
+
+<p>Till now, we have learned about what is a TensorFlow Model, how to save a model and import it when needed. Now, let&#39;s get a practicle guide to how to use any model after resotoring it.</p>
+
+<p>Here, we will resotre a saved model and use it for further training, prediction, fine tuning etc.&nbsp;</p>
+
+<p>Whenever we create a TensorFlow Model, we feed training data into it, and some other stuffs like,&nbsp;earning rate, global step etc. We feed all these data using placeholders.</p>
+
+<p>Note: Whenever we save the network, values of placeholders are not saved. Let&#39;s code a network using placeholders and&nbsp;store it.&nbsp;</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+# Let's create feed input, i.e. feed_dict and placeholders
+
+w1 = tf.placeholder("float", name="w1")
+w2 = tf.placeholder("float", name="w2")
+b1= tf.Variable(2.0,name="bias")
+feed_dict ={w1:4,w2:8}
+
+#Define a test operation that we will restore
+w3 = tf.add(w1,w2)
+w4 = tf.multiply(w3,b1,name="op_to_restore")
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+
+#Create a saver object which will save all the variables
+saver = tf.train.Saver()
+
+#Run the operation with feeding input
+print sess.run(w4,feed_dict)
+#Prints 24 which is sum of (w1+w2)*b1 
+
+#Now, save the graph
+saver.save(sess, 'hackersfriend-model',global_step=1000)</code></pre>
+
+<p>&nbsp;</p>
+
+<p>We have saved the network. Now, let&#39;s restore it.</p>
+
+<p>Here, when we are trying to restore it, we not only have to restore the graph and weights, but also prepare a new feed_dict that will feed the new training data to the network.&nbsp;</p>
+
+<p>We can use <strong>graph.get_tensor_by_name() </strong>method to&nbsp;get reference to saved operations and placeholder variables.</p>
+
+<pre>
+<code class="language-python">#Accessing saved variable/Tensor/placeholders 
+w1 = graph.get_tensor_by_name("w1:0")
+
+#Acessing saved operation
+op_to_restore = graph.get_tensor_by_name("op_to_restore:0")</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Now, suppose, if we want to run&nbsp;run the same network with different data, we can do that too. We just have to pass the new data via feed_dict to the network.</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+sess=tf.Session()    
+
+# we need to load meta graph and restore weights first.
+saver = tf.train.import_meta_graph('hackersfriend-model-1000.meta')
+saver.restore(sess,tf.train.latest_checkpoint('./'))
+
+
+# Then, we will access and create placeholders variables and create feed-dict to feed new data
+
+graph = tf.get_default_graph()
+w1 = graph.get_tensor_by_name("w1:0")
+w2 = graph.get_tensor_by_name("w2:0")
+feed_dict ={w1:13.0,w2:17.0}
+
+#Now, access the op that we want to run. 
+op_to_restore = graph.get_tensor_by_name("op_to_restore:0")
+
+print sess.run(op_to_restore,feed_dict)
+</code></pre>
+
+<p>&nbsp;</p>
+
+<p>we can use <strong>graph.get_tensor_by_name()</strong> method to restore part of the old graph and add-on to that for fine-tuning.&nbsp;</p>
                     
                     
                     
@@ -227,8 +938,7 @@ saver.save(sess, 'hackersfriend-model')
                           document.getElementById(x).style.display="block";
                         }
                     </script>
-                  </div>
-                  </div>
+                 
                 </div>
                 <hr>
                 <br>
@@ -238,110 +948,7 @@ saver.save(sess, 'hackersfriend-model')
             </center>
               </div>
               </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header text-center"> Topics</div>
-        <div class="card-body">
-            <div class="list-group">
-                
-                
-                <a href="introduction.html" class="list-group-item">Introduction &amp; Installation</a>
-                
-                
-                
-                <a href="deep-learning-and-ai.html" class="list-group-item">Deep Learning &amp; Artificial Intelligence &amp; Machine Learning</a>
-                
-                
-                
-                <a href="mathematics.html" class="list-group-item">Mathematics foundations</a>
-                
-                
-                
-                <a href="basics.html" class="list-group-item">TensorFlow Basics</a>
-                
-                
-                
-                <a href="convolutional-neural-network.html" class="list-group-item">Convolutional Neural Networks</a>
-                
-                
-                
-                <a href="recurrent-neural-network.html" class="list-group-item">Recurrent Neural Networks</a>
-                
-                
-                
-                <a href="TensorBoard-Visualization.html" class="list-group-item">TensorBoard Visualization</a>
-                
-                
-                
-                <a href="Word-Embedding.html" class="list-group-item">Word Embedding</a>
-                
-                
-                
-                <a href="Single-Layer-Perceptron.html" class="list-group-item">Single Layer Perceptron</a>
-                
-                
-                
-                <a href="Linear-Regression.html" class="list-group-item">Linear Regression</a>
-                
-                
-                
-                <a href="TFLearn.html" class="list-group-item">TFLearn</a>
-                
-                
-                
-                <a href="cnn-rnn-difference.html" class="list-group-item">Difference between CNN and RNN</a>
-                
-                
-                
-                <a href="keras.html" class="list-group-item">Keras</a>
-                
-                
-                
-                <a href="distributed.html" class="list-group-item">Distributed Computing</a>
-                
-                
-                                
-                <a href="Exporting.html" class="list-group-item active">Exporting</a>
-                
-                
-                
-                <a href="Multi-Layer-Perceptron-Learning.html" class="list-group-item">Multi-Layer Perceptron Learning</a>
-                
-                
-                
-                <a href="Hidden-Layers-Perceptron.html" class="list-group-item">Hidden Layers of Perceptron</a>
-                
-                
-                
-                <a href="Optimizers.html" class="list-group-item">Optimizers</a>
-                
-                
-                
-                <a href="XOR-Implementation.html" class="list-group-item">XOR Implementation</a>
-                
-                
-                
-                <a href="Gradient-Descent-Optimization.html" class="list-group-item">Gradient Descent Optimization</a>
-                
-                
-                
-                <a href="Forming-Graphs.html" class="list-group-item">Forming Graphs</a>
-                
-                
-                
-                <a href="Image-Recognition.html" class="list-group-item">Image Recognition</a>
-                
-                
-                
-                <a href="Neural-Network-Training.html" class="list-group-item">Neural Network Training</a>
-                
-                
-              </div>
-        </div>
-      </div>
-        
-    </div>
-  </div>
+  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");
@@ -426,36 +1033,7 @@ saver.save(sess, 'hackersfriend-model')
       <small style="color:grey;">&copy; HackersFriend | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
   </center>
   
-</div>
-
-  <!--   
-    <div class="container text-center">
-      <h2>HackersFriend</h2>
-      <br>
-      <p><a href="/jobs/">Work with us</a> | <a href="/intern/" >Intern with us</a> | <a href="#">Beocome campus ambassdor</a> | <a href="/verify-certificate">Verify certificate</a> | <a href="/innovative-startup">Submit your startup for innovative startups list</a></p>
-    </div>
-          <div class="bg-bark">
-            <div class="container">
-                <hr>
-                <div class="row">
-                    <div class="col-sm-6 offset-sm-3">
-                        <a href="https://facebook.com/HackersFn" target="_blank"><img src="/media/fb-icon.png" style="width:40px; height:40px;"></a>
-                        <a href="https://twitter.com/HackersFn" target="_blank"><img src="/media/twitter-icon.png" style="width:40px; height:40px;"></a>
-                       <a  href="https://www.linkedin.com/company/hackersfriend/" target="_blank"><img src="/media/linkedin-icon.png" style="width:35px; height:35px;"></a>
-                       <a  href="https://www.youtube.com/channel/UCbR73B5CesA1jjTPTWcLmKg/" target="_blank"><img src="/media/youtube-icon.png" style="width:40px; height:40px;"></a>
-                      </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <div class="col-sm-10 offset-sm-1">
-                    <small style="color:grey;">&copy; HackersFriend | Some rights reserved | People also search us with HackerFriend, Hacker Friend and Hacker's Friend </small>
-                  </div>
-          
-              </div>
-                <br>
-            </div>
-          </div> -->
-          
+</div>        
 </footer>
 </body>
 </html>
