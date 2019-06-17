@@ -108,6 +108,7 @@
   background-color: white;
   padding: 0px 10px;
   padding-bottom: 200px;
+ 
 }
 footer{
   display: none;
@@ -379,9 +380,51 @@ footer{
             <div id="notes" class="container tab-pane active"><br>
               
               
+              <p>In this tutorial we&#39;ll learn optimizers in TensorFlow.</p>
+
+<p>We use optimizers&nbsp;for improving speed and performance for training a specific model.&nbsp;&nbsp;Optimizer class is initialized with given parameters. But they don&#39;t need any Tesor. They just have added information for training models.</p>
+
+<p>In TensorFlow, most basic optimizer is&nbsp;</p>
+
+<pre>
+<code class="language-python">tf.train.Optimizer
+
+# tf is TensorFlow</code></pre>
+
+<p>&nbsp;</p>
+
+<p>This class is stored at <strong>tensorflow/python/training/optimizer.py</strong></p>
+
+<p>We have follwing optimizers in TensorFlow:</p>
+
+<ol>
+	<li>Stochastic Gradient descent</li>
+	<li>Stochastic Gradient descent with gradient clipping</li>
+	<li>Momentum</li>
+	<li>Nesterov momentum</li>
+	<li>Adagrad</li>
+	<li>Adadelta</li>
+	<li>RMSProp</li>
+	<li>Adam</li>
+	<li>Adamax</li>
+	<li>SMORMS3</li>
+</ol>
+
+<p>Let&#39;s implement&nbsp;Stochastic Gradient descent.&nbsp;</p>
+
+<pre>
+<code class="language-python">def sgd(cost, params, lr = np.float32(0.01)):
+   g_params = tf.gradients(cost, params)
+   updates = []
+   
+   for param, g_param in zip(params, g_params):
+      updates.append(param.assign(param - lr*g_param))
+   return updates</code></pre>
+
+<p>&nbsp;</p>
+
+<p>In upcmoing tutorial, we&#39;ll learn about&nbsp;Gradient Descent Optimization with implementation of optimizers.</p>
               
-              <br>
-                <p>Tutorial contents of Optimizers is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
               
               
             </div>
@@ -456,9 +499,51 @@ footer{
                   <div id="notes" class="container tab-pane active"><br>
                     
                     
+                    <p>In this tutorial we&#39;ll learn optimizers in TensorFlow.</p>
+
+<p>We use optimizers&nbsp;for improving speed and performance for training a specific model.&nbsp;&nbsp;Optimizer class is initialized with given parameters. But they don&#39;t need any Tesor. They just have added information for training models.</p>
+
+<p>In TensorFlow, most basic optimizer is&nbsp;</p>
+
+<pre>
+<code class="language-python">tf.train.Optimizer
+
+# tf is TensorFlow</code></pre>
+
+<p>&nbsp;</p>
+
+<p>This class is stored at <strong>tensorflow/python/training/optimizer.py</strong></p>
+
+<p>We have follwing optimizers in TensorFlow:</p>
+
+<ol>
+	<li>Stochastic Gradient descent</li>
+	<li>Stochastic Gradient descent with gradient clipping</li>
+	<li>Momentum</li>
+	<li>Nesterov momentum</li>
+	<li>Adagrad</li>
+	<li>Adadelta</li>
+	<li>RMSProp</li>
+	<li>Adam</li>
+	<li>Adamax</li>
+	<li>SMORMS3</li>
+</ol>
+
+<p>Let&#39;s implement&nbsp;Stochastic Gradient descent.&nbsp;</p>
+
+<pre>
+<code class="language-python">def sgd(cost, params, lr = np.float32(0.01)):
+   g_params = tf.gradients(cost, params)
+   updates = []
+   
+   for param, g_param in zip(params, g_params):
+      updates.append(param.assign(param - lr*g_param))
+   return updates</code></pre>
+
+<p>&nbsp;</p>
+
+<p>In upcmoing tutorial, we&#39;ll learn about&nbsp;Gradient Descent Optimization with implementation of optimizers.</p>
                     
-                    <br>
-                      <p>Tutorial contents of Optimizers is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="/jobs/" target="_blank">Carrier section</a> for openings in content writing. </p>
                     
                     
                   </div>

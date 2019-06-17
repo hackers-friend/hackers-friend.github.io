@@ -108,6 +108,7 @@
   background-color: white;
   padding: 0px 10px;
   padding-bottom: 200px;
+ 
 }
 footer{
   display: none;
@@ -379,17 +380,72 @@ footer{
             <div id="notes" class="container tab-pane active"><br>
               
               
+              <p>Gradient descent is a first-order iterative optimization algorithm for finding the minimum of a function. In this tutorial, we&#39;ll learn how to use&nbsp;Gradient Descent Optimization in TensorFlow.&nbsp; Rather than getting too mathematical, we have broken it down into simple steps, which you can learn to get started.&nbsp;<br />
+&nbsp;</p>
+
+<h2>Step 1</h2>
+
+<p>Let&#39;s have necessary modules imported and&nbsp;&nbsp;x and y variables declared, through which, we&#39;ll define our&nbsp;gradient descent optimization.</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+x = tf.Variable(2, name = 'x', dtype = tf.float32)
+log_x = tf.log(x)
+log_x_squared = tf.square(log_x)
+
+optimizer = tf.train.GradientDescentOptimizer(0.5)
+train = optimizer.minimize(log_x_squared)</code></pre>
+
+<p>&nbsp;</p>
+
+<h2>Step 2</h2>
+
+<p>Now, let&#39;s initialize necessary variables and call them with functions.</p>
+
+<pre>
+<code class="language-python">init = tf.initialize_all_variables()
+
+def optimize():
+   with tf.Session() as session:
+      session.run(init)
+      print("starting at", "x:", session.run(x), "log(x)^2:", session.run(log_x_squared))
+      
+      for step in range(10):
+         session.run(train)
+         print("step", step, "x:", session.run(x), "log(x)^2:", session.run(log_x_squared))
+optimize()</code></pre>
+
+<p>&nbsp;</p>
               
-              <br>
-                <p>Tutorial contents of Gradient Descent Optimization is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
               
               
             </div>
             <div id="problems" class="container-fluid tab-panes fade"><br>
               
-                <p>No problems available for this topic.</p>
               
               
+              <hr>
+              <div class="mcq">
+                <p>Why do we use&nbsp;Gradient Descent Optimization ?</p>
+                <p id="q_486_A"><a href="javascript: onans('q_486_A','B');"><span>A.</span></a> To improve speed</p>
+                <p id="q_486_B"><a href="javascript: onans('q_486_B','B');"><span>B.</span></a> To find minimum of function</p>
+                <p id="q_486_C"><a href="javascript: onans('q_486_C','B');"><span>C.</span></a> To reduce training time</p>
+                <p id="q_486_D"><a href="javascript: onans('q_486_D','B');"><span>D.</span></a> To improve accuracy</p>
+                <p id="q_486_result" style="display:none;"></p>
+                <div id="q_486" style="display: none; padding:2%">
+                    <span><b style="color:#005580;">Answer:</b> Option <b>B</b></span> <br> <br>
+                  
+                  <b style="color:#005580;">Explanation:</b>
+                  None
+                  
+                </div>
+                <a href="javascript: see_ans('q_486')" class="btn btn-danger"> See answer</a>
+              
+              </div>
+              <hr>
               
               
               <script>
@@ -456,17 +512,72 @@ footer{
                   <div id="notes" class="container tab-pane active"><br>
                     
                     
+                    <p>Gradient descent is a first-order iterative optimization algorithm for finding the minimum of a function. In this tutorial, we&#39;ll learn how to use&nbsp;Gradient Descent Optimization in TensorFlow.&nbsp; Rather than getting too mathematical, we have broken it down into simple steps, which you can learn to get started.&nbsp;<br />
+&nbsp;</p>
+
+<h2>Step 1</h2>
+
+<p>Let&#39;s have necessary modules imported and&nbsp;&nbsp;x and y variables declared, through which, we&#39;ll define our&nbsp;gradient descent optimization.</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+
+x = tf.Variable(2, name = 'x', dtype = tf.float32)
+log_x = tf.log(x)
+log_x_squared = tf.square(log_x)
+
+optimizer = tf.train.GradientDescentOptimizer(0.5)
+train = optimizer.minimize(log_x_squared)</code></pre>
+
+<p>&nbsp;</p>
+
+<h2>Step 2</h2>
+
+<p>Now, let&#39;s initialize necessary variables and call them with functions.</p>
+
+<pre>
+<code class="language-python">init = tf.initialize_all_variables()
+
+def optimize():
+   with tf.Session() as session:
+      session.run(init)
+      print("starting at", "x:", session.run(x), "log(x)^2:", session.run(log_x_squared))
+      
+      for step in range(10):
+         session.run(train)
+         print("step", step, "x:", session.run(x), "log(x)^2:", session.run(log_x_squared))
+optimize()</code></pre>
+
+<p>&nbsp;</p>
                     
-                    <br>
-                      <p>Tutorial contents of Gradient Descent Optimization is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="/jobs/" target="_blank">Carrier section</a> for openings in content writing. </p>
                     
                     
                   </div>
                   <div id="problems" class="container-fluid tab-panes fade"><br>
                     
-                      <p>No problems available for this topic.</p>
                     
                     
+                    <hr>
+                    <div class="mcq">
+                      <p>Why do we use&nbsp;Gradient Descent Optimization ?</p>
+                      <p id="q_486_A"><a href="javascript: onans('q_486_A','B');"><span>A.</span></a> To improve speed</p>
+                      <p id="q_486_B"><a href="javascript: onans('q_486_B','B');"><span>B.</span></a> To find minimum of function</p>
+                      <p id="q_486_C"><a href="javascript: onans('q_486_C','B');"><span>C.</span></a> To reduce training time</p>
+                      <p id="q_486_D"><a href="javascript: onans('q_486_D','B');"><span>D.</span></a> To improve accuracy</p>
+                      <p id="q_486_result" style="display:none;"></p>
+                      <div id="q_486" style="display: none; padding:2%">
+                          <span><b style="color:#005580;">Answer:</b> Option <b>B</b></span> <br> <br>
+                        
+                        <b style="color:#005580;">Explanation:</b>
+                        None
+                        
+                      </div>
+                      <a href="javascript: see_ans('q_486')" class="btn btn-danger"> See answer</a>
+                    
+                    </div>
+                    <hr>
                     
                     
                     <script>

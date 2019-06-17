@@ -108,6 +108,7 @@
   background-color: white;
   padding: 0px 10px;
   padding-bottom: 200px;
+ 
 }
 footer{
   display: none;
@@ -379,9 +380,110 @@ footer{
             <div id="notes" class="container tab-pane active"><br>
               
               
+              <p>In this tutorail, we&#39;ll form graphs of partial differential equation using TensorFlow. Partial differential equation (PDE) are&nbsp;partial derivativesof&nbsp;unknown function having&nbsp;several independent variables.&nbsp;</p>
+
+<p>We have broken down forming graphs into steps for better understanding. Follow step by step.</p>
+
+<h2>Step 1 : Import&nbsp;modules</h2>
+
+<p>Let&#39;s import necessary modules first.&nbsp;</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt</code></pre>
+
+<p>&nbsp;</p>
+
+<h2>Step 2 : Writing&nbsp;functions</h2>
+
+<p>We need to write&nbsp;functions for transformation of a 2D array into a convolution kernel and simplified 2D convolution operation.</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="language-python">def make_kernel(a):
+   a = np.asarray(a)
+   a = a.reshape(list(a.shape) + [1,1])
+   return tf.constant(a, dtype=1)
+
+def simple_conv(x, k):
+   """A simplified 2D convolution operation"""
+   x = tf.expand_dims(tf.expand_dims(x, 0), -1)
+   y = tf.nn.depthwise_conv2d(x, k, [1, 1, 1, 1], padding = 'SAME')
+   return y[0, :, :, 0]
+
+def laplace(x):
+   """Compute the 2D laplacian of an array"""
+   laplace_k = make_kernel([[0.5, 1.0, 0.5], [1.0, -6., 1.0], [0.5, 1.0, 0.5]])
+   return simple_conv(x, laplace_k)
+   
+sess = tf.InteractiveSession()</code></pre>
+
+<p>&nbsp;</p>
+
+<h2>Step 3 : Compute Graph and display</h2>
+
+<p>Now, let&#39;s provide number of iterations and compute the graph. We are assuming there is a pond with dimension 500*500 square. Hence, N = 500.</p>
+
+<pre>
+<code class="language-python">N = 500
+
+# Initial Conditions -- some rain drops hit a pond
+
+# Set everything to zero
+u_init = np.zeros([N, N], dtype = np.float32)
+ut_init = np.zeros([N, N], dtype = np.float32)
+
+# Some rain drops hit a pond at random points
+for n in range(100):
+   a,b = np.random.randint(0, N, 2)
+   u_init[a,b] = np.random.uniform()
+
+plt.imshow(u_init)
+plt.show()
+
+# Parameters:
+# eps -- time resolution
+# damping -- wave damping
+eps = tf.placeholder(tf.float32, shape = ())
+damping = tf.placeholder(tf.float32, shape = ())
+
+# Create variables for simulation state
+U = tf.Variable(u_init)
+Ut = tf.Variable(ut_init)
+
+# Discretized PDE update rules
+U_ = U + eps * Ut
+Ut_ = Ut + eps * (laplace(U) - damping * Ut)
+
+# Operation to update the state
+step = tf.group(U.assign(U_), Ut.assign(Ut_))
+
+# Initialize state to initial conditions
+tf.initialize_all_variables().run()
+
+# Run 1000 steps of PDE
+for i in range(1000):
+   # Step simulation
+   step.run({eps: 0.03, damping: 0.04})
+   
+   # Visualize every 50 steps
+   if i % 500 == 0:
+      plt.imshow(U.eval())
+      plt.show()
+</code></pre>
+
+<p>This will generate following graphs:</p>
+
+<p style="text-align:center"><img alt="" height="409" src="../../media/uploads/2019/06/17/graph_1.jpg" width="426" /></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center"><img alt="" height="418" src="../../media/uploads/2019/06/17/graph_2.jpg" width="426" /></p>
+
+<p>&nbsp;</p>
               
-              <br>
-                <p>Tutorial contents of Forming Graphs is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="../../jobs/index.html" target="_blank">Carrier section</a> for openings in content writing. </p>
               
               
             </div>
@@ -456,9 +558,110 @@ footer{
                   <div id="notes" class="container tab-pane active"><br>
                     
                     
+                    <p>In this tutorail, we&#39;ll form graphs of partial differential equation using TensorFlow. Partial differential equation (PDE) are&nbsp;partial derivativesof&nbsp;unknown function having&nbsp;several independent variables.&nbsp;</p>
+
+<p>We have broken down forming graphs into steps for better understanding. Follow step by step.</p>
+
+<h2>Step 1 : Import&nbsp;modules</h2>
+
+<p>Let&#39;s import necessary modules first.&nbsp;</p>
+
+<pre>
+<code class="language-python">import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt</code></pre>
+
+<p>&nbsp;</p>
+
+<h2>Step 2 : Writing&nbsp;functions</h2>
+
+<p>We need to write&nbsp;functions for transformation of a 2D array into a convolution kernel and simplified 2D convolution operation.</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code class="language-python">def make_kernel(a):
+   a = np.asarray(a)
+   a = a.reshape(list(a.shape) + [1,1])
+   return tf.constant(a, dtype=1)
+
+def simple_conv(x, k):
+   """A simplified 2D convolution operation"""
+   x = tf.expand_dims(tf.expand_dims(x, 0), -1)
+   y = tf.nn.depthwise_conv2d(x, k, [1, 1, 1, 1], padding = 'SAME')
+   return y[0, :, :, 0]
+
+def laplace(x):
+   """Compute the 2D laplacian of an array"""
+   laplace_k = make_kernel([[0.5, 1.0, 0.5], [1.0, -6., 1.0], [0.5, 1.0, 0.5]])
+   return simple_conv(x, laplace_k)
+   
+sess = tf.InteractiveSession()</code></pre>
+
+<p>&nbsp;</p>
+
+<h2>Step 3 : Compute Graph and display</h2>
+
+<p>Now, let&#39;s provide number of iterations and compute the graph. We are assuming there is a pond with dimension 500*500 square. Hence, N = 500.</p>
+
+<pre>
+<code class="language-python">N = 500
+
+# Initial Conditions -- some rain drops hit a pond
+
+# Set everything to zero
+u_init = np.zeros([N, N], dtype = np.float32)
+ut_init = np.zeros([N, N], dtype = np.float32)
+
+# Some rain drops hit a pond at random points
+for n in range(100):
+   a,b = np.random.randint(0, N, 2)
+   u_init[a,b] = np.random.uniform()
+
+plt.imshow(u_init)
+plt.show()
+
+# Parameters:
+# eps -- time resolution
+# damping -- wave damping
+eps = tf.placeholder(tf.float32, shape = ())
+damping = tf.placeholder(tf.float32, shape = ())
+
+# Create variables for simulation state
+U = tf.Variable(u_init)
+Ut = tf.Variable(ut_init)
+
+# Discretized PDE update rules
+U_ = U + eps * Ut
+Ut_ = Ut + eps * (laplace(U) - damping * Ut)
+
+# Operation to update the state
+step = tf.group(U.assign(U_), Ut.assign(Ut_))
+
+# Initialize state to initial conditions
+tf.initialize_all_variables().run()
+
+# Run 1000 steps of PDE
+for i in range(1000):
+   # Step simulation
+   step.run({eps: 0.03, damping: 0.04})
+   
+   # Visualize every 50 steps
+   if i % 500 == 0:
+      plt.imshow(U.eval())
+      plt.show()
+</code></pre>
+
+<p>This will generate following graphs:</p>
+
+<p style="text-align:center"><img alt="" height="409" src="/media/uploads/2019/06/17/graph_1.JPG" width="426" /></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align:center"><img alt="" height="418" src="/media/uploads/2019/06/17/graph_2.JPG" width="426" /></p>
+
+<p>&nbsp;</p>
                     
-                    <br>
-                      <p>Tutorial contents of Forming Graphs is not uploaded yet. We are working on it. It'll be available soon. Keep checking our <a href="https://facebook.com/HackersFn" target="_blank">Facebook page</a> for updates. If you'd like to contribute in writing contents and setting problems, check our <a href="/jobs/" target="_blank">Carrier section</a> for openings in content writing. </p>
                     
                     
                   </div>
