@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - TensorFlow Basics</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="mathematics.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="convolutional-neural-network.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -544,6 +559,19 @@ print (result3)</code></pre>
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="mathematics.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="convolutional-neural-network.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -551,205 +579,7 @@ print (result3)</code></pre>
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - TensorFlow Basics</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>TensorFlow starts with Tensors. Tesors are basic Data Structure of TesorFlow. So, let&#39;s start with understanding it.</p>
-
-<p><strong>Tensor Data Structure</strong></p>
-
-<p>Tensors are used as the basic data structures in TensorFlow.Tensors represent the connecting edges in any flow diagram called the Data Flow Graph. Tensors are defined as multidimensional array or list.&nbsp;</p>
-
-<p>Tensors have three parameters &minus;</p>
-
-<ul>
-	<li>Rank
-	<ul>
-		<li>&nbsp;Unit of dimensionality described within tensor is called rank. It identifies the number of dimensions of the tensor. A rank of a tensor can be described as the order or n-dimensions of a tensor defined.</li>
-	</ul>
-	</li>
-	<li>Shape
-	<ul>
-		<li>The number of rows and columns together define the shape of Tensor.</li>
-	</ul>
-	</li>
-	<li>Type
-	<ul>
-		<li>Type describes the data type assigned to Tensor&rsquo;s elements. We need to first build a n-dimensional array and then convert it.</li>
-	</ul>
-	</li>
-</ul>
-
-<p style="text-align:center"><img alt="" height="338" src="/media/uploads/2019/06/07/tensor_data_structure.jpg" width="379" /></p>
-
-<p>&nbsp;</p>
-
-<p><strong>Dimesions of TensorFlow</strong></p>
-
-<p>TensorFlow has&nbsp;various dimensions.</p>
-
-<p><strong>One dimensional Tensor</strong></p>
-
-<p>One dimensional tensor is a normal array structure, it&nbsp;includes one set of values of the same data type.</p>
-
-<p>Here is how you declare it and use it:</p>
-
-<pre>
-<code class="language-python">&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; tensor_1d = np.array([1.9, 2, 4.0, 27.9])
-&gt;&gt;&gt; print tensor_1d</code></pre>
-
-<p>Indexing of elements is same as Python lists. The first element starts with index of 0.&nbsp;To print the values through index, you need to&nbsp;mention the index number.</p>
-
-<pre>
-<code class="language-python">&gt;&gt;&gt; print tensor_1d[0]
-1.9
-&gt;&gt;&gt; print tensor_1d[2]
-4.0</code></pre>
-
-<p><strong>Two dimensional Tensors</strong></p>
-
-<p>Sequence of arrays are used for creating &ldquo;two dimensional tensors&rdquo;. Here is how you create one and use it:</p>
-
-<pre>
-<code class="language-python">&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; tensor_2d = np.array([(1,2,3,4),(4,5,6,7),(8,9,10,11),(12,13,14,15)])
-&gt;&gt;&gt; print(tensor_2d)
-[[ 1 2 3 4]
-[ 4 5 6 7]
-[ 8 9 10 11]
-[12 13 14 15]]
-&gt;&gt;&gt;</code></pre>
-
-<p>Elemets of 2d tensors can be tracked with the help of row number and column number specified as index numbers.</p>
-
-<pre>
-<code class="language-python">&gt;&gt;&gt; tensor_2d[3][1]
-13</code></pre>
-
-<p><strong>Operations on Tensors</strong></p>
-
-<p>Let&#39;s try doing some aritmetic operations on Tensors.</p>
-
-<pre>
-<code class="language-python">import tensorflow as tf
-# everyone calls it tf for short
-import numpy as np
-
-# Creating 2 matrices to play with
-
-matrix1 = np.array([(2,2,2),(2,2,2),(2,2,2)],dtype = 'int32')
-matrix2 = np.array([(1,1,1),(1,1,1),(1,1,1)],dtype = 'int32')
-
-#Just printing it to see how they look
-print (matrix1)
-print (matrix2)
-
-matrix1 = tf.constant(matrix1)
-matrix2 = tf.constant(matrix2)
-
-# Multiplying Matrices
-matrix_product = tf.matmul(matrix1, matrix2)
-
-# Addition on Matrices
-matrix_sum = tf.add(matrix1,matrix2)
-
-# Creating another matrix
-matrix_3 = np.array([(2,7,2),(1,4,2),(9,0,2)],dtype = 'float32')
-print (matrix_3)
-
-# Finding determinant of matrix
-matrix_det = tf.matrix_determinant(matrix_3)
-
-# Using TensorFlow to run operations
-
-with tf.Session() as sess:
-   result1 = sess.run(matrix_product)
-   result2 = sess.run(matrix_sum)
-   result3 = sess.run(matrix_det)
-
-# Finally print the results
-
-print (result1)
-print (result2)
-print (result3)</code></pre>
-
-<p>Here we have created multidimensional arrays. Note down,&nbsp;that we created graph and sessions, which manage the Tensors and generate the appropriate output. With the help of graph, we have the output specifying the mathematical calculations between Tensors. Don&#39;t worry if things are not clear for now. We&#39;ll get into deep in upcoming tutorials.</p>
-
-<p>&nbsp;</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/basics.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Single Layer Perceptron</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="Word-Embedding.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="Linear-Regression.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -565,6 +580,19 @@ with tf.Session() as sess:
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="Word-Embedding.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="Linear-Regression.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -572,226 +600,7 @@ with tf.Session() as sess:
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Single Layer Perceptron</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>Before we start getting into Single Layer Perceptron, lets understand&nbsp;Artificial Neural Networks (ANN) first.</p>
-
-<p><strong>What is&nbsp;Artificial Neural Networks (ANN) ?</strong></p>
-
-<p>Artificial neural networks is&nbsp;information processing system whose mechanism&nbsp;is inspired with&nbsp;functionality of biological neural circuits. An artificial neural network possesses many processing units connected to each other.</p>
-
-<div style="text-align:center">
-<figure class="image" style="display:inline-block"><img alt="" height="481" src="/media/uploads/2019/06/09/ann.png" width="400" />
-<figcaption>Artifical Neural Networks</figcaption>
-</figure>
-</div>
-
-<p>&nbsp;Hidden units communicate with the external layer. While the input and output units communicate only through hidden layer of the network.</p>
-
-<p>Pattern of connection with nodes, total number of layers and level of nodes between inputs and outputs with the number of neurons per layer define &nbsp;architecture of a neural network.</p>
-
-<p>There are two types of architecture on the basis of&nbsp;functionality&nbsp;&minus;</p>
-
-<ul>
-	<li>Single Layer Perceptron</li>
-	<li>Multi-Layer Perceptron</li>
-</ul>
-
-<p>Now, you have got the idea of what is Single Layer Perceptron. Let&#39;s talk about it in details.</p>
-
-<p><strong>What is Sinlge Layer perceptron ?</strong></p>
-
-<p>Single layer perceptron is the first proposed neural model created. Content of local memory of the neuron consists of a vector of weights. Computation of a single layer perceptron is performed over the calculation of sum of the input vector each with the value multiplied by corresponding element of vector of the weights. Value which is displayed in output will be the input of an activation function.</p>
-
-<p>&nbsp;</p>
-
-<p style="text-align:center"><img alt="Single layer perceptron" height="247" src="/media/uploads/2019/06/09/slp.JPG" width="603" /></p>
-
-<p>&nbsp;</p>
-
-<p><strong>Implementation</strong></p>
-
-<p>Now we&#39;ll implement&nbsp;single layer perceptron for an image classification problem using TensorFlow. The best example to illustrate single layer perceptron is through representation of &ldquo;Logistic Regression&rdquo;.</p>
-
-<p style="text-align:center"><img alt="Logistic regression" height="443" src="/media/uploads/2019/06/09/logistic-regression.JPG" width="601" /></p>
-
-<p>&nbsp;</p>
-
-<p>Basic steps in training&nbsp;logistic regression are &minus;</p>
-
-<ol>
-	<li>
-	<p>Weights are initialized with random values at the beginning of the training.</p>
-	</li>
-	<li>
-	<p>For each element of&nbsp;training set, error is calculated with difference between desired output and actual output. Error calculated is used to adjust the weights.</p>
-	</li>
-	<li>
-	<p>Process is repeated until the error made on entire training set is not less than&nbsp;specified threshold, until the maximum number of iterations is reached.</p>
-	</li>
-</ol>
-
-<p>&nbsp;</p>
-
-<p>Now, Let&#39;s implement it in code.</p>
-
-<pre>
-<code class="language-python"># Import MINST data 
-from tensorflow.examples.tutorials.mnist import input_data 
-mnist = input_data.read_data_sets("/tmp/data/", one_hot = True) 
-
-import tensorflow as tf 
-import matplotlib.pyplot as plt 
-
-# Parameters 
-learning_rate = 0.01 
-training_epochs = 25 
-batch_size = 100 
-display_step = 1 
-
-# tf Graph Input 
-x = tf.placeholder("float", [None, 784]) # mnist data image of shape 28*28 = 784 
-y = tf.placeholder("float", [None, 10]) # 0-9 digits recognition =&gt; 10 classes 
-
-# Create model 
-# Set model weights 
-W = tf.Variable(tf.zeros([784, 10])) 
-b = tf.Variable(tf.zeros([10])) 
-
-# Construct model 
-activation = tf.nn.softmax(tf.matmul(x, W) + b) # Softmax 
-
-# Minimize error using cross entropy 
-cross_entropy = y*tf.log(activation) 
-cost = tf.reduce_mean\ (-tf.reduce_sum\ (cross_entropy,reduction_indices = 1)) 
-
-optimizer = tf.train.\ GradientDescentOptimizer(learning_rate).minimize(cost) 
-
-#Plot settings 
-avg_set = [] 
-epoch_set = [] 
-
-# Initializing the variables init = tf.initialize_all_variables()
-# Launch the graph 
-with tf.Session() as sess:
-   sess.run(init)
-   
-   # Training cycle
-   for epoch in range(training_epochs):
-      avg_cost = 0.
-      total_batch = int(mnist.train.num_examples/batch_size)
-      
-      # Loop over all batches
-      for i in range(total_batch):
-         batch_xs, batch_ys = \ mnist.train.next_batch(batch_size)
-         # Fit training using batch data sess.run(optimizer, \ feed_dict = {
-            x: batch_xs, y: batch_ys}) 
-         # Compute average loss avg_cost += sess.run(cost, \ feed_dict = {
-            x: batch_xs, \ y: batch_ys})/total_batch
-      # Display logs per epoch step
-      if epoch % display_step == 0:
-         print ("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(avg_cost))
-            avg_set.append(avg_cost) epoch_set.append(epoch+1)
-   print ("Training phase finished")
-    
-   plt.plot(epoch_set,avg_set, 'o', label = 'Logistic Regression Training phase') 
-   plt.ylabel('cost') 
-   plt.xlabel('epoch') 
-   plt.legend() 
-   plt.show() 
-    
-   # Test model 
-   correct_prediction = tf.equal(tf.argmax(activation, 1), tf.argmax(y, 1)) 
-   
-   # Calculate accuracy 
-   accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float")) print 
-      ("Model accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels}))</code></pre>
-
-<p>&nbsp;</p>
-
-<p>The logistic regression is considered as a predictive analysis. Logistic regression is used to describe data and to explain the relationship between one dependent binary variable and one or more nominal or independent variables.</p>
-
-<p>&nbsp;</p>
-
-<p style="text-align:center"><img alt="Logistic regression training" height="437" src="/media/uploads/2019/06/09/logistic_regression_training.JPG" width="605" /></p>
-
-<p>&nbsp;</p>
-
-<p>In the next turial we&#39;ll learn about Linear regression.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/Single-Layer-Perceptron.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Forming Graphs</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="Gradient-Descent-Optimization.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="Image-Recognition.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -524,6 +539,19 @@ for i in range(1000):
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="Gradient-Descent-Optimization.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="Image-Recognition.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -531,185 +559,7 @@ for i in range(1000):
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Forming Graphs</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>In this tutorail, we&#39;ll form graphs of partial differential equation using TensorFlow. Partial differential equation (PDE) are&nbsp;partial derivativesof&nbsp;unknown function having&nbsp;several independent variables.&nbsp;</p>
-
-<p>We have broken down forming graphs into steps for better understanding. Follow step by step.</p>
-
-<h2>Step 1 : Import&nbsp;modules</h2>
-
-<p>Let&#39;s import necessary modules first.&nbsp;</p>
-
-<pre>
-<code class="language-python">import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt</code></pre>
-
-<p>&nbsp;</p>
-
-<h2>Step 2 : Writing&nbsp;functions</h2>
-
-<p>We need to write&nbsp;functions for transformation of a 2D array into a convolution kernel and simplified 2D convolution operation.</p>
-
-<p>&nbsp;</p>
-
-<pre>
-<code class="language-python">def make_kernel(a):
-   a = np.asarray(a)
-   a = a.reshape(list(a.shape) + [1,1])
-   return tf.constant(a, dtype=1)
-
-def simple_conv(x, k):
-   """A simplified 2D convolution operation"""
-   x = tf.expand_dims(tf.expand_dims(x, 0), -1)
-   y = tf.nn.depthwise_conv2d(x, k, [1, 1, 1, 1], padding = 'SAME')
-   return y[0, :, :, 0]
-
-def laplace(x):
-   """Compute the 2D laplacian of an array"""
-   laplace_k = make_kernel([[0.5, 1.0, 0.5], [1.0, -6., 1.0], [0.5, 1.0, 0.5]])
-   return simple_conv(x, laplace_k)
-   
-sess = tf.InteractiveSession()</code></pre>
-
-<p>&nbsp;</p>
-
-<h2>Step 3 : Compute Graph and display</h2>
-
-<p>Now, let&#39;s provide number of iterations and compute the graph. We are assuming there is a pond with dimension 500*500 square. Hence, N = 500.</p>
-
-<pre>
-<code class="language-python">N = 500
-
-# Initial Conditions -- some rain drops hit a pond
-
-# Set everything to zero
-u_init = np.zeros([N, N], dtype = np.float32)
-ut_init = np.zeros([N, N], dtype = np.float32)
-
-# Some rain drops hit a pond at random points
-for n in range(100):
-   a,b = np.random.randint(0, N, 2)
-   u_init[a,b] = np.random.uniform()
-
-plt.imshow(u_init)
-plt.show()
-
-# Parameters:
-# eps -- time resolution
-# damping -- wave damping
-eps = tf.placeholder(tf.float32, shape = ())
-damping = tf.placeholder(tf.float32, shape = ())
-
-# Create variables for simulation state
-U = tf.Variable(u_init)
-Ut = tf.Variable(ut_init)
-
-# Discretized PDE update rules
-U_ = U + eps * Ut
-Ut_ = Ut + eps * (laplace(U) - damping * Ut)
-
-# Operation to update the state
-step = tf.group(U.assign(U_), Ut.assign(Ut_))
-
-# Initialize state to initial conditions
-tf.initialize_all_variables().run()
-
-# Run 1000 steps of PDE
-for i in range(1000):
-   # Step simulation
-   step.run({eps: 0.03, damping: 0.04})
-   
-   # Visualize every 50 steps
-   if i % 500 == 0:
-      plt.imshow(U.eval())
-      plt.show()
-</code></pre>
-
-<p>This will generate following graphs:</p>
-
-<p style="text-align:center"><img alt="" height="409" src="/media/uploads/2019/06/17/graph_1.JPG" width="426" /></p>
-
-<p>&nbsp;</p>
-
-<p style="text-align:center"><img alt="" height="418" src="/media/uploads/2019/06/17/graph_2.JPG" width="426" /></p>
-
-<p>&nbsp;</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/Forming-Graphs.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

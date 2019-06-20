@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - XOR Implementation</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="Optimizers.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="Gradient-Descent-Optimization.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -541,6 +556,19 @@ for i in range(100000):
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="Optimizers.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="Gradient-Descent-Optimization.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -548,202 +576,7 @@ for i in range(100000):
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - XOR Implementation</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>In this tutorial, we&#39;ll learn about implementing XOR in TensorFlow. This is used in Encryption and decryption process. Before we get into implementiation of XOR in TensorFlow, let&#39;s take a look at XOR operation.</p>
-
-<table align="center" border="1" cellpadding="0" cellspacing="0" style="width:260px">
-	<tbody>
-		<tr>
-			<td style="text-align:center">A</td>
-			<td style="text-align:center">B</td>
-			<td style="text-align:center; width:104px">A <strong>XOR</strong> B</td>
-		</tr>
-		<tr>
-			<td style="text-align:center">0</td>
-			<td style="text-align:center">0</td>
-			<td style="text-align:center; width:104px">0</td>
-		</tr>
-		<tr>
-			<td style="text-align:center">0</td>
-			<td style="text-align:center">1</td>
-			<td style="text-align:center; width:104px">1</td>
-		</tr>
-		<tr>
-			<td style="text-align:center">1</td>
-			<td style="text-align:center">0</td>
-			<td style="text-align:center; width:104px">1</td>
-		</tr>
-		<tr>
-			<td style="text-align:center">1</td>
-			<td style="text-align:center">1</td>
-			<td style="text-align:center; width:104px">0</td>
-		</tr>
-	</tbody>
-</table>
-
-<p>&nbsp;</p>
-
-<p>XOR Cipher encryption method makes it hard to&nbsp;crack with brute force method.&nbsp;</p>
-
-<p>To implement XOR Cipher, we define a XOR encryption key and then perform XOR operation of the characters in the specified string with this key, which a user tries to encrypt.</p>
-
-<p>Now, let&#39;s see how can we implement XOR in TensorFlow.</p>
-
-<pre>
-<code class="language-python">import tensorflow as tf
-import numpy as np
-
-"""
-A simple numpy implementation of a XOR gate to understand the backpropagation
-algorithm
-"""
-
-x = tf.placeholder(tf.float64,shape = [4,2],name = "x")
-#declaring a place holder for input x
-y = tf.placeholder(tf.float64,shape = [4,1],name = "y")
-#declaring a place holder for desired output y
-
-m = np.shape(x)[0]#number of training examples
-n = np.shape(x)[1]#number of features
-hidden_s = 2 #number of nodes in the hidden layer
-l_r = 1#learning rate initialization
-
-theta1 = tf.cast(tf.Variable(tf.random_normal([3,hidden_s]),name = "theta1"),tf.float64)
-theta2 = tf.cast(tf.Variable(tf.random_normal([hidden_s+1,1]),name = "theta2"),tf.float64)
-
-#conducting forward propagation
-a1 = tf.concat([np.c_[np.ones(x.shape[0])],x],1)
-#the weights of the first layer are multiplied by the input of the first layer
-
-z1 = tf.matmul(a1,theta1)
-#the input of the second layer is the output of the first layer, passed through the 
-   activation function and column of biases is added
-
-a2 = tf.concat([np.c_[np.ones(x.shape[0])],tf.sigmoid(z1)],1)
-#the input of the second layer is multiplied by the weights
-
-z3 = tf.matmul(a2,theta2)
-#the output is passed through the activation function to obtain the final probability
-
-h3 = tf.sigmoid(z3)
-cost_func = -tf.reduce_sum(y*tf.log(h3)+(1-y)*tf.log(1-h3),axis = 1)
-
-#built in tensorflow optimizer that conducts gradient descent using specified 
-   learning rate to obtain theta values
-
-optimiser = tf.train.GradientDescentOptimizer(learning_rate = l_r).minimize(cost_func)
-
-#setting required X and Y values to perform XOR operation
-X = [[0,0],[0,1],[1,0],[1,1]]
-Y = [[0],[1],[1],[0]]
-
-#initializing all variables, creating a session and running a tensorflow session
-init = tf.global_variables_initializer()
-sess = tf.Session()
-sess.run(init)
-
-#running gradient descent for each iteration and printing the hypothesis 
-   obtained using the updated theta values
-for i in range(100000):
-   sess.run(optimiser, feed_dict = {x:X,y:Y})#setting place holder values using feed_dict
-   if i%100==0:
-      print("Epoch:",i)
-      print("Hyp:",sess.run(h3,feed_dict = {x:X,y:Y}))</code></pre>
-
-<p>&nbsp;</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                    
-                    
-                    <hr>
-                    <div class="mcq">
-                      <p>What is ( 0 <strong>XOR</strong> 0 ) XOR (1 <strong>XOR</strong> 1) ?</p>
-                      <p id="q_485_A"><a href="javascript: onans('q_485_A','A');"><span>A.</span></a> 0</p>
-                      <p id="q_485_B"><a href="javascript: onans('q_485_B','A');"><span>B.</span></a> 1</p>
-                      <p id="q_485_C"><a href="javascript: onans('q_485_C','A');"><span>C.</span></a> None of the options</p>
-                      <p id="q_485_D"><a href="javascript: onans('q_485_D','A');"><span>D.</span></a> Cannot be calculated</p>
-                      <p id="q_485_result" style="display:none;"></p>
-                      <div id="q_485" style="display: none; padding:2%">
-                          <span><b style="color:#005580;">Answer:</b> Option <b>A</b></span> <br> <br>
-                        
-                        <b style="color:#005580;">Explanation:</b>
-                        None
-                        
-                      </div>
-                      <a href="javascript: see_ans('q_485')" class="btn btn-danger"> See answer</a>
-                    
-                    </div>
-                    <hr>
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/XOR-Implementation.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

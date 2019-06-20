@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - TensorBoard Visualization</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="recurrent-neural-network.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="Word-Embedding.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -466,6 +481,19 @@ with tf.Session() as session:
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="recurrent-neural-network.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="Word-Embedding.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -473,127 +501,7 @@ with tf.Session() as session:
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - TensorBoard Visualization</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p><strong>What is TensorBoard ?</strong></p>
-
-<p>TensorBoard is visualization tool of TensorFlow.&nbsp;It is used for analyzing Data Flow Graph and to understand machine learning models. TensorBoard provides&nbsp;a view of different types of statistics about the parameters and details of any graph in vertical alignment.&nbsp;</p>
-
-<p>Deep neural network includes up to 36,000 nodes. TensorBoard helps in collapsing these nodes in high-level blocks and highlighting the identical structures. This allows better analysis of graph focusing on the primary sections of the computation graph. The TensorBoard visualization is said to be very interactive where a user can pan, zoom and expand the nodes to display the details.</p>
-
-<p><strong>How TensorBoard works ?</strong></p>
-
-<p>Have a look at this figure to understand how TensorBoard visualization works.&nbsp;</p>
-
-<p style="text-align:center"><img alt="tensorboard_working" height="346" src="/media/uploads/2019/06/09/tensorboard_working.JPG" width="593" /></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;Algorithms collapse nodes into high-level blocks and highlight the specific groups with identical structures, which separate high-degree nodes.</p>
-
-<p>TensorBoard&nbsp;created in&nbsp;this way is useful and is treated equally important for tuning a machine learning model. This visualization tool is designed for the configuration log file with summary information and details that need to be displayed.</p>
-
-<p><strong>Implementation</strong></p>
-
-<p>Let&#39;s now implement TensorBoard in code.</p>
-
-<pre>
-<code class="language-python">import tensorflow as tf 
-
-# Constants for TensorBoard visualization 
-a = tf.constant(10,name = "a") 
-b = tf.constant(90,name = "b") 
-y = tf.Variable(a+b*2,name = 'y') 
-#Creating model 
-model = tf.initialize_all_variables()
-
-with tf.Session() as session: 
-   merged = tf.merge_all_summaries() 
-   writer = tf.train.SummaryWriter("/tmp/tensorflowlogs",session.graph) 
-   session.run(model) 
-   print(session.run(y))</code></pre>
-
-<p>&nbsp;</p>
-
-<p>Here is a cheatsheet for TesorBoard visualization symbols.</p>
-
-<p style="text-align:center"><img alt="" height="386" src="/media/uploads/2019/06/09/tensorboard-cheatsheet.JPG" width="593" /></p>
-
-<p>In the next tutorial we&#39;ll learn about word embedding.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/TensorBoard-Visualization.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

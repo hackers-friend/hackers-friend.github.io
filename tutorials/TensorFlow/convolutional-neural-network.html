@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Convolutional Neural Networks</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="basics.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="recurrent-neural-network.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -631,6 +646,19 @@ of 1003520000 exceeds 10% of system memory.
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="basics.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="recurrent-neural-network.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -638,292 +666,7 @@ of 1003520000 exceeds 10% of system memory.
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Convolutional Neural Networks</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>We have understood basic concepts of Machine Learning, Let&#39;s now get into Deep Learning.</p>
-
-<p>Deep learning is a division of machine learning. It is considered as a remarkable&nbsp;step taken by researchers in recent decades. Deep learning is implented in&nbsp;applications like image recognition and speech recognition.</p>
-
-<p>two important types of deep neural networks&nbsp; are:</p>
-
-<ul>
-	<li>Convolutional Neural Networks</li>
-	<li>Recurrent Neural Networks</li>
-</ul>
-
-<p>We&#39;ll talk about&nbsp;CNN, Convolutional Neural Networks, in this tutorial. In next tutorial we&#39;ll cover RNN,&nbsp;Recurrent Neural Networks.</p>
-
-<p><strong>So, What is&nbsp;Convolutional Neural Networks ?</strong></p>
-
-<p>Convolutional Neural networks process data through multiple layers of arrays. This type of neural networks is used in applications like image recognition or face recognition.Primary difference between CNN and any other ordinary neural network is that, CNN takes input as a two-dimensional array and operates directly on the images rather than focusing on feature extraction which other neural networks focus on.</p>
-
-<p>The dominant approach of CNN includes solutions for problems of recognition. Top companies like Google and Facebook have invested in research and development towards recognition projects to get activities done with greater speed.</p>
-
-<p>Convolution Neural Network works on three basic ideas:</p>
-
-<ul>
-	<li>Local respective fields</li>
-	<li>Convolution</li>
-	<li>Pooling</li>
-</ul>
-
-<p><strong>What do we mean by these ideas ?</strong>&nbsp;</p>
-
-<p>CNN utilizes spatial correlations that exist within the input data. Each concurrent layer of a neural network connects some input neurons. This specific region is called local receptive field. Local receptive field focusses on the hidden neurons. The hidden neurons process the input data inside the mentioned field not realizing the changes outside the specific boundary.</p>
-
-<div style="text-align:center">
-<figure class="image" style="display:inline-block"><img alt="Local respective fields with input Neurons" src="/media/uploads/2019/06/08/cnn-local.JPG" />
-<figcaption>Local respective fields with input Neurons</figcaption>
-</figure>
-</div>
-
-<p>Observe the above representation, each connection learns a weight of the hidden neuron with an associated connection with movement from one layer to another. Here, individual neurons perform a shift from time to time. This process is called &ldquo;<strong>convolution</strong>&rdquo;.</p>
-
-<p>Mapping of connections from the input layer to the hidden feature map is defined as <strong>&ldquo;shared weights</strong>&rdquo; and bias included is called &ldquo;<strong>shared bias</strong>&rdquo;.</p>
-
-<p>CNN uses pooling layers, which are the layers, positioned immediately after CNN declaration. It takes&nbsp;input from&nbsp;user as a feature map, that comes out of convolutional networks and prepares a condensed feature map. Pooling layers helps in creating layers with neurons of previous layers.</p>
-
-<p>&nbsp;</p>
-
-<p><strong>Implemeting CNN in TensorFlow</strong></p>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 1</strong>&nbsp;&minus; Let&#39;s start with Including&nbsp;the necessary modules for TensorFlow and the data set modules, which are needed to compute the CNN model.</p>
-
-<pre>
-<code class="language-python">import tensorflow as tf
-import numpy as np
-from tensorflow.examples.tutorials.mnist import input_data</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 2</strong>&nbsp;&minus; Declare a function called&nbsp;<strong>run_cnn()</strong>, which includes various parameters and optimization variables with declaration of data placeholders. These optimization variables will declare the training pattern.</p>
-
-<pre>
-<code class="language-python">def run_cnn():
-   mnist = input_data.read_data_sets("MNIST_data/", one_hot = True)
-   learning_rate = 0.0001
-   epochs = 10
-   batch_size = 50</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 3</strong>&nbsp;&minus; Now, we will declare the training data placeholders with input parameters - for 28 x 28 pixels = 784. This is the flattened image data that is drawn from&nbsp;<strong>mnist.train.nextbatch()</strong>.</p>
-
-<p>We can reshape the tensor according to our requirements. The first value (-1) tells function to dynamically shape that dimension based on the amount of data passed to it. The two middle dimensions are set to the image size (i.e. 28 x 28).</p>
-
-<pre>
-<code class="language-python">x = tf.placeholder(tf.float32, [None, 784])
-x_shaped = tf.reshape(x, [-1, 28, 28, 1])
-y = tf.placeholder(tf.float32, [None, 10])</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 4</strong>&nbsp;&minus; Let&#39;s create some convolutional layers&nbsp;</p>
-
-<pre>
-<code class="language-python">layer1 = create_new_conv_layer(x_shaped, 1, 32, [5, 5], [2, 2], name = 'layer1')
-layer2 = create_new_conv_layer(layer1, 32, 64, [5, 5], [2, 2], name = 'layer2')</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 5</strong>&nbsp;&minus; Let us flatten the output ready for the fully connected output stage - after two layers of stride 2 pooling with the dimensions of 28 x 28, to dimension of 14 x 14 or minimum 7 x 7 x,y co-ordinates, but with 64 output channels. To create the fully connected with &quot;dense&quot; layer, the new shape needs to be [-1, 7 x 7 x 64]. We can set up some weights and bias values for this layer, then activate with ReLU.</p>
-
-<pre>
-<code class="language-python">flattened = tf.reshape(layer2, [-1, 7 * 7 * 64])
-
-wd1 = tf.Variable(tf.truncated_normal([7 * 7 * 64, 1000], stddev = 0.03), name = 'wd1')
-bd1 = tf.Variable(tf.truncated_normal([1000], stddev = 0.01), name = 'bd1')
-
-dense_layer1 = tf.matmul(flattened, wd1) + bd1
-dense_layer1 = tf.nn.relu(dense_layer1)</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 6</strong>&nbsp;&minus; Now, we&#39;ll create Another layer with specific softmax activations with the required optimizer that defines the accuracy assessment, which makes the setup of initialization operator.</p>
-
-<pre>
-<code class="language-python">wd2 = tf.Variable(tf.truncated_normal([1000, 10], stddev = 0.03), name = 'wd2')
-bd2 = tf.Variable(tf.truncated_normal([10], stddev = 0.01), name = 'bd2')
-
-dense_layer2 = tf.matmul(dense_layer1, wd2) + bd2
-y_ = tf.nn.softmax(dense_layer2)
-
-cross_entropy = tf.reduce_mean(
-   tf.nn.softmax_cross_entropy_with_logits(logits = dense_layer2, labels = y))
-
-optimiser = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(cross_entropy)
-
-correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-
-init_op = tf.global_variables_initializer()</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 7</strong>&nbsp;&minus; Let&#39;s set up recording variables. This adds up a summary to store the accuracy of data.</p>
-
-<p>&nbsp;</p>
-
-<pre>
-<code class="language-python">tf.summary.scalar('accuracy', accuracy)
-   merged = tf.summary.merge_all()
-   writer = tf.summary.FileWriter('E:\TensorFlowProject')
-   
-   with tf.Session() as sess:
-      sess.run(init_op)
-      total_batch = int(len(mnist.train.labels) / batch_size)
-      
-      for epoch in range(epochs):
-         avg_cost = 0
-      for i in range(total_batch):
-         batch_x, batch_y = mnist.train.next_batch(batch_size = batch_size)
-            _, c = sess.run([optimiser, cross_entropy], feed_dict = {
-            x:batch_x, y: batch_y})
-            avg_cost += c / total_batch
-         test_acc = sess.run(accuracy, feed_dict = {x: mnist.test.images, y:
-            mnist.test.labels})
-            summary = sess.run(merged, feed_dict = {x: mnist.test.images, y:
-            mnist.test.labels})
-         writer.add_summary(summary, epoch)
-
-   print("\nTraining complete!")
-   writer.add_graph(sess.graph)
-   print(sess.run(accuracy, feed_dict = {x: mnist.test.images, y:
-      mnist.test.labels}))
-
-def create_new_conv_layer(
-   input_data, num_input_channels, num_filters,filter_shape, pool_shape, name):
-
-   conv_filt_shape = [
-      filter_shape[0], filter_shape[1], num_input_channels, num_filters]
-
-   weights = tf.Variable(
-      tf.truncated_normal(conv_filt_shape, stddev = 0.03), name = name+'_W')
-   bias = tf.Variable(tf.truncated_normal([num_filters]), name = name+'_b')
-
-   out_layer =
-      tf.nn.conv2d(input_data, weights, [1, 1, 1, 1], padding = 'SAME')
-
-   out_layer += bias
-   out_layer = tf.nn.relu(out_layer)
-   ksize = [1, pool_shape[0], pool_shape[1], 1]
-   strides = [1, 2, 2, 1]
-   out_layer = tf.nn.max_pool(
-      out_layer, ksize = ksize, strides = strides, padding = 'SAME')
-
-   return out_layer
-
-if __name__ == "__main__":
-run_cnn()</code></pre>
-
-<p>&nbsp;</p>
-
-<p>Now, let&#39;s take a look at output generated by our code:</p>
-
-<p>&nbsp;</p>
-
-<pre>
-<code class="language-markdown">See @{tf.nn.softmax_cross_entropy_with_logits_v2}.
-
-2019-06-08 17:22:52.802268: I
-T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:140]
-Your CPU supports instructions that this TensorFlow binary was not compiled to
-use: AVX2
-
-2019-06-08 17:25:45.522845: W
-T:\src\github\tensorflow\tensorflow\core\framework\allocator.cc:101] Allocation
-of 1003520000 exceeds 10% of system memory.
-
-2019-06-08 17:25:50.630941: W
-T:\src\github\tensorflow\tensorflow\core\framework\allocator.cc:101] Allocation
-of 501760000 exceeds 10% of system memory.
-
-Epoch: 1 cost = 0.676 test accuracy: 0.940
-
-2019-06-08 17:26:58.987554: W
-T:\src\github\tensorflow\tensorflow\core\framework\allocator.cc:101] Allocation
-of 1003520000 exceeds 10% of system memory.
-</code></pre>
-
-<p>&nbsp;</p>
-
-<p>In this tutorial you learned about CNN and implemented it in TensorFlow. In the next tutorial we&#39;ll talk about RNN.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/convolutional-neural-network.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

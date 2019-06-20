@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - TFLearn</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="Linear-Regression.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="cnn-rnn-difference.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -488,6 +503,19 @@ print(testY[:5])</code></pre>
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="Linear-Regression.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="cnn-rnn-difference.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -495,149 +523,7 @@ print(testY[:5])</code></pre>
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - TFLearn</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>TFLearn&nbsp;provides a higher level API to TensorFlow for facilitating and showing up new experiments.</p>
-
-<p>Important Features of TFLearn are:</p>
-
-<ul>
-	<li>
-	<p>TFLearn is easy to use and understand.</p>
-	</li>
-	<li>
-	<p>It includes easy concepts to build highly modular network layers, optimizers and various metrics embedded within them.</p>
-	</li>
-	<li>
-	<p>It includes full transparency with TensorFlow work system.</p>
-	</li>
-	<li>
-	<p>It includes powerful helper functions to train the built in tensors which accept multiple inputs, outputs and optimizers.</p>
-	</li>
-	<li>
-	<p>It includes easy and beautiful graph visualization.</p>
-	</li>
-	<li>
-	<p>The graph visualization includes various details of weights, gradients and activations.</p>
-	</li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><strong>Installation of TFLearn</strong></p>
-
-<p>In order to install TFLearn, we can use simple pip command as we always do.&nbsp;</p>
-
-<pre>
-<code class="language-bash">pip install tflearn</code></pre>
-
-<p>&nbsp;</p>
-
-<p>Now that we have TFLearn installed let&#39;s use it&nbsp;with Random Forest classifier.</p>
-
-<pre>
-<code class="language-python">from __future__ import division, print_function, absolute_import
-
-#TFLearn module implementation
-import tflearn
-from tflearn.estimators import RandomForestClassifier
-
-# Data loading and pre-processing with respect to dataset
-import tflearn.datasets.mnist as mnist
-X, Y, testX, testY = mnist.load_data(one_hot = False)
-
-m = RandomForestClassifier(n_estimators = 100, max_nodes = 1000)
-m.fit(X, Y, batch_size = 10000, display_step = 10)
-
-print("Compute the accuracy on train data:")
-print(m.evaluate(X, Y, tflearn.accuracy_op))
-
-print("Compute the accuracy on test set:")
-print(m.evaluate(testX, testY, tflearn.accuracy_op))
-
-print("Digits for test images id 0 to 5:")
-print(m.predict(testX[:5]))
-
-print("True digits:")
-print(testY[:5])</code></pre>
-
-<p>&nbsp;</p>
-
-<p>In the next tutroal, we&#39;ll talk about difference between CNN and RNN.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/TFLearn.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

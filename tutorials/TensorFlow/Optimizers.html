@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Optimizers</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="Hidden-Layers-Perceptron.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="XOR-Implementation.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -465,6 +480,19 @@ footer{
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="Hidden-Layers-Perceptron.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="XOR-Implementation.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -472,126 +500,7 @@ footer{
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Optimizers</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>In this tutorial we&#39;ll learn optimizers in TensorFlow.</p>
-
-<p>We use optimizers&nbsp;for improving speed and performance for training a specific model.&nbsp;&nbsp;Optimizer class is initialized with given parameters. But they don&#39;t need any Tesor. They just have added information for training models.</p>
-
-<p>In TensorFlow, most basic optimizer is&nbsp;</p>
-
-<pre>
-<code class="language-python">tf.train.Optimizer
-
-# tf is TensorFlow</code></pre>
-
-<p>&nbsp;</p>
-
-<p>This class is stored at <strong>tensorflow/python/training/optimizer.py</strong></p>
-
-<p>We have follwing optimizers in TensorFlow:</p>
-
-<ol>
-	<li>Stochastic Gradient descent</li>
-	<li>Stochastic Gradient descent with gradient clipping</li>
-	<li>Momentum</li>
-	<li>Nesterov momentum</li>
-	<li>Adagrad</li>
-	<li>Adadelta</li>
-	<li>RMSProp</li>
-	<li>Adam</li>
-	<li>Adamax</li>
-	<li>SMORMS3</li>
-</ol>
-
-<p>Let&#39;s implement&nbsp;Stochastic Gradient descent.&nbsp;</p>
-
-<pre>
-<code class="language-python">def sgd(cost, params, lr = np.float32(0.01)):
-   g_params = tf.gradients(cost, params)
-   updates = []
-   
-   for param, g_param in zip(params, g_params):
-      updates.append(param.assign(param - lr*g_param))
-   return updates</code></pre>
-
-<p>&nbsp;</p>
-
-<p>In upcmoing tutorial, we&#39;ll learn about&nbsp;Gradient Descent Optimization with implementation of optimizers.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/Optimizers.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

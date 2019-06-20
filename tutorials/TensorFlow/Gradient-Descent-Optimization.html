@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Gradient Descent Optimization</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="XOR-Implementation.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="Forming-Graphs.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -478,6 +493,19 @@ optimize()</code></pre>
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="XOR-Implementation.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="Forming-Graphs.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -485,139 +513,7 @@ optimize()</code></pre>
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Gradient Descent Optimization</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>Gradient descent is a first-order iterative optimization algorithm for finding the minimum of a function. In this tutorial, we&#39;ll learn how to use&nbsp;Gradient Descent Optimization in TensorFlow.&nbsp; Rather than getting too mathematical, we have broken it down into simple steps, which you can learn to get started.&nbsp;<br />
-&nbsp;</p>
-
-<h2>Step 1</h2>
-
-<p>Let&#39;s have necessary modules imported and&nbsp;&nbsp;x and y variables declared, through which, we&#39;ll define our&nbsp;gradient descent optimization.</p>
-
-<p>&nbsp;</p>
-
-<pre>
-<code class="language-python">import tensorflow as tf
-
-x = tf.Variable(2, name = 'x', dtype = tf.float32)
-log_x = tf.log(x)
-log_x_squared = tf.square(log_x)
-
-optimizer = tf.train.GradientDescentOptimizer(0.5)
-train = optimizer.minimize(log_x_squared)</code></pre>
-
-<p>&nbsp;</p>
-
-<h2>Step 2</h2>
-
-<p>Now, let&#39;s initialize necessary variables and call them with functions.</p>
-
-<pre>
-<code class="language-python">init = tf.initialize_all_variables()
-
-def optimize():
-   with tf.Session() as session:
-      session.run(init)
-      print("starting at", "x:", session.run(x), "log(x)^2:", session.run(log_x_squared))
-      
-      for step in range(10):
-         session.run(train)
-         print("step", step, "x:", session.run(x), "log(x)^2:", session.run(log_x_squared))
-optimize()</code></pre>
-
-<p>&nbsp;</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                    
-                    
-                    <hr>
-                    <div class="mcq">
-                      <p>Why do we use&nbsp;Gradient Descent Optimization ?</p>
-                      <p id="q_486_A"><a href="javascript: onans('q_486_A','B');"><span>A.</span></a> To improve speed</p>
-                      <p id="q_486_B"><a href="javascript: onans('q_486_B','B');"><span>B.</span></a> To find minimum of function</p>
-                      <p id="q_486_C"><a href="javascript: onans('q_486_C','B');"><span>C.</span></a> To reduce training time</p>
-                      <p id="q_486_D"><a href="javascript: onans('q_486_D','B');"><span>D.</span></a> To improve accuracy</p>
-                      <p id="q_486_result" style="display:none;"></p>
-                      <div id="q_486" style="display: none; padding:2%">
-                          <span><b style="color:#005580;">Answer:</b> Option <b>B</b></span> <br> <br>
-                        
-                        <b style="color:#005580;">Explanation:</b>
-                        None
-                        
-                      </div>
-                      <a href="javascript: see_ans('q_486')" class="btn btn-danger"> See answer</a>
-                    
-                    </div>
-                    <hr>
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/Gradient-Descent-Optimization.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

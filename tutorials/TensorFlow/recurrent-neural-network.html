@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Recurrent Neural Networks</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="convolutional-neural-network.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="TensorBoard-Visualization.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -554,6 +569,19 @@ init = tf.global_variables_initializer()</code></pre>
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="convolutional-neural-network.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="TensorBoard-Visualization.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -561,215 +589,7 @@ init = tf.global_variables_initializer()</code></pre>
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Recurrent Neural Networks</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p><strong>What is&nbsp;Recurrent Neural Networks ?</strong></p>
-
-<p>Recurrent neural networks are deep learning algorithm, which follows a sequential approach. We always assume that each input and output is independent of all other layers. These are called recurrent because they perform mathematical computations in sequential manner.</p>
-
-<p>To train a recurrent neural network we have to follow following steps:</p>
-
-<p><strong>Step 1</strong>&nbsp;&minus; Input an example from dataset.</p>
-
-<p><strong>Step 2</strong>&nbsp;&minus; Network will take an example from dataset and compute some calculations using randomly initialized variables.</p>
-
-<p><strong>Step 3</strong>&nbsp;&minus; A predicted result is then computed.</p>
-
-<p><strong>Step 4</strong>&nbsp;&minus; Now we do&nbsp;comparison of actual result generated with the expected value. We&nbsp;will get an error. There comes the work.</p>
-
-<p><strong>Step 5</strong>&nbsp;&minus; To trace the error, it is propagated through same path where the variables are also adjusted.</p>
-
-<p><strong>Step 6</strong>&nbsp;&minus; Repeat&nbsp;steps from 1 to 5,&nbsp;until we are confident that the variables declared to get the output are defined properly.</p>
-
-<p><strong>Step 7</strong>&nbsp;&minus; Now we are ready to do prediction by applying these variables to get new unseen input.<br />
-&nbsp;</p>
-
-<p>Have a look at the diagram to understand&nbsp;the system.</p>
-
-<p style="text-align:center"><img alt="" height="215" src="/media/uploads/2019/06/08/rnn_system.JPG" width="555" /></p>
-
-<p>&nbsp;</p>
-
-<p><strong>Implementing Recurrent Neural Networks using TensorFlow</strong></p>
-
-<p>Now that we have talked about what are RNN and how they work. Let&#39;s try implementing them in TensorFLow. To do so, we have variours libraries in TensorFlow.</p>
-
-<p><strong>Step 1 -&nbsp;</strong>Import Libraries.</p>
-
-<pre>
-<code class="language-python">from __future__ import print_function
-
-import tensorflow as tf
-from tensorflow.contrib import rnn
-from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("/tmp/data/", one_hot = True)</code></pre>
-
-<p>Libraries help in defining the input data, which forms the primary part of recurrent neural network implementation.</p>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 2</strong>&nbsp;&minus; Before we move ahead, let me tell you what we are doing here&nbsp;is, we are trying&nbsp;to classify the images using a recurrent neural network, where we consider every image row as a sequence of pixels. MNIST image shape is specifically defined as 28*28 px. Now we will handle 28 sequences of 28 steps for each sample that is mentioned. We will define the input parameters to get the sequential pattern done.</p>
-
-<p>&nbsp;</p>
-
-<pre>
-<code class="language-python"># MNIST data input with image of shape 28*28
-n_input = 28 
-n_steps = 28
-n_hidden = 128
-n_classes = 10
-
-# Graph input to TensorFlow
-x = tf.placeholder("float", [None, n_steps, n_input])
-y = tf.placeholder("float", [None, n_classes]
-weights = {
-   'out': tf.Variable(tf.random_normal([n_hidden, n_classes]))
-}
-biases = {
-   'out': tf.Variable(tf.random_normal([n_classes]))
-}</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 3</strong>&nbsp;&minus; Now, we&#39;ll&nbsp;compute the results using a defined function in RNN to get the best results. Here, each data shape is compared with current input shape and the results are computed to maintain the accuracy rate.&nbsp;</p>
-
-<pre>
-<code class="language-python">def RNN(x, weights, biases):
-   x = tf.unstack(x, n_steps, 1)
-
-   # Define a lstm cell with tensorflow
-   lstm_cell = rnn.BasicLSTMCell(n_hidden, forget_bias=1.0)
-
-   # Get lstm cell output
-   outputs, states = rnn.static_rnn(lstm_cell, x, dtype = tf.float32)
-
-   # Linear activation, using rnn inner loop last output
-   return tf.matmul(outputs[-1], weights['out']) + biases['out']
-
-pred = RNN(x, weights, biases)
-
-# Define loss and optimizer
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits = pred, labels = y))
-optimizer = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(cost)
-
-# Evaluate model
-correct_pred = tf.equal(tf.argmax(pred,1), tf.argmax(y,1))
-accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
-
-# Initializing the variables
-init = tf.global_variables_initializer()</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 4</strong>&nbsp;&minus; Finally,&nbsp;we will launch the graph to get the computational results. This also helps in calculating the accuracy for test results.</p>
-
-<pre>
-<code class="language-python">with tf.Session() as sess:
-   sess.run(init)
-   step = 1
-   # Keep training until reach max iterations
-   
-   while step * batch_size &lt; training_iters:
-      batch_x, batch_y = mnist.train.next_batch(batch_size)
-      batch_x = batch_x.reshape((batch_size, n_steps, n_input))
-      sess.run(optimizer, feed_dict={x: batch_x, y: batch_y})
-      
-      if step % display_step == 0:
-         # Calculate batch accuracy
-         acc = sess.run(accuracy, feed_dict={x: batch_x, y: batch_y})
-         
-         # Calculate batch loss
-         loss = sess.run(cost, feed_dict={x: batch_x, y: batch_y})
-         
-         print("Iter " + str(step*batch_size) + ", Minibatch Loss= " + \
-            "{:.6f}".format(loss) + ", Training Accuracy= " + \
-            "{:.5f}".format(acc))
-      step += 1
-   print("Optimization Done!")
-      test_len = 128
-   test_data = mnist.test.images[:test_len].reshape((-1, n_steps, n_input))
-   
-   test_label = mnist.test.labels[:test_len]
-   print("Testing Accuracy:", \
-      sess.run(accuracy, feed_dict={x: test_data, y: test_label}))</code></pre>
-
-<p>So that was RNN in TesorFlow. When you are writing code to implement things in TesorFlow.. try to keep a repository for this. and run files with their name.</p>
-
-<p>In next tutorial, we&#39;ll learn about TensorBoard visualization.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/recurrent-neural-network.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

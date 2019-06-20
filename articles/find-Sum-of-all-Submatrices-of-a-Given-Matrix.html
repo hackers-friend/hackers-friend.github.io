@@ -13,7 +13,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Length of longest sub-array with maximum arithmetic mean - HackersFriend</title>
+    <title> Find Sum of all Submatrices of a Given Matrix - HackersFriend</title>
     
     <link rel="stylesheet" href="../static/hfmain/css/main.css" />
     <script src="../static/hfmain/js/offline.js"></script>
@@ -77,112 +77,87 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
 
-<meta property="og:url"                content="https://www.hackersfriend.com/articles/longest-subarry-maximum-mean.html" />
+<meta property="og:url"                content="https://www.hackersfriend.com/articles/find-Sum-of-all-Submatrices-of-a-Given-Matrix.html" />
 <meta property="og:type"               content="article" />
-<meta property="og:title"              content="Length of longest sub-array with maximum arithmetic mean" />
+<meta property="og:title"              content="Find Sum of all Submatrices of a Given Matrix" />
 
 <link rel="stylesheet" href="../static/hfmain/css/prism.css" />
 <script src="../static/hfmain/js/prism.js"></script>
 
 <br>
 <br>
-<!-- <p style="border-top:solid; border-bottom: solid;"> <a href="/">HackersFriend</a> / <a href="/articles/"> Articles</a> / <a href="/articles/topic/coding-problems"> Coding Problems</a> / Length of longest sub-array with maximum arithmetic mean</p>
+<!-- <p style="border-top:solid; border-bottom: solid;"> <a href="/">HackersFriend</a> / <a href="/articles/"> Articles</a> / <a href="/articles/topic/coding-problems"> Coding Problems</a> / Find Sum of all Submatrices of a Given Matrix</p>
     <br> -->
 <div class="container">
-        <h1>Length of longest sub-array with maximum arithmetic mean</h1>
-        <p style="border-top:solid; border-bottom: solid;"> <a href="../index.html">HackersFriend</a> / <a href="index.html"> Articles</a> / <a href="topic/coding-problems.html"> Coding Problems</a> / Length of longest sub-array with maximum arithmetic mean</p>
+        <h1>Find Sum of all Submatrices of a Given Matrix</h1>
+        <p style="border-top:solid; border-bottom: solid;"> <a href="../index.html">HackersFriend</a> / <a href="index.html"> Articles</a> / <a href="topic/coding-problems.html"> Coding Problems</a> / Find Sum of all Submatrices of a Given Matrix</p>
  
         <br>
         
-        <p><strong>Problem statement:</strong></p>
+        <p><strong>Problem</strong></p>
 
-<p>Given an array of n-elements find the longest sub-array with the greatest arithmetic mean. The length of the sub-array must be greater than 1 and the mean should be calculated as an integer only.</p>
+<p>You are given a N * N 2D Matrix.</p>
 
-<p>&nbsp;</p>
+<p>Your task is to find sum of all possible submatrices. Which can be produced from this matrix.</p>
 
-<p><strong>Example:</strong></p>
+<p>Have a look at input and output for better understanding.</p>
 
-<pre>
-<code>Input:
-arr[] = {3, 2, 1, 2}
-
-Output : 2
-sub-array 3, 2 has greatest arithmetic mean
-
-Input :arr[] = {3, 3, 3, 2}
-Output : 3</code></pre>
-
-<p><strong>Solution Idea:</strong></p>
-
-<p>First find the greatest mean of two consecutive elements from the array. Again iterate over the array and try to find the longest sequence in which each element must be greater or equal to the greatest mean calculated.</p>
-
-<p><strong>Why it works ?</strong></p>
-
-<p>Above approach works because of these key points:</p>
-
-<ul>
-	<li>Minimum possible sequence length is 2 and hence the greatest mean of two consecutive elements will always be part of the result.</li>
-	<li>Any element which is equal or greater than the calculated mean may be the part of the longest sequence.</li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><strong>Implementation</strong></p>
+<p><strong>Input</strong></p>
 
 <pre>
-<code class="language-cpp">#include &lt;bits/stdc++.h&gt; 
-using namespace std; 
+<code class="language-markdown">arr[] = {{1, 1}, {1, 1}};</code></pre>
 
-// Function to find maximum distance between unequal elements
-int longestSubarray(int arr[], int n) 
-{ 
+<p><strong>Output</strong></p>
 
-	// Calculate maxMean 
-	int maxMean = 0; 
-	for (int i = 1; i &lt; n; i++) 
-		maxMean = max(maxMean, 
-					(arr[i] + arr[i - 1]) / 2); 
+<pre>
+<code class="language-markdown">16</code></pre>
 
-	// Iterate over array and calculate largest subarray 
-	// with all elements greater or equal to maxMean 
-	int ans = 0; 
-	int subarrayLength = 0; 
-	for (int i = 0; i &lt; n; i++) 
-		if (arr[i] &gt;= maxMean) 
-			ans = max(ans, ++subarrayLength); 
-		else
-			subarrayLength = 0; 
+<p><strong>Explanatation</strong></p>
 
-	return ans; 
-} 
+<p>Sum of sub matrices with size 1 = 1*4 = 4</p>
 
-// Main Function
-int main() 
-{ 
-	int arr[] = { 4, 3, 3, 2, 1, 4 };  // example array
+<p>Sum of sub matrices with size 2 = 2*4 = 8</p>
 
-	int n = sizeof(arr) / sizeof(arr[0]); 
+<p>Similarly,&nbsp;Sum of sub matrices with size 3 = 3 * 0 (since, no 3 * 3 matrix is possible)&nbsp; = 0</p>
 
-	cout &lt;&lt; longestSubarray(arr, n); 
+<p>Sum of sub matrices with size 4 = 4*1 =4</p>
 
-	return 0; 
-} 
-</code></pre>
+<p>Hence, total sum = 4 + 8 + 0 + 4 = 16.</p>
+
+<p>Have a look at another example too.</p>
+
+<p><strong>Input</strong></p>
+
+<pre>
+<code class="language-markdown">arr[] = {{1, 2, 3},{4, 5, 6}, {7, 8, 9}}</code></pre>
+
+<p><strong>Output</strong></p>
+
+<pre>
+<code class="language-markdown">500</code></pre>
 
 <p>&nbsp;</p>
 
-<p><strong>Time Complexity :&nbsp;</strong>O(N)</p>
+<p><strong>Solution</strong></p>
+
+<p><strong>Brute force</strong>&nbsp;- We can solve this question just by traversing the whole matrix N times and generating and calculating their sums.</p>
+
+<p>But problem, is this is very in efficient way to solve this problem. Once, the size of matrix gets bigger, it will be very time consuming and start producing TLE in competitve programming.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Tricky Solution</strong> -&nbsp;</p>
         
         <br>
         <br>
         <p style="border-top:solid; border-bottom:solid;">
-            <b style="color:rgb(255, 0, 0);">Author: </b> Rajan Shah  | <b style="color:rgb(255, 0, 0);">Topic :</b> <a href="topic/coding-problems.html"> Coding Problems</a> | <span class="fb-comments-count" data-href="https://www.hackersfriend.com/articles/longest-subarry-maximum-mean.html"></span>
+            <b style="color:rgb(255, 0, 0);">Author: </b> Rajan Shah  | <b style="color:rgb(255, 0, 0);">Topic :</b> <a href="topic/coding-problems.html"> Coding Problems</a> | <span class="fb-comments-count" data-href="https://www.hackersfriend.com/articles/find-Sum-of-all-Submatrices-of-a-Given-Matrix.html"></span>
             comments  
         </p>
         <br>
         <br>
         <center>
-        <div class="fb-comments" data-href="https://www.hackersfriend.com/articles/longest-subarry-maximum-mean.html" data-width="" data-numposts="10"></div>
+        <div class="fb-comments" data-href="https://www.hackersfriend.com/articles/find-Sum-of-all-Submatrices-of-a-Given-Matrix.html" data-width="" data-numposts="10"></div>
     </center>
     </div>
 <!-- <div class="container-fluid">
@@ -190,15 +165,15 @@ int main()
     <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                <h4 class="text-center">Length of longest sub-array with maximum arithmetic mean</h4>
+                <h4 class="text-center">Find Sum of all Submatrices of a Given Matrix</h4>
                 <hr>
                
                 <hr>
                 <p>
                         <a href="whatsapp://send?text= Hi there read this article on HackersFriend
-                        Length of longest sub-array with maximum arithmetic mean 
-                        https://hackersfriend.com/articles/longest-subarry-maximum-mean" data-action="share/whatsapp/share"><img src="/media/whatsapp_icon.png" alt="Share on whatsapp" style="height:24px; width:24px;"></a> |
-                    <b style="color:darkviolet;">Author: </b> Rajan Shah  | <b style="color:#5e1414;">Last updated at :</b> June 6, 2019, 7:12 p.m. | <b style="color:grey;">Category :</b> Coding Problems </p>
+                        Find Sum of all Submatrices of a Given Matrix 
+                        https://hackersfriend.com/articles/find-Sum-of-all-Submatrices-of-a-Given-Matrix" data-action="share/whatsapp/share"><img src="/media/whatsapp_icon.png" alt="Share on whatsapp" style="height:24px; width:24px;"></a> |
+                    <b style="color:darkviolet;">Author: </b> Rajan Shah  | <b style="color:#5e1414;">Last updated at :</b> June 20, 2019, 10:05 a.m. | <b style="color:grey;">Category :</b> Coding Problems </p>
             </div>
         </div>
     </div>

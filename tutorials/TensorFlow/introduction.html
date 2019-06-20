@@ -364,7 +364,20 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Introduction &amp; Installation</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            
+            <a href="deep-learning-and-ai.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -503,6 +516,17 @@ Type "help", "copyright", "credits" or "license" for more information.
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  
+                  <a href="deep-learning-and-ai.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -510,164 +534,7 @@ Type "help", "copyright", "credits" or "license" for more information.
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Introduction &amp; Installation</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <h1>What is TensorFlow ?</h1>
-
-<p>TensorFlow is an open source machine learning framework.&nbsp;It is used for implementing machine learning and deep learning applications.&nbsp;Google team created TensorFlow to&nbsp;develop and research on fascinating ideas on artificial intelligence.&nbsp;TensorFlow is designed in Python programming language.</p>
-
-<p>It combines the computational algebra of optimization techniques for easy calculation of many mathematical expressions.</p>
-
-<p>The official website of TensorFlow is&nbsp;&nbsp;<a href="https://www.tensorflow.org/" rel="nofollow" target="_blank">www.tensorflow.org</a></p>
-
-<p>Before proceeding with this tutorial, we expect you to have a basic knowledge of Python programming language. Knowledge of artificial intelligence concepts will be a plus point.</p>
-
-<h1>What&#39;s special about TensorFlow ?</h1>
-
-<p>following important features of TensorFlow &minus;</p>
-
-<ul>
-	<li>
-	<p>It includes a feature of that defines, optimizes and calculates mathematical expressions easily with the help of multi-dimensional arrays called tensors.</p>
-	</li>
-	<li>
-	<p>It includes a programming support of deep neural networks and machine learning techniques.</p>
-	</li>
-	<li>
-	<p>It includes a high scalable feature of computation with various data sets.</p>
-	</li>
-	<li>
-	<p>TensorFlow uses GPU computing, automating management. It also includes a unique feature of optimization of same memory and the data used.</p>
-	</li>
-</ul>
-
-<p>TensorFlow is well-documented and includes plenty of machine learning libraries. It offers a few important functionalities and methods for the same.</p>
-
-<p>TensorFlow is also called a &ldquo;Google&rdquo; product. It includes a variety of machine learning and deep learning algorithms. TensorFlow can train and run deep neural networks for handwritten digit classification, image recognition, word embedding and creation of various sequence models.</p>
-
-<h1>Installation</h1>
-
-<p>To install TensorFlow, you must have &ldquo;Python 3.4+ &rdquo; installed in your system.&nbsp;</p>
-
-<p><strong>Step 1</strong>&nbsp;&minus; Verify the python version being installed.</p>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type python in commanline and hit enter</p>
-
-<pre>
-<code class="language-bash">C:\users\HackersFriend&gt;python
-Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
-&gt;&gt;&gt;</code></pre>
-
-<p><strong>Step 2</strong>&nbsp;&minus; You can pick up any mechanism to install TensorFlow in the system. Though &ldquo;pip&rdquo; and &ldquo;Anaconda&rdquo; are easier once. Pip is a command used for executing and installing modules in Python.</p>
-
-<p>Before we install TensorFlow, Let&#39;s install Anaconda framework in our system.</p>
-
-<p>go to&nbsp;<a href="https://www.anaconda.com/">https://www.anaconda.com/</a>&nbsp;and download latest version and install it.</p>
-
-<p>After successful installation, we are ready to move ahead.</p>
-
-<p><strong>Step 3</strong>&nbsp;&minus; Use pip to install &ldquo;Tensorflow&rdquo; in the system.</p>
-
-<pre>
-<code class="language-bash">pip install tensorflow</code></pre>
-
-<p>after that</p>
-
-<pre>
-<code class="language-bash">pip install tensorflow-gpu</code></pre>
-
-<p>&nbsp;</p>
-
-<p>After successful installation, let&#39;s check&nbsp;the sample program execution of TensorFlow.</p>
-
-<p>as always, let&#39;s print&nbsp;&ldquo;Hello World&rdquo; in TensorFlow.</p>
-
-<p>The code for Hello world is following:</p>
-
-<pre>
-<code class="language-python">&gt;&gt; activate tensorflow
-&gt;&gt; python (activating python shell)
-&gt;&gt; import tensorflow as tf
-&gt;&gt; hello = tf.constant(‘Hello, Tensorflow!’)
-&gt;&gt; sess = tf.Session()
-&gt;&gt; print(sess.run(hello))</code></pre>
-
-<p>Congratulations. You printed Hello world using TensorFlow. Let&#39;s get started!&nbsp;</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/introduction.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Distributed Computing</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="keras.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="Exporting.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -489,6 +504,19 @@ sess.close()</code></pre>
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="keras.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="Exporting.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -496,150 +524,7 @@ sess.close()</code></pre>
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Distributed Computing</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>In production, our models get complex and our datasets too. It is not possible to process them all on a single machine. We&#39;ll have to get multiple machines and use them all together to get our work done. In this tutorial, we&#39;ll learn to use&nbsp;distributed system for TensorFlow. For better understanding we have broken it down into steps. Follow step by step.</p>
-
-<p><strong>Step 1</strong>&nbsp;&minus; As always, Import the necessary modules.&nbsp;</p>
-
-<pre>
-<code class="language-python">import tensorflow as tf</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 2</strong>&nbsp;&minus; Now let&#39;s&nbsp;Create a TensorFlow cluster with one node. This node will be responsible for a job that that has name &quot;hackersfriend_worker&quot; and that&nbsp;will operate at localhost:2222.</p>
-
-<pre>
-<code class="language-python">cluster_spec = tf.train.ClusterSpec({'hackersfriend_worker' : ['localhost:2222']})
-server = tf.train.Server(cluster_spec)
-server.target</code></pre>
-
-<p>You&#39;ll get an output like this:</p>
-
-<pre>
-<code class="language-markdown">'grpc://localhost:2222'
-The server is currently running.</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 3</strong>&nbsp;&minus; We can&nbsp;calculate&nbsp;server configuration with respective session by executing this command &minus;</p>
-
-<pre>
-<code class="language-python">server.server_def</code></pre>
-
-<p>on running this command, you should get following output:</p>
-
-<pre>
-<code class="language-json">cluster {
-   job {
-      name: "hackersfriend_worker"
-      tasks {
-         value: "localhost:2222"
-      }
-   }
-}
-job_name: "hackersfriend_worker"
-protocol: "grpc"</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 4</strong>&nbsp;&minus; Launch a TensorFlow session with the execution engine being the server. Use TensorFlow to create a local server and use&nbsp;<strong>lsof</strong>&nbsp;to find out the location of the server.</p>
-
-<pre>
-<code class="language-python">ess = tf.Session(target = server.target)
-server = tf.train.Server.create_local_server()</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 5</strong>&nbsp;&minus; View devices available in this session.</p>
-
-<pre>
-<code class="language-python">devices = sess.list_devices()</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 6 </strong>- Finally close the session.</p>
-
-<pre>
-<code class="language-python">for d in devices:
-   print(d.name)
-sess.close()</code></pre>
-
-<p>&nbsp;</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/distributed.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

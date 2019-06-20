@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Keras</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="cnn-rnn-difference.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="distributed.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -529,6 +544,19 @@ acc: 0.9910
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="cnn-rnn-difference.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="distributed.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -536,190 +564,7 @@ acc: 0.9910
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Keras</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>Keras is&nbsp;high-level Python library run on top of TensorFlow framework. It is very easy to learn. Goal behind creation of Keras is to make easy understanding deep learning techniques, such as creating layers for neural networks, maintaining the concepts of shapes and mathematical details.</p>
-
-<p>There are two types of frameworks, we can create-&nbsp;</p>
-
-<ul>
-	<li>Sequential API</li>
-	<li>Functional API</li>
-</ul>
-
-<p>Now, In order to&nbsp;create deep learning model in Keras, we have to go through a number of processes. We have broken down them into steps for better understanding. Let&#39;s implement each step one by one.</p>
-
-<p><strong>Step 1</strong>&nbsp;&minus; Loading the data and preprocessing the loaded data.</p>
-
-<pre>
-<code class="language-python">import warnings
-warnings.filterwarnings('ignore')
-
-import numpy as np
-np.random.seed(123) # for reproducibility
-
-from keras.models import Sequential
-from keras.layers import Flatten, MaxPool2D, Conv2D, Dense, Reshape, Dropout
-from keras.utils import np_utils
-Using TensorFlow backend.
-from keras.datasets import mnist
-
-# Load pre-shuffled MNIST data into train and test sets
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
-X_train = X_train.reshape(X_train.shape[0], 28, 28, 1)
-X_test = X_test.reshape(X_test.shape[0], 28, 28, 1)
-X_train = X_train.astype('float32')
-X_test = X_test.astype('float32')
-X_train /= 255
-X_test /= 255
-Y_train = np_utils.to_categorical(y_train, 10)
-Y_test = np_utils.to_categorical(y_test, 10)</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 2</strong>&nbsp;&minus; Now, Let&#39;s define the model architecture.</p>
-
-<pre>
-<code class="language-python">model = Sequential()
-model.add(Conv2D(32, 3, 3, activation = 'relu', input_shape = (28,28,1)))
-model.add(Conv2D(32, 3, 3, activation = 'relu'))
-model.add(MaxPool2D(pool_size = (2,2)))
-model.add(Dropout(0.25))
-model.add(Flatten())
-model.add(Dense(128, activation = 'relu'))
-model.add(Dropout(0.5))
-model.add(Dense(10, activation = 'softmax'))</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 3</strong>&nbsp;&minus; Let us now compile the specified model.</p>
-
-<p>&nbsp;</p>
-
-<pre>
-<code class="language-python">model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])</code></pre>
-
-<p>&nbsp;</p>
-
-<p><strong>Step 4</strong>&nbsp;&minus; Finally, We will now fit the model using training data.</p>
-
-<pre>
-<code class="language-python">model.fit(X_train, Y_train, batch_size = 32, epochs = 10, verbose = 1)</code></pre>
-
-<p>&nbsp;</p>
-
-<p>You should get follwing output:</p>
-
-<pre>
-<code class="language-markdown">Epoch 1/10 60000/60000 [==============================] - 65s - 
-loss: 0.2124 - 
-acc: 0.9345 
-Epoch 2/10 60000/60000 [==============================] - 62s - 
-loss: 0.0893 - 
-acc: 0.9740 
-Epoch 3/10 60000/60000 [==============================] - 58s - 
-loss: 0.0665 - 
-acc: 0.9802 
-Epoch 4/10 60000/60000 [==============================] - 62s - 
-loss: 0.0571 - 
-acc: 0.9830 
-Epoch 5/10 60000/60000 [==============================] - 62s - 
-loss: 0.0474 - 
-acc: 0.9855 
-Epoch 6/10 60000/60000 [==============================] - 59s -
-loss: 0.0416 - 
-acc: 0.9871 
-Epoch 7/10 60000/60000 [==============================] - 61s - 
-loss: 0.0380 - 
-acc: 0.9877 
-Epoch 8/10 60000/60000 [==============================] - 63s - 
-loss: 0.0333 - 
-acc: 0.9895 
-Epoch 9/10 60000/60000 [==============================] - 64s - 
-loss: 0.0325 - 
-acc: 0.9898 
-Epoch 10/10 60000/60000 [==============================] - 60s - 
-loss: 0.0284 - 
-acc: 0.9910
-</code></pre>
-
-<p>&nbsp;</p>
-
-<p>In the next tutorial, We&#39;ll get started with distributed TensorFlow.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/keras.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");

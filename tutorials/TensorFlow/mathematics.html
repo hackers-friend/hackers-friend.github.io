@@ -364,7 +364,22 @@ footer{
       <br>
       <br>
       <p class="lead text-center">TensorFlow - Mathematics foundations</p>
-      
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            
+            <a href="deep-learning-and-ai.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+            
+            
+            <a href="basics.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+            
+          </div>
+          
+        </div>
+      </div>
+      <br>
+      <br>
       
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -476,6 +491,19 @@ footer{
            
           </div>
           <hr>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  
+                  <a href="deep-learning-and-ai.html" class="btn btn-info" style="float:left;"><i class="material-icons">keyboard_arrow_left</i> Previous </a>
+                  
+                  
+                  <a href="basics.html" class="btn btn-info" style="float: right;">Next <i class="material-icons">keyboard_arrow_right</i></a>
+                  
+                </div>
+                
+              </div>
+            </div>
           <br>
         <br>
           <center>
@@ -483,137 +511,7 @@ footer{
       </center>
         </div>
   </div>
-  <!--
-  <div class="row">
-      <div class="col-md-3" >
-         
-            
-        </div>
-    <div class="col-md-9" style="background-color: white;">
-      <br>
-            <p class="lead text-center">TensorFlow - Mathematics foundations</p>
-            <hr>
-            
-              <ul class="nav nav-tabs" role="tablist">
-                      <li class="nav-item">
-                        <a href="#notes" class="nav-link active" data-toggle="tab" >Learn</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                          <a href="#problems" class="nav-link" data-toggle="tab">Practice</a>
-                        </li>
-                    </ul> -->
 
-                  <!-- Tab panes -->
-                  <!--
-                  <div class="tab-content">
-                  <div id="notes" class="container tab-pane active"><br>
-                    
-                    
-                    <p>Mathematics is considered as the heart of any machine learning algorithm. It is with the help of core concepts of Mathematics, a solution for specific machine learning algorithm is defined.</p>
-
-<p>It is important to understand mathematical concepts needed for TensorFlow before creating the basic application in TensorFlow.&nbsp;</p>
-
-<h1>Vector</h1>
-
-<p>An array of numbers, which is either continuous or discrete, is defined as a vector. Machine learning algorithms deal with fixed length vectors for better output generation.</p>
-
-<p>Machine learning algorithms deal with multidimensional data so vectors play a crucial role.</p>
-
-<p style="text-align:center"><img alt="Vector" height="229" src="/media/uploads/2019/05/31/vector.png" width="473" /></p>
-
-<p>&nbsp;</p>
-
-<h1>Scalar</h1>
-
-<p>Scalar can be defined as one-dimensional vector. Scalars are those, which include only magnitude and no direction. With scalars, we are only concerned with the magnitude.</p>
-
-<p>Examples of scalar include weight and height parameters of children.</p>
-
-<p>&nbsp;</p>
-
-<h1>Matrix</h1>
-
-<p>Matrix can be defined as multi-dimensional arrays, which are arranged in the format of rows and columns. The size of matrix is defined by row length and column length. Following figure shows the representation of any specified matrix.</p>
-
-<p style="text-align:center"><img alt="Matrix" height="350" src="/media/uploads/2019/05/31/matrix.png" width="350" /></p>
-
-<p>&nbsp;</p>
-
-<h2>Addition of matrices</h2>
-
-<p>Addition of two or more matrices is possible if the matrices are of the same dimension. The addition implies addition of each element as per the given position.</p>
-
-<h2>Subtraction of matrices</h2>
-
-<p>The subtraction of matrices operates in similar fashion like the addition of two matrices. We can subtract two matrices provided the dimensions are equal.</p>
-
-<h2>Multiplication of matrices</h2>
-
-<p>For two matrices A m*n and B p*q to be multipliable,&nbsp;<strong>n</strong>&nbsp;should be equal to&nbsp;<strong>p</strong>.&nbsp;</p>
-
-<h2>Transpose of matrix</h2>
-
-<p>The transpose of a matrix A,<strong> m*n</strong> is generally represented by AT (transpose) <strong>n*m </strong>and is obtained by transposing the column vectors as row vectors.</p>
-
-<h2>Dot product of vectors</h2>
-
-<p>Any vector of dimension n can be represented as a matrix v = R^n*1.</p>
-
-<p>The dot product of two vectors is the sum of the product of corresponding components &minus; Components along the same dimension and can be expressed as</p>
-
-<p><span class="mathjax-latex">\(v1⋅v2=vT1v2=vT2v1=v11v21+v12v22+⋅⋅+v1nv2n=∑k=1 to n (v1kv2k)\)</span></p>
-
-<p>In next tutorial we&#39;ll learn basics of TensorFlow.</p>
-                    
-                    
-                    
-                  </div>
-                  <div id="problems" class="container-fluid tab-panes fade"><br>
-                    
-                      <p>No problems available for this topic.</p>
-                    
-                    
-                    
-                    
-                    <script>
-                        function onans(option, ans)
-                        {
-                          var x = option.slice(0,option.lastIndexOf('_'));
-                          var y = x+"_result";
-                          if(option[option.length-1]==ans){
-                            // we got to display correct icon and show explanation
-                            document.getElementById(y).innerHTML = "Correct Answer!";
-                            document.getElementById(y).style.color = "green";
-                            document.getElementById(y).style.display = "block";
-                            document.getElementById(option).style.color = "green";
-                            // console.log("Correct ans");
-                          }else{
-                            // we got to blur that option
-                            // console.log("Wrong ans");
-                            document.getElementById(option).style.color="#e0dbdb";
-                            document.getElementById(y).innerHTML = "Wrong Answer!";
-                            document.getElementById(y).style.color = "red";
-                            document.getElementById(y).style.display = "block";
-                          }
-                        }
-        
-                        function see_ans(x)
-                        {
-                          document.getElementById(x).style.display="block";
-                        }
-                    </script>
-                 
-                </div>
-                <hr>
-                <br>
-              <br>
-                <center>
-              <div class="fb-comments" data-href="https://www.hackersfriend.com/tutorials/TensorFlow/mathematics.html" data-width="" data-numposts="10"></div>
-            </center>
-              </div>
-              </div>
-  </div> -->
 </div>
 <script>
   pr = document.getElementsByTagName("pre");
