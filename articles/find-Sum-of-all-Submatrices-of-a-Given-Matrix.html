@@ -131,7 +131,7 @@
 <p><strong>Input</strong></p>
 
 <pre>
-<code class="language-markdown">arr[] = {{1, 1}, {1, 1}};</code></pre>
+<code>arr[] = {{1, 1}, {1, 1}};</code></pre>
 
 <p><strong>Output</strong></p>
 
@@ -168,11 +168,17 @@
 
 <p><strong>Brute force</strong>&nbsp;- We can solve this question just by traversing the whole matrix N times and generating and calculating their sums.</p>
 
-<p>But problem, is this is very in efficient way to solve this problem. Once, the size of matrix gets bigger, it will be very time consuming and start producing TLE in competitve programming.</p>
+<p>But problem, is this is very in efficient way to solve this problem. Once, the size of matrix gets bigger, it will be very time consuming and start producing TLE in competitve programming. Time complexity of this soltuion will be <strong>O(n<sup>6</sup>)</strong>.</p>
 
 <p>&nbsp;</p>
 
 <p><strong>Tricky Solution</strong> -&nbsp;</p>
+
+<p>Key here is to understand the relation. Let&#39;s beak it down.</p>
+
+<p>We&#39;ll first find out, how many times an element of matirix can occur in submatrices.</p>
+
+<p>Wait.&nbsp;How do we do that ? Simple.&nbsp;</p>
         
         <br>
         <br>
@@ -199,7 +205,7 @@
                         <a href="whatsapp://send?text= Hi there read this article on HackersFriend
                         Find Sum of all Submatrices of a Given Matrix 
                         https://hackersfriend.com/articles/find-Sum-of-all-Submatrices-of-a-Given-Matrix" data-action="share/whatsapp/share"><img src="/media/whatsapp_icon.png" alt="Share on whatsapp" style="height:24px; width:24px;"></a> |
-                    <b style="color:darkviolet;">Author: </b> Rajan Shah  | <b style="color:#5e1414;">Last updated at :</b> June 20, 2019, 10:05 a.m. | <b style="color:grey;">Category :</b> Coding Problems </p>
+                    <b style="color:darkviolet;">Author: </b> Rajan Shah  | <b style="color:#5e1414;">Last updated at :</b> June 23, 2019, 9 p.m. | <b style="color:grey;">Category :</b> Coding Problems </p>
             </div>
         </div>
     </div>
@@ -253,16 +259,6 @@
 </div>
 </div>
 -->
-<script>
-    pr = document.getElementsByTagName("pre");
-    x = pr.length;
-    if( x > 0)
-    {
-        for(i = 0; i<x; i++){
-      pr[i].classList.add("line-numbers");
-    }
-    }
-    </script>
 
 <footer class="footer bg-dark mt-5 pt-3 pb-3 text-light" style="margin-bottom: -1px;">
 <div class="container">
@@ -338,5 +334,16 @@
   
 </div>        
 </footer>
+<script>
+
+$(document).ready(function()
+{
+  
+  if(getCookie("logged_in")==1){
+    $('#logged-out').hide();
+    $("#logged-in").show();
+  }
+});
+</script>
 </body>
 </html>

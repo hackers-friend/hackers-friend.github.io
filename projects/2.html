@@ -249,5 +249,16 @@ Server script is in PHP and it&#39;ll fetch data from database. Hence, you&#39;l
   
 </div>        
 </footer>
+<script>
+
+$(document).ready(function()
+{
+  
+  if(getCookie("logged_in")==1){
+    $('#logged-out').hide();
+    $("#logged-in").show();
+  }
+});
+</script>
 </body>
 </html>

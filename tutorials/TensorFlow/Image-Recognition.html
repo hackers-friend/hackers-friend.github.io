@@ -625,16 +625,6 @@ print("Saved model to disk")
   </div>
 
 </div>
-<script>
-  pr = document.getElementsByTagName("pre");
-  x = pr.length;
-  if( x > 0)
-  {
-      for(i = 0; i<x; i++){
-    pr[i].classList.add("line-numbers");
-  }
-  }
-  </script>
 
 <footer class="footer bg-dark mt-5 pt-3 pb-3 text-light" style="margin-bottom: -1px;">
 <div class="container">
@@ -710,5 +700,16 @@ print("Saved model to disk")
   
 </div>        
 </footer>
+<script>
+
+$(document).ready(function()
+{
+  
+  if(getCookie("logged_in")==1){
+    $('#logged-out').hide();
+    $("#logged-in").show();
+  }
+});
+</script>
 </body>
 </html>

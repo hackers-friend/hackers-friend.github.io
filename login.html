@@ -157,7 +157,7 @@ $(document).ready(function(){
         $("#login_submit").addClass("btn-secondary");
         $("#login_submit").html("Loging in...");
 				$.post(url, {email:email, password:password, login:"ok" }).done(function(data){
-					alert("login successful");
+          window.location.replace(" index.html");
           $("#login_submit").removeClass("disabled");
           $("#login_submit").removeClass("btn-secondary");
           $("#login_submit").addClass("btn-primary");
@@ -243,5 +243,16 @@ $(document).ready(function(){
   
 </div>        
 </footer>
+<script>
+
+$(document).ready(function()
+{
+  
+  if(getCookie("logged_in")==1){
+    $('#logged-out').hide();
+    $("#logged-in").show();
+  }
+});
+</script>
 </body>
 </html>
