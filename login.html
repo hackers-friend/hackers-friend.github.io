@@ -148,22 +148,22 @@
 <script>
 $(document).ready(function(){
   $('#login-form').submit(function(e){
-				e.preventDefault();
-				var email = $('#inputEmail').val();
-				var password = $('#inputPassword').val();
-				var url = $(this).attr('action');
+        e.preventDefault();
+        var email = $('#inputEmail').val();
+        var password = $('#inputPassword').val();
+        var url = $(this).attr('action');
         $("#login_submit").addClass("disabled");
         $("#login_submit").removeClass("btn-primary");
         $("#login_submit").addClass("btn-secondary");
         $("#login_submit").html("Loging in...");
-				$.post(url, {email:email, password:password, login:"ok" }).done(function(data){
-          window.location.replace(" index.html");
+        $.post(url, {email:email, password:password, login:"ok" }).done(function(data){
           $("#login_submit").removeClass("disabled");
           $("#login_submit").removeClass("btn-secondary");
           $("#login_submit").addClass("btn-primary");
           $("#login_submit").html("Log in");
-				});
-			});
+        });
+        window.location.replace(" {% url 'home' %}");
+      });
 });
 
 </script>
