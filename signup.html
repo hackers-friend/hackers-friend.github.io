@@ -94,19 +94,133 @@
     <br>
 
 
-<div class="cotainer-fluid">
+<style type="text/css">
+    .form-control{
+		height: 40px;
+		box-shadow: none;
+		color: #969fa4;
+	}
+	.form-control:focus{
+		border-color: #375877;
+	}
+    .form-control, .btn{        
+        border-radius: 3px;
+    }
+	.signup-form{
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.signup-form h2{
+		color: #636363;
+        margin: 0 0 15px;
+		position: relative;
+		text-align: center;
+    }
+	.signup-form h2:before, .signup-form h2:after{
+		content: "";
+		height: 2px;
+		width: 25%;
+		background: #d4d4d4;
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+	}	
+	.signup-form h2:before{
+		left: 0;
+	}
+	.signup-form h2:after{
+		right: 0;
+	}
+    .signup-form .hint-text{
+		color: #999;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+    .signup-form form{
+		color: #999;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #f2f3f7;
+        
+        padding: 30px;
+    }
+	.signup-form .form-group{
+		margin-bottom: 20px;
+	}
+	.signup-form input[type="checkbox"]{
+		margin-top: 3px;
+	}
+
+	 	
+    .signup-form a{
+		
+		text-decoration: none;
+	}
+    .signup-form a:hover{
+		text-decoration: none;
+	}
+	.signup-form form a{
+		
+		text-decoration: none;
+	}	
+	.signup-form form a:hover{
+		text-decoration: underline;
+	}  
+</style>
+<div class="container-fluid">
     <br>
-    <br>
-    <h1 class="h3 mb-3 font-weight-normal text-center mt-5">Signup at HackersFriend</h1>
+
+    <div class="row">
+            <div class="col-md-6 pt-5">
+                    <br>
+					<center>
+						<img src="media/enterprenuer.png" alt="" style="max-width:80%;" >
+					</center>
+                </div>
+        <div class="col-md-6">
+                <div class="signup-form">
+                        <form action="http://127.0.0.1:8000/examples/actions/confirmation.php" method="post">
+                            <h2>Sign up</h2>
+                            <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+                            <div class="form-group">
+                                    <input type="text" class="form-control" name="first_name" placeholder="Name" required="required">	
+                            </div>
+                            <div class="form-group">
+                                   
+                                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+                            </div>
+                            <div class="form-group">
+                                   
+                                    <input type="username" class="form-control" name="email" placeholder="username" required="required">
+                                </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                            </div>        
+                            <div class="form-group">
+                                <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-danger btn-lg btn-block">Sign up Now</button>
+                            </div>
+                        </form>
+                        <div class="text-center">Already have an account? <a href="login.html">Sign in</a></div>
+                    </div>
+        </div>
+      
+    </div>     
 </div>
 
-<footer class="footer bg-dark mt-5 pt-3 pb-3 text-light" style="margin-bottom: -1px;">
+<br>
+<footer class="footer mt-5 pt-3 pb-3 text-dark bg-light" style=" margin-bottom: -1px; background-image: url('media/footer_bg.png'); background-size: cover;">
 <div class="container">
     
   <div class="row">
       <div class="col-md-4 col-sm-4">
          <h2>HackersFriend</h2>
-          <hr style="width:75%; background: white;  margin: 0">
+          <hr style="width:225px; background: black;  margin: 0">
           <br>
           <table>
             <tbody>
@@ -135,8 +249,8 @@
       </div>
       <div class="col-md-2"></div>
     <div class="col-md-3 col-sm-3 mt-5">
-        <h6 class="text-white">Quick Links</h6>
-        <hr style="width:40%; background: white;  margin: 0">
+        <h6>Quick Links</h6>
+        <hr style="width:90px; background:black;  margin: 0">
         <br>
          <a href="verify-certificate.html">Verify certificate</a>
         <br>
@@ -152,8 +266,8 @@
          <br>
     </div>
     <div class="col-md-3 col-sm-3 mt-5">
-        <h6 class="text-white">Business</h6>
-        <hr style="width:35%; background: white;  margin: 0">
+        <h6>Business</h6>
+        <hr style="width:70px; background:black;  margin: 0">
         <br>
         <a href="#">Hire talent</a>
         <br>

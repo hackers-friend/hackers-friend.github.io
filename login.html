@@ -94,88 +94,147 @@
     <br>
 
 
-<style>
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
+<style type="text/css">
+  .form-control{
+  height: 40px;
+  box-shadow: none;
+  color: #969fa4;
 }
-.form-signin .checkbox {
-  font-weight: 400;
+.form-control:focus{
+  border-color: #375877;
 }
-.form-signin .form-control {
+  .form-control, .btn{        
+      border-radius: 3px;
+  }
+.signup-form{
+  max-width: 100%;
+  margin: 0 auto;
+}
+.signup-form h2{
+  color: #636363;
+      margin: 0 0 15px;
   position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
+  text-align: center;
+  }
+.signup-form h2:before, .signup-form h2:after{
+  content: "";
+  height: 2px;
+  width: 25%;
+  background: #d4d4d4;
+  position: absolute;
+  top: 50%;
   z-index: 2;
+}	
+.signup-form h2:before{
+  left: 0;
 }
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.signup-form h2:after{
+  right: 0;
 }
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  .signup-form .hint-text{
+  color: #999;
+  margin-bottom: 30px;
+  text-align: center;
 }
+  .signup-form form{
+  color: #999;
+  border-radius: 3px;
+    margin-bottom: 15px;
+      background: #f2f3f7;
+      
+      padding: 30px;
+  }
+.signup-form .form-group{
+  margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"]{
+  margin-top: 3px;
+}
+
+   
+  .signup-form a{
+  
+  text-decoration: none;
+}
+  .signup-form a:hover{
+  text-decoration: none;
+}
+.signup-form form a{
+  
+  text-decoration: none;
+}	
+.signup-form form a:hover{
+  text-decoration: underline;
+}  
 </style>
-<div class="cotainer-fluid">
+<div class="container-fluid">
 <br>
-<br>
-<h1 class="h3 mb-3 font-weight-normal text-center mt-5">Login to HackersFriend</h1>
-        <form class="form-signin text-center" id="login-form" method="POST" action="https://api.hackersfriend.com/login.php">
-          
-          <label for="inputEmail" class="sr-only">Email address</label>
-          
-          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-          <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-          <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
+<div class="row">
+  <div class="col-md-6 pt-5">
+          <br>
+              <center>
+              <img src="media/kid_coding.png" alt="" style="max-width:60%;" >
+            </center>
+      </div>
+<div class="col-md-6">
+      <div class="signup-form pt-5">
+              <form action="https://api.hackersfriend.com/login.php" id="login-form" method="post">
+                  <h2>Login</h2>
+                  <p class="hint-text">Login to your account. Use your email and password.</p>
+                  <div class="form-group">
+                         
+                      <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email" required="required">
+                  </div>
+                
+                  <div class="form-group">
+                      <input type="password" class="form-control" name="password" placeholder="Password" id="inputPassowrd" required="required">
+                  </div>
+                    
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-lg btn-block" id="login_submit" name="login">Login</button>
+                  </div>
+              </form>
+            
           </div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit" name="login" id ="login_submit" value="ok"> Login</button>
-          <p class="mt-5 mb-3 text-muted">Don't have account ? <a href="signup.html">Sign up here</a></p>
-        </form>
+          <div class="text-center">Forgot password? <a href="login.html">Contact us</a></div>
+          <br>
+          <div class="text-center">Don't have an account? <a href="login.html">Sign up here</a></div>
+</div>
+
+</div>  
 
 <script>
 $(document).ready(function(){
   $('#login-form').submit(function(e){
-        e.preventDefault();
-        var email = $('#inputEmail').val();
-        var password = $('#inputPassword').val();
-        var url = $(this).attr('action');
+				e.preventDefault();
+				var email = $('#inputEmail').val();
+				var password = $('#inputPassword').val();
+				var url = $(this).attr('action');
         $("#login_submit").addClass("disabled");
         $("#login_submit").removeClass("btn-primary");
         $("#login_submit").addClass("btn-secondary");
         $("#login_submit").html("Loging in...");
-        $.post(url, {email:email, password:password, login:"ok" }).done(function(data){
+				$.post(url, {email:email, password:password, login:"ok" }).done(function(data){
           $("#login_submit").removeClass("disabled");
           $("#login_submit").removeClass("btn-secondary");
           $("#login_submit").addClass("btn-primary");
           $("#login_submit").html("Log in");
-        });
-        window.location.href = "index.html";
-      });
+				});
+        window.location.replace(" index.html");
+			});
 });
 
 </script>
 </div>
 
-<footer class="footer bg-dark mt-5 pt-3 pb-3 text-light" style="margin-bottom: -1px;">
+<br>
+<footer class="footer mt-5 pt-3 pb-3 text-dark bg-light" style=" margin-bottom: -1px; background-image: url('media/footer_bg.png'); background-size: cover;">
 <div class="container">
     
   <div class="row">
       <div class="col-md-4 col-sm-4">
          <h2>HackersFriend</h2>
-          <hr style="width:75%; background: white;  margin: 0">
+          <hr style="width:225px; background: black;  margin: 0">
           <br>
           <table>
             <tbody>
@@ -204,8 +263,8 @@ $(document).ready(function(){
       </div>
       <div class="col-md-2"></div>
     <div class="col-md-3 col-sm-3 mt-5">
-        <h6 class="text-white">Quick Links</h6>
-        <hr style="width:40%; background: white;  margin: 0">
+        <h6>Quick Links</h6>
+        <hr style="width:90px; background:black;  margin: 0">
         <br>
          <a href="verify-certificate.html">Verify certificate</a>
         <br>
@@ -221,8 +280,8 @@ $(document).ready(function(){
          <br>
     </div>
     <div class="col-md-3 col-sm-3 mt-5">
-        <h6 class="text-white">Business</h6>
-        <hr style="width:35%; background: white;  margin: 0">
+        <h6>Business</h6>
+        <hr style="width:70px; background:black;  margin: 0">
         <br>
         <a href="#">Hire talent</a>
         <br>
